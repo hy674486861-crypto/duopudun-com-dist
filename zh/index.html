@@ -1,633 +1,685 @@
 <!DOCTYPE html>
 <html lang="zh-CN" data-lang="zh" data-lang-en="/en/" data-lang-zh="/zh/">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>多普盾 | 工业级 LiFePO4 储能一体机</title>
-  
+
   <link rel="canonical" href="https://duopudun.com/zh/">
   <link rel="icon" type="image/png" href="/favicon-logo.png" sizes="178x160">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  
-  <link rel="alternate" hreflang="zh-CN" href="https://duopudun.com/zh/"><link rel="alternate" hreflang="en" href="https://duopudun.com/en/"><link rel="alternate" hreflang="fr" href="https://duopudun.com/fr/"><link rel="alternate" hreflang="id" href="https://duopudun.com/id/"><link rel="alternate" hreflang="ar" href="https://duopudun.com/ar/"><link rel="alternate" hreflang="zh-Hant" href="https://duopudun.com/zh-Hant/">
-  <link rel="alternate" hreflang="x-default" href="https://duopudun.com/en/">
-<link rel="stylesheet" href="/_assets/Layout.Dk53qlD-.css">
-<link rel="stylesheet" href="/_assets/index.B6KJ3CZX.css"></head>
-<body>
-<header class="site-header">
-  <div class="header-inner">
-    <a href="/zh" class="logo">
-      <img src="/Duopudun_logo.png" alt="Duopudun" width="120" height="23" style="object-fit:contain">
-    </a>
 
-    <nav class="main-nav">
+  <link rel="alternate" hreflang="zh-CN" href="https://duopudun.com/zh/">
+  <link rel="alternate" hreflang="en" href="https://duopudun.com/en/">
+  <link rel="alternate" hreflang="fr" href="https://duopudun.com/fr/">
+  <link rel="alternate" hreflang="id" href="https://duopudun.com/id/">
+  <link rel="alternate" hreflang="ar" href="https://duopudun.com/ar/">
+  <link rel="alternate" hreflang="zh-Hant" href="https://duopudun.com/zh-Hant/">
+  <link rel="alternate" hreflang="x-default" href="https://duopudun.com/en/">
+  <link rel="stylesheet" href="/_assets/Layout.Dk53qlD-.css">
+  <link rel="stylesheet" href="/_assets/index.B6KJ3CZX.css">
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="/zh" class="logo">
+        <img src="/Duopudun_logo.png" alt="Duopudun" width="120" height="23" style="object-fit:contain">
+      </a>
+
+      <nav class="main-nav">
+        <a href="/zh">首页</a>
+        <a href="/zh/products">产品</a>
+        <a href="/zh/about">关于</a>
+        <a href="/zh/contact" class="nav-cta">联系我们</a>
+      </nav>
+
+      <div class="lang-dropdown">
+        <button class="lang-toggle" aria-label="Switch language">
+          <span class="lang-toggle-flag">
+            <img src="/flags/cn.png" alt="ZH" width="22" height="15" style="vertical-align:middle;border-radius:2px">
+          </span>
+          <span class="lang-toggle-code">ZH</span>
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+            <path d="M3 5l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg>
+        </button>
+        <div class="lang-menu">
+          <a href="/zh/" class="lang-option" data-lang="zh">
+            <span class="lang-option-flag">
+              <img src="/flags/cn.png" alt="ZH" width="22" height="15" style="vertical-align:middle;border-radius:2px">
+            </span>
+            <span>ZH</span>
+          </a><a href="/en/" class="lang-option" data-lang="en">
+            <span class="lang-option-flag">
+              <img src="/flags/gb.png" alt="EN" width="22" height="15" style="vertical-align:middle;border-radius:2px">
+            </span>
+            <span>EN</span>
+          </a><a href="/fr/" class="lang-option" data-lang="fr">
+            <span class="lang-option-flag">
+              <img src="/flags/fr.png" alt="FR" width="22" height="15" style="vertical-align:middle;border-radius:2px">
+            </span>
+            <span>FR</span>
+          </a><a href="/id/" class="lang-option" data-lang="id">
+            <span class="lang-option-flag">
+              <img src="/flags/id.png" alt="ID" width="22" height="15" style="vertical-align:middle;border-radius:2px">
+            </span>
+            <span>ID</span>
+          </a><a href="/ar/" class="lang-option" data-lang="ar">
+            <span class="lang-option-flag">
+              <img src="/flags/sa.png" alt="AR" width="22" height="15" style="vertical-align:middle;border-radius:2px">
+            </span>
+            <span>AR</span>
+          </a><a href="/zh-Hant/" class="lang-option" data-lang="zh-Hant">
+            <span class="lang-option-flag">
+              <img src="/flags/hk.png" alt="ZH-Hant" width="22" height="15" style="vertical-align:middle;border-radius:2px">
+            </span>
+            <span>ZH-Hant</span>
+          </a>
+        </div>
+      </div>
+
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="mobile-nav" id="mobileNav" style="display:none">
       <a href="/zh">首页</a>
       <a href="/zh/products">产品</a>
       <a href="/zh/about">关于</a>
-      <a href="/zh/contact" class="nav-cta">联系我们</a>
-    </nav>
+      <a href="/zh/contact">联系我们</a>
+      <div class="mobile-lang">
+        <a href="/zh/" class="lang-btn active">ZH</a><a href="/en/" class="lang-btn">EN</a><a href="/fr/" class="lang-btn">FR</a><a href="/id/" class="lang-btn">ID</a><a href="/ar/" class="lang-btn">AR</a><a href="/zh-Hant/" class="lang-btn">ZH-Hant</a>
+      </div>
+    </div>
+  </header>
 
-    <div class="lang-dropdown">
-    <button class="lang-toggle" aria-label="Switch language">
-      <span class="lang-toggle-flag">
-        <img src="/flags/cn.png" alt="ZH" width="22" height="15" style="vertical-align:middle;border-radius:2px">
-      </span>
-      <span class="lang-toggle-code">ZH</span>
-      <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M3 5l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+  <script type="module">
+    const r = document.getElementById("mobileMenuBtn"),
+      t = document.getElementById("mobileNav");
+    r?.addEventListener("click", () => {
+      t && (t.style.display = t.style.display === "none" ? "flex" : "none")
+    });
+    document.querySelectorAll(".lang-dropdown").forEach(e => {
+      const l = e.querySelector(".lang-toggle"),
+        n = e.querySelector(".lang-menu");
+      !l || !n || l.addEventListener("click", c => {
+        c.stopPropagation(), document.querySelectorAll(".lang-menu.open").forEach(o => {
+          o !== n && o.classList.remove("open")
+        }), n.classList.toggle("open")
+      })
+    });
+    document.addEventListener("click", () => {
+      document.querySelectorAll(".lang-menu.open").forEach(e => e.classList.remove("open"))
+    });
+  </script>
+
+  <main>
+
+    <section class="hero" data-astro-cid-nlow4r3u>
+      <div class="container hero-inner" data-astro-cid-nlow4r3u>
+        <div class="hero-copy" data-astro-cid-nlow4r3u>
+          <div class="eyebrow" data-astro-cid-nlow4r3u>
+            <span data-astro-cid-nlow4r3u></span>
+            工业级 LiFePO4 储能
+          </div>
+
+          <h1 data-astro-cid-nlow4r3u>
+            让每一处电力<br data-astro-cid-nlow4r3u>
+            <span data-astro-cid-nlow4r3u>稳定可靠</span>
+          </h1>
+
+          <p data-astro-cid-nlow4r3u>多普盾专注工业级家用储能系统研发制造，涵盖便携式/一体式/堆叠式/微电网储能全场景应用。产品远销东南亚、中东、欧洲、非洲，服务全球客户。</p>
+
+          <div class="hero-actions" data-astro-cid-nlow4r3u>
+            <a href="/zh/contact" class="btn-primary" data-astro-cid-nlow4r3u>联系我们</a>
+            <a href="/zh/products" class="btn-outline-dark" data-astro-cid-nlow4r3u>了解产品线 →</a>
+          </div>
+
+          <div class="proof-row" aria-label="Duopudun capabilities" data-astro-cid-nlow4r3u>
+            <div data-astro-cid-nlow4r3u><b data-astro-cid-nlow4r3u>1-61.0kWh</b><span data-astro-cid-nlow4r3u>电池容量</span></div>
+            <div data-astro-cid-nlow4r3u><b data-astro-cid-nlow4r3u>1-50kW</b><span data-astro-cid-nlow4r3u>输出功率</span></div>
+            <div data-astro-cid-nlow4r3u><b data-astro-cid-nlow4r3u>6000+</b><span data-astro-cid-nlow4r3u>循环寿命</span></div>
+            <div data-astro-cid-nlow4r3u><b data-astro-cid-nlow4r3u>24/7</b><span data-astro-cid-nlow4r3u>香港联络处提供全球 24/7 技术支持</span></div>
+          </div>
+        </div>
+
+        <div class="hero-visual" aria-label="Duopudun product preview" data-astro-cid-nlow4r3u>
+          <div class="product-stage" data-astro-cid-nlow4r3u>
+            <div class="stage-label" data-astro-cid-nlow4r3u>A8 Hybrid ESS</div>
+            <img src="/uploads/products/a8/main.webp" alt="A8 Home Energy Storage System" loading="eager" data-astro-cid-nlow4r3u>
+            <div class="spec-card spec-card-a" data-astro-cid-nlow4r3u>
+              <span data-astro-cid-nlow4r3u>Capacity</span>
+              <b data-astro-cid-nlow4r3u>8.03kWh</b>
+            </div>
+            <div class="spec-card spec-card-b" data-astro-cid-nlow4r3u>
+              <span data-astro-cid-nlow4r3u>Output</span>
+              <b data-astro-cid-nlow4r3u>3.6kW / 5kVA</b>
+            </div>
+          </div>
+          <div class="product-links" data-astro-cid-nlow4r3u>
+            <a href="/zh/products/a8" data-astro-cid-nlow4r3u>A8</a>
+            <a href="/zh/products/t15" data-astro-cid-nlow4r3u>T15</a>
+            <a href="/zh/products/k30" data-astro-cid-nlow4r3u>K30</a>
+            <a href="/zh/products/h6050" data-astro-cid-nlow4r3u>H6050</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="quick-stats" data-astro-cid-s74nee7l>
+      <div class="container" data-astro-cid-s74nee7l>
+        <div class="stats-panel" data-astro-cid-s74nee7l>
+          <div class="item" data-astro-cid-s74nee7l>
+            <strong data-astro-cid-s74nee7l>20,000m²</strong>
+            <span data-astro-cid-s74nee7l>生产研发基地</span>
+          </div>
+          <div class="item" data-astro-cid-s74nee7l>
+            <strong data-astro-cid-s74nee7l>100+</strong>
+            <span data-astro-cid-s74nee7l>工程师团队</span>
+          </div>
+          <div class="item" data-astro-cid-s74nee7l>
+            <strong data-astro-cid-s74nee7l>6000+</strong>
+            <span data-astro-cid-s74nee7l>电池循环寿命</span>
+          </div>
+          <div class="item" data-astro-cid-s74nee7l>
+            <strong data-astro-cid-s74nee7l>99.5%</strong>
+            <span data-astro-cid-s74nee7l>MPPT转化效率</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section product-matrix-section" data-astro-cid-zdxu43nv>
+      <div class="container" data-astro-cid-zdxu43nv>
+        <div class="section-head" data-astro-cid-zdxu43nv>
+          <div data-astro-cid-zdxu43nv>
+            <span class="section-label" data-astro-cid-zdxu43nv>产品系列</span>
+            <h2 class="section-title" data-astro-cid-zdxu43nv>覆盖全场景储能需求</h2>
+          </div>
+          <p class="section-subtitle" data-astro-cid-zdxu43nv>从便携式应急到工商业高压，从家用备用到离网微网，多普盾提供覆盖主要应用场景的储能产品线。</p>
+        </div>
+
+        <div class="matrix" role="table" aria-label="Duopudun product matrix" data-astro-cid-zdxu43nv>
+          <div class="matrix-head" role="row" data-astro-cid-zdxu43nv>
+            <span data-astro-cid-zdxu43nv>产品</span>
+            <span data-astro-cid-zdxu43nv>容量</span>
+            <span data-astro-cid-zdxu43nv>输出功率</span>
+            <span data-astro-cid-zdxu43nv>应用场景实拍</span>
+            <span data-astro-cid-zdxu43nv>产品型号</span>
+          </div>
+          <article class="matrix-row" id="portable" role="row" data-astro-cid-zdxu43nv>
+            <div class="series-cell" data-astro-cid-zdxu43nv>
+              <b data-astro-cid-zdxu43nv>便携式系列</b>
+              <a href="/zh/products#portable" data-astro-cid-zdxu43nv>了解更多</a>
+            </div>
+            <div class="metric" data-astro-cid-zdxu43nv><span data-astro-cid-zdxu43nv>1-5kWh</span></div>
+            <div class="metric" data-astro-cid-zdxu43nv><span data-astro-cid-zdxu43nv>1-3.6kW</span></div>
+            <p data-astro-cid-zdxu43nv>轻巧设计，1-5kWh容量，适合户外作业、应急备电、车载旅行。支持PV，DC，AC三种充电方式。</p>
+            <div class="model-list" data-astro-cid-zdxu43nv>
+              <a href="/zh/products/m1" data-astro-cid-zdxu43nv>M1</a><a href="/zh/products/m2" data-astro-cid-zdxu43nv>M2</a>
+            </div>
+          </article>
+          <article class="matrix-row" id="home" role="row" data-astro-cid-zdxu43nv>
+            <div class="series-cell" data-astro-cid-zdxu43nv>
+              <b data-astro-cid-zdxu43nv>一体式系列</b>
+              <a href="/zh/products#home" data-astro-cid-zdxu43nv>了解更多</a>
+            </div>
+            <div class="metric" data-astro-cid-zdxu43nv><span data-astro-cid-zdxu43nv>2.56-15kWh</span></div>
+            <div class="metric" data-astro-cid-zdxu43nv><span data-astro-cid-zdxu43nv>3.6-12kW</span></div>
+            <p data-astro-cid-zdxu43nv>3.6kW-12kW 一体机，MPPT 99.5%，壁挂/落地灵活安装，支持并联扩容，4种充电模式。</p>
+            <div class="model-list" data-astro-cid-zdxu43nv>
+              <a href="/zh/products/a8" data-astro-cid-zdxu43nv>A8</a><a href="/zh/products/t10" data-astro-cid-zdxu43nv>T10</a><a href="/zh/products/t15" data-astro-cid-zdxu43nv>T15</a><a href="/zh/products/e2" data-astro-cid-zdxu43nv>E2</a><a href="/zh/products/e5" data-astro-cid-zdxu43nv>E5</a><a href="/zh/products/a5" data-astro-cid-zdxu43nv>A5</a><a href="/zh/products/q5" data-astro-cid-zdxu43nv>Q5</a>
+            </div>
+          </article>
+          <article class="matrix-row" id="stack" role="row" data-astro-cid-zdxu43nv>
+            <div class="series-cell" data-astro-cid-zdxu43nv>
+              <b data-astro-cid-zdxu43nv>堆叠式系列</b>
+              <a href="/zh/products#stack" data-astro-cid-zdxu43nv>了解更多</a>
+            </div>
+            <div class="metric" data-astro-cid-zdxu43nv><span data-astro-cid-zdxu43nv>5-60kWh</span></div>
+            <div class="metric" data-astro-cid-zdxu43nv><span data-astro-cid-zdxu43nv>6-12kW</span></div>
+            <p data-astro-cid-zdxu43nv>模块化堆叠设计，容量可按项目需求灵活配置，适合中大型家庭和小型商用场景。</p>
+            <div class="model-list" data-astro-cid-zdxu43nv>
+              <a href="/zh/products/t15pro" data-astro-cid-zdxu43nv>T15Pro</a><a href="/zh/products/t30" data-astro-cid-zdxu43nv>T30</a><a href="/zh/products/t45" data-astro-cid-zdxu43nv>T45</a><a href="/zh/products/t60" data-astro-cid-zdxu43nv>T60</a><a href="/zh/products/k15" data-astro-cid-zdxu43nv>K15</a><a href="/zh/products/k16" data-astro-cid-zdxu43nv>K16</a><a href="/zh/products/k30" data-astro-cid-zdxu43nv>K30</a><a href="/zh/products/k32" data-astro-cid-zdxu43nv>K32</a><a href="/zh/products/k45" data-astro-cid-zdxu43nv>K45</a><a href="/zh/products/k60" data-astro-cid-zdxu43nv>K60</a>
+            </div>
+          </article>
+          <article class="matrix-row" id="wall" role="row" data-astro-cid-zdxu43nv>
+            <div class="series-cell" data-astro-cid-zdxu43nv>
+              <b data-astro-cid-zdxu43nv>壁挂式系列</b>
+              <a href="/zh/products#wall" data-astro-cid-zdxu43nv>了解更多</a>
+            </div>
+            <div class="metric" data-astro-cid-zdxu43nv><span data-astro-cid-zdxu43nv>5kWh</span></div>
+            <div class="metric" data-astro-cid-zdxu43nv><span data-astro-cid-zdxu43nv>51.2V100Ah</span></div>
+            <p data-astro-cid-zdxu43nv>51.2V100Ah 壁挂式 LiFePO4 电池，5kWh 容量，堆叠模块设计，兼容多品牌逆变器，即插即用。</p>
+            <div class="model-list" data-astro-cid-zdxu43nv>
+              <a href="/zh/products/d5" data-astro-cid-zdxu43nv>D5</a>
+            </div>
+          </article>
+          <article class="matrix-row" id="hv" role="row" data-astro-cid-zdxu43nv>
+            <div class="series-cell" data-astro-cid-zdxu43nv>
+              <b data-astro-cid-zdxu43nv>微电网系列</b>
+              <a href="/zh/products#hv" data-astro-cid-zdxu43nv>了解更多</a>
+            </div>
+            <div class="metric" data-astro-cid-zdxu43nv><span data-astro-cid-zdxu43nv>61.0kWh</span></div>
+            <div class="metric" data-astro-cid-zdxu43nv><span data-astro-cid-zdxu43nv>30-50kW</span></div>
+            <p data-astro-cid-zdxu43nv>H6050: 61.0kWh / 50kW；H6030: 61.0kWh / 30kW。三相 AC400V，IP54 户外安装，EMS/消防/空调一体化集成。</p>
+            <div class="model-list" data-astro-cid-zdxu43nv>
+              <a href="/zh/products/h6050" data-astro-cid-zdxu43nv>H6050</a><a href="/zh/products/h6030" data-astro-cid-zdxu43nv>H6030</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section class="tech-section" data-astro-cid-5g76nsm6>
+      <div class="container tech-layout" data-astro-cid-5g76nsm6>
+        <div class="tech-heading" data-astro-cid-5g76nsm6>
+          <span class="section-label" data-astro-cid-5g76nsm6>核心技术</span>
+          <h2 class="section-title" data-astro-cid-5g76nsm6>工业级安全标准</h2>
+          <p class="section-subtitle" data-astro-cid-5g76nsm6>每一台多普盾产品都经过严格测试，确保在高温、离网、备用电源等复杂场景下稳定运行。</p>
+        </div>
+
+        <div class="tech-panel" data-astro-cid-5g76nsm6>
+          <div class="tech-row" data-astro-cid-5g76nsm6>
+            <div class="tech-metric" data-astro-cid-5g76nsm6>
+              <strong data-astro-cid-5g76nsm6>6000+</strong>
+              <span data-astro-cid-5g76nsm6>cycles</span>
+            </div>
+            <div class="tech-copy" data-astro-cid-5g76nsm6>
+              <h4 data-astro-cid-5g76nsm6>LiFePO4 磷酸铁锂</h4>
+              <p data-astro-cid-5g76nsm6>工业级电芯，6000+ 次循环，针刺不爆炸，热稳定性极佳，工作温度 -20°C ~ 60°C</p>
+            </div>
+          </div>
+          <div class="tech-row" data-astro-cid-5g76nsm6>
+            <div class="tech-metric" data-astro-cid-5g76nsm6>
+              <strong data-astro-cid-5g76nsm6>99.5%</strong>
+              <span data-astro-cid-5g76nsm6>MPPT</span>
+            </div>
+            <div class="tech-copy" data-astro-cid-5g76nsm6>
+              <h4 data-astro-cid-5g76nsm6>MPPT 99.5%</h4>
+              <p data-astro-cid-5g76nsm6>先进最大功率点追踪技术，最大限度利用光伏输入，提升系统整体效率</p>
+            </div>
+          </div>
+          <div class="tech-row" data-astro-cid-5g76nsm6>
+            <div class="tech-metric" data-astro-cid-5g76nsm6>
+              <strong data-astro-cid-5g76nsm6>&lt;10ms</strong>
+              <span data-astro-cid-5g76nsm6>UPS</span>
+            </div>
+            <div class="tech-copy" data-astro-cid-5g76nsm6>
+              <h4 data-astro-cid-5g76nsm6>UPS &lt; 10ms</h4>
+              <p data-astro-cid-5g76nsm6>市电与逆变器无缝切换，医疗设备、服务器、通讯基站不断电保障</p>
+            </div>
+          </div>
+          <div class="tech-row" data-astro-cid-5g76nsm6>
+            <div class="tech-metric" data-astro-cid-5g76nsm6>
+              <strong data-astro-cid-5g76nsm6>-20~60C</strong>
+              <span data-astro-cid-5g76nsm6>wide temp</span>
+            </div>
+            <div class="tech-copy" data-astro-cid-5g76nsm6>
+              <h4 data-astro-cid-5g76nsm6>三级温度保护</h4>
+              <p data-astro-cid-5g76nsm6>电芯级 → 模组级 → 系统级三重热失控抑制，自动消防联动</p>
+            </div>
+          </div>
+          <div class="tech-row" data-astro-cid-5g76nsm6>
+            <div class="tech-metric" data-astro-cid-5g76nsm6>
+              <strong data-astro-cid-5g76nsm6>IP54</strong>
+              <span data-astro-cid-5g76nsm6>outdoor</span>
+            </div>
+            <div class="tech-copy" data-astro-cid-5g76nsm6>
+              <h4 data-astro-cid-5g76nsm6>IP54 防护</h4>
+              <p data-astro-cid-5g76nsm6>户外型产品具备防尘防水能力，沙尘/雨雪/盐雾环境均可正常工作</p>
+            </div>
+          </div>
+          <div class="tech-row" data-astro-cid-5g76nsm6>
+            <div class="tech-metric" data-astro-cid-5g76nsm6>
+              <strong data-astro-cid-5g76nsm6>EMS</strong>
+              <span data-astro-cid-5g76nsm6>monitoring</span>
+            </div>
+            <div class="tech-copy" data-astro-cid-5g76nsm6>
+              <h4 data-astro-cid-5g76nsm6>云端远程监控</h4>
+              <p data-astro-cid-5g76nsm6>内置 EMS 能源管理系统，移动端 APP + 网页端实时数据可视化</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="app-section" data-astro-cid-pdfrfmkq>
+      <div class="container" data-astro-cid-pdfrfmkq>
+        <span class="section-label" data-astro-cid-pdfrfmkq>应用场景</span>
+        <h2 class="section-title" data-astro-cid-pdfrfmkq>全球市场的可靠选择</h2>
+        <p class="section-subtitle" data-astro-cid-pdfrfmkq>中东偏远地区通讯基站、东南亚农场、非洲离网村落、工商业峰谷调节，多普盾储能面向多类真实应用场景。</p>
+        <div class="app-grid" data-astro-cid-pdfrfmkq>
+          <a class="app-card featured" href="/zh/products/t30" data-astro-cid-pdfrfmkq>
+            <div class="app-media" data-astro-cid-pdfrfmkq>
+              <img src="/uploads/products/a8/scenarios/farm-poultry.webp" alt="东南亚" loading="lazy" data-astro-cid-pdfrfmkq>
+              <span data-astro-cid-pdfrfmkq>T30 / D5</span>
+            </div>
+            <div class="app-content" data-astro-cid-pdfrfmkq>
+              <h3 data-astro-cid-pdfrfmkq>东南亚</h3>
+              <p data-astro-cid-pdfrfmkq>电网不稳定，停电频繁。T系列/D系列提供可靠备用电源，支持并联扩容。</p>
+            </div>
+          </a><a class="app-card featured" href="/zh/products/k30" data-astro-cid-pdfrfmkq>
+            <div class="app-media" data-astro-cid-pdfrfmkq>
+              <img src="/uploads/products/a8/scenarios/remote-site.webp" alt="中东" loading="lazy" data-astro-cid-pdfrfmkq>
+              <span data-astro-cid-pdfrfmkq>K30 / H6050</span>
+            </div>
+            <div class="app-content" data-astro-cid-pdfrfmkq>
+              <h3 data-astro-cid-pdfrfmkq>中东</h3>
+              <p data-astro-cid-pdfrfmkq>高温沙尘环境，IP54全金属外壳设计，-20°C~60°C宽温工作，7kW EV充电。</p>
+            </div>
+          </a><a class="app-card" href="/zh/products/a8" data-astro-cid-pdfrfmkq>
+            <div class="app-media" data-astro-cid-pdfrfmkq>
+              <img src="/uploads/products/a8/scenarios/solar-system.webp" alt="非洲" loading="lazy" data-astro-cid-pdfrfmkq>
+              <span data-astro-cid-pdfrfmkq>A8 / G Series</span>
+            </div>
+            <div class="app-content" data-astro-cid-pdfrfmkq>
+              <h3 data-astro-cid-pdfrfmkq>非洲</h3>
+              <p data-astro-cid-pdfrfmkq>离网地区电力短缺，G系列离网逆变器配合光伏板，构建完整离网电力系统。</p>
+            </div>
+          </a><a class="app-card" href="/zh/products/t15" data-astro-cid-pdfrfmkq>
+            <div class="app-media" data-astro-cid-pdfrfmkq>
+              <img src="/uploads/products/a8/scenarios/island-house.webp" alt="离网微网" loading="lazy" data-astro-cid-pdfrfmkq>
+              <span data-astro-cid-pdfrfmkq>A8 / T15</span>
+            </div>
+            <div class="app-content" data-astro-cid-pdfrfmkq>
+              <h3 data-astro-cid-pdfrfmkq>离网微网</h3>
+              <p data-astro-cid-pdfrfmkq>山区/海岛无电地区，光储柴互补系统，零碳排供电。</p>
+            </div>
+          </a><a class="app-card" href="/zh/products/h6030" data-astro-cid-pdfrfmkq>
+            <div class="app-media" data-astro-cid-pdfrfmkq>
+              <img src="/uploads/products/a8/scenarios/server-room.webp" alt="通讯基站" loading="lazy" data-astro-cid-pdfrfmkq>
+              <span data-astro-cid-pdfrfmkq>H6030 / D5</span>
+            </div>
+            <div class="app-content" data-astro-cid-pdfrfmkq>
+              <h3 data-astro-cid-pdfrfmkq>通讯基站</h3>
+              <p data-astro-cid-pdfrfmkq>偏远地区通讯基站，IP54 机柜，48V 备电，支持长时间稳定运行。</p>
+            </div>
+          </a><a class="app-card" href="/zh/products/h6050" data-astro-cid-pdfrfmkq>
+            <div class="app-media" data-astro-cid-pdfrfmkq>
+              <img src="/uploads/products/scenarios/small-shop-backup.webp" alt="工商业" loading="lazy" data-astro-cid-pdfrfmkq>
+              <span data-astro-cid-pdfrfmkq>H6050 / K30</span>
+            </div>
+            <div class="app-content" data-astro-cid-pdfrfmkq>
+              <h3 data-astro-cid-pdfrfmkq>工商业</h3>
+              <p data-astro-cid-pdfrfmkq>H系列高压一体机(30-50kW)，削峰填谷+分时电价优化，IP54户外安装。</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+    <section class="cert-section" data-astro-cid-dy327znm>
+      <div class="container cert-layout" data-astro-cid-dy327znm>
+        <div class="cert-copy" data-astro-cid-dy327znm>
+          <span class="section-label" data-astro-cid-dy327znm>认证资质</span>
+          <h2 class="section-title" data-astro-cid-dy327znm>全球认证 · 通行无忧</h2>
+          <p class="section-subtitle" data-astro-cid-dy327znm>多普盾产品围绕 IEC、CE、UN38.3、RoHS 等国际合规要求进行设计与测试，支持目标市场准入。</p>
+
+          <div class="support-list" data-astro-cid-dy327znm>
+            <div class="support-item" data-astro-cid-dy327znm>
+              <strong data-astro-cid-dy327znm>GLOBAL</strong>
+              <span data-astro-cid-dy327znm>全球发货 DDP</span>
+            </div>
+            <div class="support-item" data-astro-cid-dy327znm>
+              <strong data-astro-cid-dy327znm>LOGISTICS</strong>
+              <span data-astro-cid-dy327znm>香港仓储中转</span>
+            </div>
+            <div class="support-item" data-astro-cid-dy327znm>
+              <strong data-astro-cid-dy327znm>TECH</strong>
+              <span data-astro-cid-dy327znm>24/7 本地技术支持</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="cert-grid" data-astro-cid-dy327znm>
+          <div class="cert-card" data-astro-cid-dy327znm>
+            <strong data-astro-cid-dy327znm>IEC 62619</strong>
+            <span data-astro-cid-dy327znm>工业电池安全标准</span>
+          </div>
+          <div class="cert-card" data-astro-cid-dy327znm>
+            <strong data-astro-cid-dy327znm>CE</strong>
+            <span data-astro-cid-dy327znm>欧盟市场准入</span>
+          </div>
+          <div class="cert-card" data-astro-cid-dy327znm>
+            <strong data-astro-cid-dy327znm>RoHS</strong>
+            <span data-astro-cid-dy327znm>有害物质限制指令</span>
+          </div>
+          <div class="cert-card" data-astro-cid-dy327znm>
+            <strong data-astro-cid-dy327znm>UN38.3</strong>
+            <span data-astro-cid-dy327znm>锂电池运输安全</span>
+          </div>
+          <div class="cert-card" data-astro-cid-dy327znm>
+            <strong data-astro-cid-dy327znm>MSDS</strong>
+            <span data-astro-cid-dy327znm>材料安全数据表</span>
+          </div>
+          <div class="cert-card" data-astro-cid-dy327znm>
+            <strong data-astro-cid-dy327znm>UL 9540</strong>
+            <span data-astro-cid-dy327znm>储能系统安全标准</span>
+          </div>
+          <div class="cert-card" data-astro-cid-dy327znm>
+            <strong data-astro-cid-dy327znm>IEC 62040</strong>
+            <span data-astro-cid-dy327znm>不间断电源系统</span>
+          </div>
+          <div class="cert-card" data-astro-cid-dy327znm>
+            <strong data-astro-cid-dy327znm>ISO9001</strong>
+            <span data-astro-cid-dy327znm>质量管理体系</span>
+          </div>
+          <div class="cert-card" data-astro-cid-dy327znm>
+            <strong data-astro-cid-dy327znm>ISO14001</strong>
+            <span data-astro-cid-dy327znm>环境管理体系</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="process-section" data-astro-cid-25obxio5>
+      <div class="container process-layout" data-astro-cid-25obxio5>
+        <div class="process-head" data-astro-cid-25obxio5>
+          <span class="section-label" data-astro-cid-25obxio5>项目流程</span>
+          <h2 class="section-title" data-astro-cid-25obxio5>四步完成您的储能项目</h2>
+          <p class="section-subtitle" data-astro-cid-25obxio5>从需求沟通到交付运维，我们提供全程支持。</p>
+        </div>
+
+        <div class="process-board" data-astro-cid-25obxio5>
+          <div class="process-step" data-astro-cid-25obxio5>
+            <div class="step-num" data-astro-cid-25obxio5>01</div>
+            <div class="step-copy" data-astro-cid-25obxio5>
+              <h3 data-astro-cid-25obxio5>需求沟通</h3>
+              <p data-astro-cid-25obxio5>了解您的用电场景、功率需求、预算与并网要求。</p>
+            </div>
+          </div>
+          <div class="process-step" data-astro-cid-25obxio5>
+            <div class="step-num" data-astro-cid-25obxio5>02</div>
+            <div class="step-copy" data-astro-cid-25obxio5>
+              <h3 data-astro-cid-25obxio5>方案配置</h3>
+              <p data-astro-cid-25obxio5>工程师团队提供最佳产品组合与系统架构设计。</p>
+            </div>
+          </div>
+          <div class="process-step" data-astro-cid-25obxio5>
+            <div class="step-num" data-astro-cid-25obxio5>03</div>
+            <div class="step-copy" data-astro-cid-25obxio5>
+              <h3 data-astro-cid-25obxio5>报价交付</h3>
+              <p data-astro-cid-25obxio5>提供详细报价、货期与物流方案，DDP可选。</p>
+            </div>
+          </div>
+          <div class="process-step" data-astro-cid-25obxio5>
+            <div class="step-num" data-astro-cid-25obxio5>04</div>
+            <div class="step-copy" data-astro-cid-25obxio5>
+              <h3 data-astro-cid-25obxio5>运维支持</h3>
+              <p data-astro-cid-25obxio5>24/7 远程监控，全球本地化服务团队。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="cta-section" data-astro-cid-ne56ttnc>
+      <div class="container" data-astro-cid-ne56ttnc>
+        <div class="cta-panel" data-astro-cid-ne56ttnc>
+          <div class="cta-copy" data-astro-cid-ne56ttnc>
+            <span data-astro-cid-ne56ttnc>项目流程</span>
+            <h2 data-astro-cid-ne56ttnc>准备好开始了吗？</h2>
+            <p data-astro-cid-ne56ttnc>无论您是寻找家用备用电源，还是规划工商业微网项目，多普盾都能提供最适合的解决方案。</p>
+          </div>
+
+          <div class="cta-aside" data-astro-cid-ne56ttnc>
+            <div class="intake-list" aria-label="Quotation inputs" data-astro-cid-ne56ttnc>
+              <span data-astro-cid-ne56ttnc>Load profile</span><span data-astro-cid-ne56ttnc>Target capacity</span><span data-astro-cid-ne56ttnc>Installation market</span>
+            </div>
+            <div class="cta-actions" data-astro-cid-ne56ttnc>
+              <a href="/zh/contact" class="btn-primary" data-astro-cid-ne56ttnc>联系销售团队</a>
+              <a href="/zh/products" class="btn-outline" data-astro-cid-ne56ttnc>浏览全部产品 →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="logo">
+            <img src="/Duopudun_logo_white.png" alt="Duopudun" width="100" height="19" style="object-fit:contain">
+          </div>
+          <p>工业级智能储能系统制造商<br>专注 LiFePO4 · 全球 24/7 支持</p>
+        </div>
+        <div class="footer-links">
+          <div class="footer-col">
+            <h4>产品</h4>
+            <a href="/zh/products#portable">便携式系列</a>
+            <a href="/zh/products#home">一体式系列</a>
+            <a href="/zh/products#stack">堆叠式系列</a>
+            <a href="/zh/products#wall">壁挂式系列</a>
+            <a href="/zh/products#hv">微电网系列</a>
+          </div>
+          <div class="footer-col">
+            <h4>公司</h4>
+            <a href="/zh/about">关于我们</a>
+            <a href="/zh/about#certifications">认证资质</a>
+            <a href="/zh/contact">联系我们</a>
+          </div>
+          <div class="footer-col">
+            <h4>支持</h4>
+            <p>香港联络处</p>
+            <p>24/7 全球技术支持</p>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Duopudun. All rights reserved.</p>
+        <div class="social-bar" data-astro-cid-aushcpd5>
+          <a href="https://facebook.com/DuopudunEnergy" class="social-icon" aria-label="Facebook" title="Facebook" target="_blank" rel="noopener noreferrer" data-astro-cid-aushcpd5>
+            <span class="social-icon-inner" style="--s-color: #1877F2" data-astro-cid-aushcpd5>
+              <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18" data-astro-cid-aushcpd5>
+                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" data-astro-cid-aushcpd5></path>
+
+
+              </svg>
+
+            </span>
+          </a><a href="https://www.instagram.com/duopudunpower" class="social-icon" aria-label="Instagram" title="Instagram" target="_blank" rel="noopener noreferrer" data-astro-cid-aushcpd5>
+            <span class="social-icon-inner" style="--s-color: #E1306C" data-astro-cid-aushcpd5>
+              <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18" data-astro-cid-aushcpd5>
+
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" data-astro-cid-aushcpd5></path>
+
+
+              </svg>
+
+            </span>
+          </a><a href="https://www.tiktok.com/@duopudun.us.tka" class="social-icon" aria-label="TikTok" title="TikTok" target="_blank" rel="noopener noreferrer" data-astro-cid-aushcpd5>
+            <span class="social-icon-inner" style="--s-color: #010101" data-astro-cid-aushcpd5>
+              <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18" data-astro-cid-aushcpd5>
+
+
+                <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.21-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z" data-astro-cid-aushcpd5></path>
+                <path d="M10.06 15.38c-.71 0-1.396.098-2.048.29-2.02.596-3.635 2.325-4.17 4.446-.28 1.115-.25 2.262-.06 3.385.37 2.19 1.91 4.003 3.89 4.57 2.1.603 4.33.115 5.96-1.196 1.62-1.303 2.68-3.23 2.78-5.35.1-2.19-.68-4.27-2.05-5.79-.92-1.02-2.13-1.72-3.44-1.91-.38-.05-.77-.08-1.15-.08h-.02c-.11 0-.22 0-.33.01z" data-astro-cid-aushcpd5></path>
+
+
+              </svg>
+
+            </span>
+          </a><a href="https://www.youtube.com/@DuopudunPower" class="social-icon" aria-label="YouTube" title="YouTube" target="_blank" rel="noopener noreferrer" data-astro-cid-aushcpd5>
+            <span class="social-icon-inner" style="--s-color: #FF0000" data-astro-cid-aushcpd5>
+              <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18" data-astro-cid-aushcpd5>
+
+
+                <path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" data-astro-cid-aushcpd5></path>
+
+
+              </svg>
+
+            </span>
+          </a><a href="https://www.linkedin.com/in/DuopudunPower" class="social-icon" aria-label="LinkedIn" title="LinkedIn" target="_blank" rel="noopener noreferrer" data-astro-cid-aushcpd5>
+            <span class="social-icon-inner" style="--s-color: #0A66C2" data-astro-cid-aushcpd5>
+              <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18" data-astro-cid-aushcpd5>
+
+
+                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" data-astro-cid-aushcpd5></path>
+
+              </svg>
+
+            </span>
+          </a><a href="https://wa.me/85296783958" class="social-icon" aria-label="WhatsApp" title="WhatsApp" target="_blank" rel="noopener noreferrer" data-astro-cid-aushcpd5>
+            <span class="social-icon-inner" style="--s-color: #25D366" data-astro-cid-aushcpd5>
+              <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18" data-astro-cid-aushcpd5>
+
+
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" data-astro-cid-aushcpd5></path>
+              </svg>
+
+            </span>
+          </a>
+        </div>
+      </div>
+      <div class="footer-contact">
+        <span>香港</span>
+        <span class="sep">|</span>
+        <span>Dexon@duopudun.com</span>
+        <span class="sep">|</span>
+        <span>+852 9678 3958</span>
+        <span class="right">24/7 全球技术支持</span>
+      </div>
+    </div>
+  </footer>
+  <div class="wa-sticky" id="waSticky">
+    <button class="wa-btn" id="waBtn" aria-label="WhatsApp us" title="WhatsApp us">
+      <svg viewBox="0 0 24 24" width="32" height="32" fill="currentColor" aria-hidden="true">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path>
+      </svg>
+      <span class="wa-pulse" aria-hidden="true"></span>
     </button>
-    <div class="lang-menu">
-      <a href="/zh/" class="lang-option" data-lang="zh">
-          <span class="lang-option-flag">
-            <img src="/flags/cn.png" alt="ZH" width="22" height="15" style="vertical-align:middle;border-radius:2px">
-          </span>
-          <span>ZH</span>
-        </a><a href="/en/" class="lang-option" data-lang="en">
-          <span class="lang-option-flag">
-            <img src="/flags/gb.png" alt="EN" width="22" height="15" style="vertical-align:middle;border-radius:2px">
-          </span>
-          <span>EN</span>
-        </a><a href="/fr/" class="lang-option" data-lang="fr">
-          <span class="lang-option-flag">
-            <img src="/flags/fr.png" alt="FR" width="22" height="15" style="vertical-align:middle;border-radius:2px">
-          </span>
-          <span>FR</span>
-        </a><a href="/id/" class="lang-option" data-lang="id">
-          <span class="lang-option-flag">
-            <img src="/flags/id.png" alt="ID" width="22" height="15" style="vertical-align:middle;border-radius:2px">
-          </span>
-          <span>ID</span>
-        </a><a href="/ar/" class="lang-option" data-lang="ar">
-          <span class="lang-option-flag">
-            <img src="/flags/sa.png" alt="AR" width="22" height="15" style="vertical-align:middle;border-radius:2px">
-          </span>
-          <span>AR</span>
-        </a><a href="/zh-Hant/" class="lang-option" data-lang="zh-Hant">
-          <span class="lang-option-flag">
-            <img src="/flags/hk.png" alt="ZH-Hant" width="22" height="15" style="vertical-align:middle;border-radius:2px">
-          </span>
-          <span>ZH-Hant</span>
-        </a>
+    <div class="wa-menu" id="waMenu" role="menu">
+      <a href="https://wa.me/85296783958?text=Hello%20Duopudun%2C%20I%27d%20like%20to%20inquire%20about%20your%20energy%20storage%20products." class="wa-menu-item" role="menuitem" target="_blank" rel="noopener noreferrer">
+        <span class="wa-menu-icon">💼</span>
+        <span class="wa-menu-text">
+          <strong>Business</strong>
+          <small>+852 9678 3958</small>
+        </span>
+      </a>
+      <a href="https://wa.me/85270783958?text=Hello%20Duopudun%2C%20I%20need%20technical%20support." class="wa-menu-item" role="menuitem" target="_blank" rel="noopener noreferrer">
+        <span class="wa-menu-icon">🛠️</span>
+        <span class="wa-menu-text">
+          <strong>Support</strong>
+          <small>+852 7078 3958</small>
+        </span>
+      </a>
     </div>
   </div>
 
-    <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
-  <div class="mobile-nav" id="mobileNav" style="display:none">
-    <a href="/zh">首页</a>
-    <a href="/zh/products">产品</a>
-    <a href="/zh/about">关于</a>
-    <a href="/zh/contact">联系我们</a>
-    <div class="mobile-lang">
-    <a href="/zh/" class="lang-btn active">ZH</a><a href="/en/" class="lang-btn">EN</a><a href="/fr/" class="lang-btn">FR</a><a href="/id/" class="lang-btn">ID</a><a href="/ar/" class="lang-btn">AR</a><a href="/zh-Hant/" class="lang-btn">ZH-Hant</a>
-  </div>
-  </div>
-</header>
 
-<script type="module">const r=document.getElementById("mobileMenuBtn"),t=document.getElementById("mobileNav");r?.addEventListener("click",()=>{t&&(t.style.display=t.style.display==="none"?"flex":"none")});document.querySelectorAll(".lang-dropdown").forEach(e=>{const l=e.querySelector(".lang-toggle"),n=e.querySelector(".lang-menu");!l||!n||l.addEventListener("click",c=>{c.stopPropagation(),document.querySelectorAll(".lang-menu.open").forEach(o=>{o!==n&&o.classList.remove("open")}),n.classList.toggle("open")})});document.addEventListener("click",()=>{document.querySelectorAll(".lang-menu.open").forEach(e=>e.classList.remove("open"))});</script>
-
-<main>
-  
-  <section class="hero" data-astro-cid-nlow4r3u>
-  <div class="container hero-inner" data-astro-cid-nlow4r3u>
-    <div class="hero-copy" data-astro-cid-nlow4r3u>
-      <div class="eyebrow" data-astro-cid-nlow4r3u>
-        <span data-astro-cid-nlow4r3u></span>
-        工业级 LiFePO4 储能
-      </div>
-
-      <h1 data-astro-cid-nlow4r3u>
-        让每一处电力<br data-astro-cid-nlow4r3u>
-        <span data-astro-cid-nlow4r3u>稳定可靠</span>
-      </h1>
-
-      <p data-astro-cid-nlow4r3u>多普盾专注工业级家用储能系统研发制造，涵盖便携式/一体式/堆叠式/微电网储能全场景应用。产品远销东南亚、中东、欧洲、非洲，服务全球客户。</p>
-
-      <div class="hero-actions" data-astro-cid-nlow4r3u>
-        <a href="/zh/contact" class="btn-primary" data-astro-cid-nlow4r3u>联系我们</a>
-        <a href="/zh/products" class="btn-outline-dark" data-astro-cid-nlow4r3u>了解产品线 →</a>
-      </div>
-
-      <div class="proof-row" aria-label="Duopudun capabilities" data-astro-cid-nlow4r3u>
-        <div data-astro-cid-nlow4r3u><b data-astro-cid-nlow4r3u>1-61.0kWh</b><span data-astro-cid-nlow4r3u>电池容量</span></div>
-        <div data-astro-cid-nlow4r3u><b data-astro-cid-nlow4r3u>1-50kW</b><span data-astro-cid-nlow4r3u>输出功率</span></div>
-        <div data-astro-cid-nlow4r3u><b data-astro-cid-nlow4r3u>6000+</b><span data-astro-cid-nlow4r3u>循环寿命</span></div>
-        <div data-astro-cid-nlow4r3u><b data-astro-cid-nlow4r3u>24/7</b><span data-astro-cid-nlow4r3u>香港联络处提供全球 24/7 技术支持</span></div>
-      </div>
-    </div>
-
-    <div class="hero-visual" aria-label="Duopudun product preview" data-astro-cid-nlow4r3u>
-      <div class="product-stage" data-astro-cid-nlow4r3u>
-        <div class="stage-label" data-astro-cid-nlow4r3u>A8 Hybrid ESS</div>
-        <img src="/uploads/products/a8/main.webp" alt="A8 Home Energy Storage System" loading="eager" data-astro-cid-nlow4r3u>
-        <div class="spec-card spec-card-a" data-astro-cid-nlow4r3u>
-          <span data-astro-cid-nlow4r3u>Capacity</span>
-          <b data-astro-cid-nlow4r3u>8.03kWh</b>
-        </div>
-        <div class="spec-card spec-card-b" data-astro-cid-nlow4r3u>
-          <span data-astro-cid-nlow4r3u>Output</span>
-          <b data-astro-cid-nlow4r3u>3.6kW / 5kVA</b>
-        </div>
-      </div>
-      <div class="product-links" data-astro-cid-nlow4r3u>
-        <a href="/zh/products/a8" data-astro-cid-nlow4r3u>A8</a>
-        <a href="/zh/products/t15" data-astro-cid-nlow4r3u>T15</a>
-        <a href="/zh/products/k30" data-astro-cid-nlow4r3u>K30</a>
-        <a href="/zh/products/h6050" data-astro-cid-nlow4r3u>H6050</a>
-      </div>
-    </div>
-  </div>
-</section>
-  <section class="quick-stats" data-astro-cid-s74nee7l>
-  <div class="container" data-astro-cid-s74nee7l>
-    <div class="stats-panel" data-astro-cid-s74nee7l>
-      <div class="item" data-astro-cid-s74nee7l>
-          <strong data-astro-cid-s74nee7l>20,000m²</strong>
-          <span data-astro-cid-s74nee7l>生产研发基地</span>
-        </div><div class="item" data-astro-cid-s74nee7l>
-          <strong data-astro-cid-s74nee7l>100+</strong>
-          <span data-astro-cid-s74nee7l>工程师团队</span>
-        </div><div class="item" data-astro-cid-s74nee7l>
-          <strong data-astro-cid-s74nee7l>6000+</strong>
-          <span data-astro-cid-s74nee7l>电池循环寿命</span>
-        </div><div class="item" data-astro-cid-s74nee7l>
-          <strong data-astro-cid-s74nee7l>99.5%</strong>
-          <span data-astro-cid-s74nee7l>MPPT转化效率</span>
-        </div>
-    </div>
-  </div>
-</section>
-  <section class="section product-matrix-section" data-astro-cid-zdxu43nv>
-  <div class="container" data-astro-cid-zdxu43nv>
-    <div class="section-head" data-astro-cid-zdxu43nv>
-      <div data-astro-cid-zdxu43nv>
-        <span class="section-label" data-astro-cid-zdxu43nv>产品系列</span>
-        <h2 class="section-title" data-astro-cid-zdxu43nv>覆盖全场景储能需求</h2>
-      </div>
-      <p class="section-subtitle" data-astro-cid-zdxu43nv>从便携式应急到工商业高压，从家用备用到离网微网，多普盾提供覆盖主要应用场景的储能产品线。</p>
-    </div>
-
-    <div class="matrix" role="table" aria-label="Duopudun product matrix" data-astro-cid-zdxu43nv>
-      <div class="matrix-head" role="row" data-astro-cid-zdxu43nv>
-        <span data-astro-cid-zdxu43nv>产品</span>
-        <span data-astro-cid-zdxu43nv>容量</span>
-        <span data-astro-cid-zdxu43nv>输出功率</span>
-        <span data-astro-cid-zdxu43nv>应用场景实拍</span>
-        <span data-astro-cid-zdxu43nv>产品型号</span>
-      </div>
-      <article class="matrix-row" id="portable" role="row" data-astro-cid-zdxu43nv>
-          <div class="series-cell" data-astro-cid-zdxu43nv>
-            <b data-astro-cid-zdxu43nv>便携式系列</b>
-            <a href="/zh/products#portable" data-astro-cid-zdxu43nv>了解更多</a>
-          </div>
-          <div class="metric" data-astro-cid-zdxu43nv><span data-astro-cid-zdxu43nv>1-5kWh</span></div>
-          <div class="metric" data-astro-cid-zdxu43nv><span data-astro-cid-zdxu43nv>1-3.6kW</span></div>
-          <p data-astro-cid-zdxu43nv>轻巧设计，1-5kWh容量，适合户外作业、应急备电、车载旅行。支持PV，DC，AC三种充电方式。</p>
-          <div class="model-list" data-astro-cid-zdxu43nv>
-            <a href="/zh/products/m1" data-astro-cid-zdxu43nv>M1</a><a href="/zh/products/m2" data-astro-cid-zdxu43nv>M2</a>
-          </div>
-        </article><article class="matrix-row" id="home" role="row" data-astro-cid-zdxu43nv>
-          <div class="series-cell" data-astro-cid-zdxu43nv>
-            <b data-astro-cid-zdxu43nv>一体式系列</b>
-            <a href="/zh/products#home" data-astro-cid-zdxu43nv>了解更多</a>
-          </div>
-          <div class="metric" data-astro-cid-zdxu43nv><span data-astro-cid-zdxu43nv>2.56-15kWh</span></div>
-          <div class="metric" data-astro-cid-zdxu43nv><span data-astro-cid-zdxu43nv>3.6-12kW</span></div>
-          <p data-astro-cid-zdxu43nv>3.6kW-12kW 一体机，MPPT 99.5%，壁挂/落地灵活安装，支持并联扩容，4种充电模式。</p>
-          <div class="model-list" data-astro-cid-zdxu43nv>
-            <a href="/zh/products/a8" data-astro-cid-zdxu43nv>A8</a><a href="/zh/products/t10" data-astro-cid-zdxu43nv>T10</a><a href="/zh/products/t15" data-astro-cid-zdxu43nv>T15</a><a href="/zh/products/e2" data-astro-cid-zdxu43nv>E2</a><a href="/zh/products/e5" data-astro-cid-zdxu43nv>E5</a><a href="/zh/products/a5" data-astro-cid-zdxu43nv>A5</a><a href="/zh/products/q5" data-astro-cid-zdxu43nv>Q5</a>
-          </div>
-        </article><article class="matrix-row" id="stack" role="row" data-astro-cid-zdxu43nv>
-          <div class="series-cell" data-astro-cid-zdxu43nv>
-            <b data-astro-cid-zdxu43nv>堆叠式系列</b>
-            <a href="/zh/products#stack" data-astro-cid-zdxu43nv>了解更多</a>
-          </div>
-          <div class="metric" data-astro-cid-zdxu43nv><span data-astro-cid-zdxu43nv>5-60kWh</span></div>
-          <div class="metric" data-astro-cid-zdxu43nv><span data-astro-cid-zdxu43nv>6-12kW</span></div>
-          <p data-astro-cid-zdxu43nv>模块化堆叠设计，容量可按项目需求灵活配置，适合中大型家庭和小型商用场景。</p>
-          <div class="model-list" data-astro-cid-zdxu43nv>
-            <a href="/zh/products/t15pro" data-astro-cid-zdxu43nv>T15Pro</a><a href="/zh/products/t30" data-astro-cid-zdxu43nv>T30</a><a href="/zh/products/t45" data-astro-cid-zdxu43nv>T45</a><a href="/zh/products/t60" data-astro-cid-zdxu43nv>T60</a><a href="/zh/products/k15" data-astro-cid-zdxu43nv>K15</a><a href="/zh/products/k16" data-astro-cid-zdxu43nv>K16</a><a href="/zh/products/k30" data-astro-cid-zdxu43nv>K30</a><a href="/zh/products/k32" data-astro-cid-zdxu43nv>K32</a><a href="/zh/products/k45" data-astro-cid-zdxu43nv>K45</a><a href="/zh/products/k60" data-astro-cid-zdxu43nv>K60</a>
-          </div>
-        </article><article class="matrix-row" id="wall" role="row" data-astro-cid-zdxu43nv>
-          <div class="series-cell" data-astro-cid-zdxu43nv>
-            <b data-astro-cid-zdxu43nv>壁挂式系列</b>
-            <a href="/zh/products#wall" data-astro-cid-zdxu43nv>了解更多</a>
-          </div>
-          <div class="metric" data-astro-cid-zdxu43nv><span data-astro-cid-zdxu43nv>5kWh</span></div>
-          <div class="metric" data-astro-cid-zdxu43nv><span data-astro-cid-zdxu43nv>51.2V100Ah</span></div>
-          <p data-astro-cid-zdxu43nv>51.2V100Ah 壁挂式 LiFePO4 电池，5kWh 容量，堆叠模块设计，兼容多品牌逆变器，即插即用。</p>
-          <div class="model-list" data-astro-cid-zdxu43nv>
-            <a href="/zh/products/d5" data-astro-cid-zdxu43nv>D5</a>
-          </div>
-        </article><article class="matrix-row" id="hv" role="row" data-astro-cid-zdxu43nv>
-          <div class="series-cell" data-astro-cid-zdxu43nv>
-            <b data-astro-cid-zdxu43nv>微电网系列</b>
-            <a href="/zh/products#hv" data-astro-cid-zdxu43nv>了解更多</a>
-          </div>
-          <div class="metric" data-astro-cid-zdxu43nv><span data-astro-cid-zdxu43nv>61.0kWh</span></div>
-          <div class="metric" data-astro-cid-zdxu43nv><span data-astro-cid-zdxu43nv>30-50kW</span></div>
-          <p data-astro-cid-zdxu43nv>H6050: 61.0kWh / 50kW；H6030: 61.0kWh / 30kW。三相 AC400V，IP54 户外安装，EMS/消防/空调一体化集成。</p>
-          <div class="model-list" data-astro-cid-zdxu43nv>
-            <a href="/zh/products/h6050" data-astro-cid-zdxu43nv>H6050</a><a href="/zh/products/h6030" data-astro-cid-zdxu43nv>H6030</a>
-          </div>
-        </article>
-    </div>
-  </div>
-</section>
-  <section class="tech-section" data-astro-cid-5g76nsm6>
-  <div class="container tech-layout" data-astro-cid-5g76nsm6>
-    <div class="tech-heading" data-astro-cid-5g76nsm6>
-      <span class="section-label" data-astro-cid-5g76nsm6>核心技术</span>
-      <h2 class="section-title" data-astro-cid-5g76nsm6>工业级安全标准</h2>
-      <p class="section-subtitle" data-astro-cid-5g76nsm6>每一台多普盾产品都经过严格测试，确保在高温、离网、备用电源等复杂场景下稳定运行。</p>
-    </div>
-
-    <div class="tech-panel" data-astro-cid-5g76nsm6>
-      <div class="tech-row" data-astro-cid-5g76nsm6>
-          <div class="tech-metric" data-astro-cid-5g76nsm6>
-            <strong data-astro-cid-5g76nsm6>6000+</strong>
-            <span data-astro-cid-5g76nsm6>cycles</span>
-          </div>
-          <div class="tech-copy" data-astro-cid-5g76nsm6>
-            <h4 data-astro-cid-5g76nsm6>LiFePO4 磷酸铁锂</h4>
-            <p data-astro-cid-5g76nsm6>工业级电芯，6000+ 次循环，针刺不爆炸，热稳定性极佳，工作温度 -20°C ~ 60°C</p>
-          </div>
-        </div><div class="tech-row" data-astro-cid-5g76nsm6>
-          <div class="tech-metric" data-astro-cid-5g76nsm6>
-            <strong data-astro-cid-5g76nsm6>99.5%</strong>
-            <span data-astro-cid-5g76nsm6>MPPT</span>
-          </div>
-          <div class="tech-copy" data-astro-cid-5g76nsm6>
-            <h4 data-astro-cid-5g76nsm6>MPPT 99.5%</h4>
-            <p data-astro-cid-5g76nsm6>先进最大功率点追踪技术，最大限度利用光伏输入，提升系统整体效率</p>
-          </div>
-        </div><div class="tech-row" data-astro-cid-5g76nsm6>
-          <div class="tech-metric" data-astro-cid-5g76nsm6>
-            <strong data-astro-cid-5g76nsm6>&lt;10ms</strong>
-            <span data-astro-cid-5g76nsm6>UPS</span>
-          </div>
-          <div class="tech-copy" data-astro-cid-5g76nsm6>
-            <h4 data-astro-cid-5g76nsm6>UPS &lt; 10ms</h4>
-            <p data-astro-cid-5g76nsm6>市电与逆变器无缝切换，医疗设备、服务器、通讯基站不断电保障</p>
-          </div>
-        </div><div class="tech-row" data-astro-cid-5g76nsm6>
-          <div class="tech-metric" data-astro-cid-5g76nsm6>
-            <strong data-astro-cid-5g76nsm6>-20~60C</strong>
-            <span data-astro-cid-5g76nsm6>wide temp</span>
-          </div>
-          <div class="tech-copy" data-astro-cid-5g76nsm6>
-            <h4 data-astro-cid-5g76nsm6>三级温度保护</h4>
-            <p data-astro-cid-5g76nsm6>电芯级 → 模组级 → 系统级三重热失控抑制，自动消防联动</p>
-          </div>
-        </div><div class="tech-row" data-astro-cid-5g76nsm6>
-          <div class="tech-metric" data-astro-cid-5g76nsm6>
-            <strong data-astro-cid-5g76nsm6>IP54</strong>
-            <span data-astro-cid-5g76nsm6>outdoor</span>
-          </div>
-          <div class="tech-copy" data-astro-cid-5g76nsm6>
-            <h4 data-astro-cid-5g76nsm6>IP54 防护</h4>
-            <p data-astro-cid-5g76nsm6>户外型产品具备防尘防水能力，沙尘/雨雪/盐雾环境均可正常工作</p>
-          </div>
-        </div><div class="tech-row" data-astro-cid-5g76nsm6>
-          <div class="tech-metric" data-astro-cid-5g76nsm6>
-            <strong data-astro-cid-5g76nsm6>EMS</strong>
-            <span data-astro-cid-5g76nsm6>monitoring</span>
-          </div>
-          <div class="tech-copy" data-astro-cid-5g76nsm6>
-            <h4 data-astro-cid-5g76nsm6>云端远程监控</h4>
-            <p data-astro-cid-5g76nsm6>内置 EMS 能源管理系统，移动端 APP + 网页端实时数据可视化</p>
-          </div>
-        </div>
-    </div>
-  </div>
-</section>
-  <section class="app-section" data-astro-cid-pdfrfmkq>
-  <div class="container" data-astro-cid-pdfrfmkq>
-    <span class="section-label" data-astro-cid-pdfrfmkq>应用场景</span>
-    <h2 class="section-title" data-astro-cid-pdfrfmkq>全球市场的可靠选择</h2>
-    <p class="section-subtitle" data-astro-cid-pdfrfmkq>中东偏远地区通讯基站、东南亚农场、非洲离网村落、工商业峰谷调节，多普盾储能面向多类真实应用场景。</p>
-    <div class="app-grid" data-astro-cid-pdfrfmkq>
-      <a class="app-card featured" href="/zh/products/t30" data-astro-cid-pdfrfmkq>
-          <div class="app-media" data-astro-cid-pdfrfmkq>
-            <img src="/uploads/products/a8/scenarios/farm-poultry.webp" alt="东南亚" loading="lazy" data-astro-cid-pdfrfmkq>
-            <span data-astro-cid-pdfrfmkq>T30 / D5</span>
-          </div>
-          <div class="app-content" data-astro-cid-pdfrfmkq>
-            <h3 data-astro-cid-pdfrfmkq>东南亚</h3>
-            <p data-astro-cid-pdfrfmkq>电网不稳定，停电频繁。T系列/D系列提供可靠备用电源，支持并联扩容。</p>
-          </div>
-        </a><a class="app-card featured" href="/zh/products/k30" data-astro-cid-pdfrfmkq>
-          <div class="app-media" data-astro-cid-pdfrfmkq>
-            <img src="/uploads/products/a8/scenarios/remote-site.webp" alt="中东" loading="lazy" data-astro-cid-pdfrfmkq>
-            <span data-astro-cid-pdfrfmkq>K30 / H6050</span>
-          </div>
-          <div class="app-content" data-astro-cid-pdfrfmkq>
-            <h3 data-astro-cid-pdfrfmkq>中东</h3>
-            <p data-astro-cid-pdfrfmkq>高温沙尘环境，IP54全金属外壳设计，-20°C~60°C宽温工作，7kW EV充电。</p>
-          </div>
-        </a><a class="app-card" href="/zh/products/a8" data-astro-cid-pdfrfmkq>
-          <div class="app-media" data-astro-cid-pdfrfmkq>
-            <img src="/uploads/products/a8/scenarios/solar-system.webp" alt="非洲" loading="lazy" data-astro-cid-pdfrfmkq>
-            <span data-astro-cid-pdfrfmkq>A8 / G Series</span>
-          </div>
-          <div class="app-content" data-astro-cid-pdfrfmkq>
-            <h3 data-astro-cid-pdfrfmkq>非洲</h3>
-            <p data-astro-cid-pdfrfmkq>离网地区电力短缺，G系列离网逆变器配合光伏板，构建完整离网电力系统。</p>
-          </div>
-        </a><a class="app-card" href="/zh/products/t15" data-astro-cid-pdfrfmkq>
-          <div class="app-media" data-astro-cid-pdfrfmkq>
-            <img src="/uploads/products/a8/scenarios/island-house.webp" alt="离网微网" loading="lazy" data-astro-cid-pdfrfmkq>
-            <span data-astro-cid-pdfrfmkq>A8 / T15</span>
-          </div>
-          <div class="app-content" data-astro-cid-pdfrfmkq>
-            <h3 data-astro-cid-pdfrfmkq>离网微网</h3>
-            <p data-astro-cid-pdfrfmkq>山区/海岛无电地区，光储柴互补系统，零碳排供电。</p>
-          </div>
-        </a><a class="app-card" href="/zh/products/h6030" data-astro-cid-pdfrfmkq>
-          <div class="app-media" data-astro-cid-pdfrfmkq>
-            <img src="/uploads/products/a8/scenarios/server-room.webp" alt="通讯基站" loading="lazy" data-astro-cid-pdfrfmkq>
-            <span data-astro-cid-pdfrfmkq>H6030 / D5</span>
-          </div>
-          <div class="app-content" data-astro-cid-pdfrfmkq>
-            <h3 data-astro-cid-pdfrfmkq>通讯基站</h3>
-            <p data-astro-cid-pdfrfmkq>偏远地区通讯基站，IP54 机柜，48V 备电，支持长时间稳定运行。</p>
-          </div>
-        </a><a class="app-card" href="/zh/products/h6050" data-astro-cid-pdfrfmkq>
-          <div class="app-media" data-astro-cid-pdfrfmkq>
-            <img src="/uploads/products/scenarios/small-shop-backup.webp" alt="工商业" loading="lazy" data-astro-cid-pdfrfmkq>
-            <span data-astro-cid-pdfrfmkq>H6050 / K30</span>
-          </div>
-          <div class="app-content" data-astro-cid-pdfrfmkq>
-            <h3 data-astro-cid-pdfrfmkq>工商业</h3>
-            <p data-astro-cid-pdfrfmkq>H系列高压一体机(30-50kW)，削峰填谷+分时电价优化，IP54户外安装。</p>
-          </div>
-        </a>
-    </div>
-  </div>
-</section>
-  <section class="cert-section" data-astro-cid-dy327znm>
-  <div class="container cert-layout" data-astro-cid-dy327znm>
-    <div class="cert-copy" data-astro-cid-dy327znm>
-      <span class="section-label" data-astro-cid-dy327znm>认证资质</span>
-      <h2 class="section-title" data-astro-cid-dy327znm>全球认证 · 通行无忧</h2>
-      <p class="section-subtitle" data-astro-cid-dy327znm>多普盾产品围绕 IEC、CE、UN38.3、RoHS 等国际合规要求进行设计与测试，支持目标市场准入。</p>
-
-      <div class="support-list" data-astro-cid-dy327znm>
-        <div class="support-item" data-astro-cid-dy327znm>
-            <strong data-astro-cid-dy327znm>GLOBAL</strong>
-            <span data-astro-cid-dy327znm>全球发货 DDP</span>
-          </div><div class="support-item" data-astro-cid-dy327znm>
-            <strong data-astro-cid-dy327znm>LOGISTICS</strong>
-            <span data-astro-cid-dy327znm>香港仓储中转</span>
-          </div><div class="support-item" data-astro-cid-dy327znm>
-            <strong data-astro-cid-dy327znm>TECH</strong>
-            <span data-astro-cid-dy327znm>24/7 本地技术支持</span>
-          </div>
-      </div>
-    </div>
-
-    <div class="cert-grid" data-astro-cid-dy327znm>
-      <div class="cert-card" data-astro-cid-dy327znm>
-          <strong data-astro-cid-dy327znm>IEC 62619</strong>
-          <span data-astro-cid-dy327znm>工业电池安全标准</span>
-        </div><div class="cert-card" data-astro-cid-dy327znm>
-          <strong data-astro-cid-dy327znm>CE</strong>
-          <span data-astro-cid-dy327znm>欧盟市场准入</span>
-        </div><div class="cert-card" data-astro-cid-dy327znm>
-          <strong data-astro-cid-dy327znm>RoHS</strong>
-          <span data-astro-cid-dy327znm>有害物质限制指令</span>
-        </div><div class="cert-card" data-astro-cid-dy327znm>
-          <strong data-astro-cid-dy327znm>UN38.3</strong>
-          <span data-astro-cid-dy327znm>锂电池运输安全</span>
-        </div><div class="cert-card" data-astro-cid-dy327znm>
-          <strong data-astro-cid-dy327znm>MSDS</strong>
-          <span data-astro-cid-dy327znm>材料安全数据表</span>
-        </div><div class="cert-card" data-astro-cid-dy327znm>
-          <strong data-astro-cid-dy327znm>UL 9540</strong>
-          <span data-astro-cid-dy327znm>储能系统安全标准</span>
-        </div><div class="cert-card" data-astro-cid-dy327znm>
-          <strong data-astro-cid-dy327znm>IEC 62040</strong>
-          <span data-astro-cid-dy327znm>不间断电源系统</span>
-        </div><div class="cert-card" data-astro-cid-dy327znm>
-          <strong data-astro-cid-dy327znm>ISO9001</strong>
-          <span data-astro-cid-dy327znm>质量管理体系</span>
-        </div><div class="cert-card" data-astro-cid-dy327znm>
-          <strong data-astro-cid-dy327znm>ISO14001</strong>
-          <span data-astro-cid-dy327znm>环境管理体系</span>
-        </div>
-    </div>
-  </div>
-</section>
-  <section class="process-section" data-astro-cid-25obxio5>
-  <div class="container process-layout" data-astro-cid-25obxio5>
-    <div class="process-head" data-astro-cid-25obxio5>
-      <span class="section-label" data-astro-cid-25obxio5>项目流程</span>
-      <h2 class="section-title" data-astro-cid-25obxio5>四步完成您的储能项目</h2>
-      <p class="section-subtitle" data-astro-cid-25obxio5>从需求沟通到交付运维，我们提供全程支持。</p>
-    </div>
-
-    <div class="process-board" data-astro-cid-25obxio5>
-      <div class="process-step" data-astro-cid-25obxio5>
-          <div class="step-num" data-astro-cid-25obxio5>01</div>
-          <div class="step-copy" data-astro-cid-25obxio5>
-            <h3 data-astro-cid-25obxio5>需求沟通</h3>
-            <p data-astro-cid-25obxio5>了解您的用电场景、功率需求、预算与并网要求。</p>
-          </div>
-        </div><div class="process-step" data-astro-cid-25obxio5>
-          <div class="step-num" data-astro-cid-25obxio5>02</div>
-          <div class="step-copy" data-astro-cid-25obxio5>
-            <h3 data-astro-cid-25obxio5>方案配置</h3>
-            <p data-astro-cid-25obxio5>工程师团队提供最佳产品组合与系统架构设计。</p>
-          </div>
-        </div><div class="process-step" data-astro-cid-25obxio5>
-          <div class="step-num" data-astro-cid-25obxio5>03</div>
-          <div class="step-copy" data-astro-cid-25obxio5>
-            <h3 data-astro-cid-25obxio5>报价交付</h3>
-            <p data-astro-cid-25obxio5>提供详细报价、货期与物流方案，DDP可选。</p>
-          </div>
-        </div><div class="process-step" data-astro-cid-25obxio5>
-          <div class="step-num" data-astro-cid-25obxio5>04</div>
-          <div class="step-copy" data-astro-cid-25obxio5>
-            <h3 data-astro-cid-25obxio5>运维支持</h3>
-            <p data-astro-cid-25obxio5>24/7 远程监控，全球本地化服务团队。</p>
-          </div>
-        </div>
-    </div>
-  </div>
-</section>
-  <section class="cta-section" data-astro-cid-ne56ttnc>
-  <div class="container" data-astro-cid-ne56ttnc>
-    <div class="cta-panel" data-astro-cid-ne56ttnc>
-      <div class="cta-copy" data-astro-cid-ne56ttnc>
-        <span data-astro-cid-ne56ttnc>项目流程</span>
-        <h2 data-astro-cid-ne56ttnc>准备好开始了吗？</h2>
-        <p data-astro-cid-ne56ttnc>无论您是寻找家用备用电源，还是规划工商业微网项目，多普盾都能提供最适合的解决方案。</p>
-      </div>
-
-      <div class="cta-aside" data-astro-cid-ne56ttnc>
-        <div class="intake-list" aria-label="Quotation inputs" data-astro-cid-ne56ttnc>
-          <span data-astro-cid-ne56ttnc>Load profile</span><span data-astro-cid-ne56ttnc>Target capacity</span><span data-astro-cid-ne56ttnc>Installation market</span>
-        </div>
-        <div class="cta-actions" data-astro-cid-ne56ttnc>
-          <a href="/zh/contact" class="btn-primary" data-astro-cid-ne56ttnc>联系销售团队</a>
-          <a href="/zh/products" class="btn-outline" data-astro-cid-ne56ttnc>浏览全部产品 →</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-</main>
-
-<footer class="site-footer">
-  <div class="footer-inner">
-    <div class="footer-top">
-      <div class="footer-brand">
-        <div class="logo">
-          <img src="/Duopudun_logo_white.png" alt="Duopudun" width="100" height="19" style="object-fit:contain">
-        </div>
-        <p>工业级智能储能系统制造商<br>专注 LiFePO4 · 全球 24/7 支持</p>
-      </div>
-      <div class="footer-links">
-        <div class="footer-col">
-          <h4>产品</h4>
-          <a href="/zh/products#portable">便携式系列</a>
-          <a href="/zh/products#home">一体式系列</a>
-          <a href="/zh/products#stack">堆叠式系列</a>
-          <a href="/zh/products#wall">壁挂式系列</a>
-          <a href="/zh/products#hv">微电网系列</a>
-        </div>
-        <div class="footer-col">
-          <h4>公司</h4>
-          <a href="/zh/about">关于我们</a>
-          <a href="/zh/about#certifications">认证资质</a>
-          <a href="/zh/contact">联系我们</a>
-        </div>
-        <div class="footer-col">
-          <h4>支持</h4>
-          <p>香港联络处</p>
-          <p>24/7 全球技术支持</p>
-        </div>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>© 2026 Duopudun. All rights reserved.</p>
-      <div class="social-bar" data-astro-cid-aushcpd5>
-  <a href="https://facebook.com/DuopudunEnergy" class="social-icon" aria-label="Facebook" title="Facebook" target="_blank" rel="noopener noreferrer" data-astro-cid-aushcpd5>
-      <span class="social-icon-inner" style="--s-color: #1877F2" data-astro-cid-aushcpd5>
-        <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18" data-astro-cid-aushcpd5>
-          <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" data-astro-cid-aushcpd5></path>
-          
-          
-          
-          
-          
-        </svg>
-        
-      </span>
-    </a><a href="https://www.instagram.com/duopudunpower" class="social-icon" aria-label="Instagram" title="Instagram" target="_blank" rel="noopener noreferrer" data-astro-cid-aushcpd5>
-      <span class="social-icon-inner" style="--s-color: #E1306C" data-astro-cid-aushcpd5>
-        <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18" data-astro-cid-aushcpd5>
-          
-          <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" data-astro-cid-aushcpd5></path>
-          
-          
-          
-          
-        </svg>
-        
-      </span>
-    </a><a href="https://www.tiktok.com/@duopudun.us.tka" class="social-icon" aria-label="TikTok" title="TikTok" target="_blank" rel="noopener noreferrer" data-astro-cid-aushcpd5>
-      <span class="social-icon-inner" style="--s-color: #010101" data-astro-cid-aushcpd5>
-        <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18" data-astro-cid-aushcpd5>
-          
-          
-          <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.21-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z" data-astro-cid-aushcpd5></path><path d="M10.06 15.38c-.71 0-1.396.098-2.048.29-2.02.596-3.635 2.325-4.17 4.446-.28 1.115-.25 2.262-.06 3.385.37 2.19 1.91 4.003 3.89 4.57 2.1.603 4.33.115 5.96-1.196 1.62-1.303 2.68-3.23 2.78-5.35.1-2.19-.68-4.27-2.05-5.79-.92-1.02-2.13-1.72-3.44-1.91-.38-.05-.77-.08-1.15-.08h-.02c-.11 0-.22 0-.33.01z" data-astro-cid-aushcpd5></path>
-          
-          
-          
-        </svg>
-        
-      </span>
-    </a><a href="https://www.youtube.com/@DuopudunPower" class="social-icon" aria-label="YouTube" title="YouTube" target="_blank" rel="noopener noreferrer" data-astro-cid-aushcpd5>
-      <span class="social-icon-inner" style="--s-color: #FF0000" data-astro-cid-aushcpd5>
-        <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18" data-astro-cid-aushcpd5>
-          
-          
-          
-          <path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" data-astro-cid-aushcpd5></path>
-          
-          
-        </svg>
-        
-      </span>
-    </a><a href="https://www.linkedin.com/in/DuopudunPower" class="social-icon" aria-label="LinkedIn" title="LinkedIn" target="_blank" rel="noopener noreferrer" data-astro-cid-aushcpd5>
-      <span class="social-icon-inner" style="--s-color: #0A66C2" data-astro-cid-aushcpd5>
-        <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18" data-astro-cid-aushcpd5>
-          
-          
-          
-          
-          <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" data-astro-cid-aushcpd5></path>
-          
-        </svg>
-        
-      </span>
-    </a><a href="https://wa.me/85296783958" class="social-icon" aria-label="WhatsApp" title="WhatsApp" target="_blank" rel="noopener noreferrer" data-astro-cid-aushcpd5>
-      <span class="social-icon-inner" style="--s-color: #25D366" data-astro-cid-aushcpd5>
-        <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18" data-astro-cid-aushcpd5>
-          
-          
-          
-          
-          
-          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" data-astro-cid-aushcpd5></path>
-        </svg>
-        
-      </span>
-    </a>
-</div>
-    </div>
-    <div class="footer-contact">
-      <span>香港</span>
-      <span class="sep">|</span>
-      <span>Dexon@duopudun.com</span>
-      <span class="sep">|</span>
-      <span>+852 9678 3958</span>
-      <span class="right">24/7 全球技术支持</span>
-    </div>
-  </div>
-</footer>
-<div class="wa-sticky" id="waSticky">
-  <button class="wa-btn" id="waBtn" aria-label="WhatsApp us" title="WhatsApp us">
-    <svg viewBox="0 0 24 24" width="32" height="32" fill="currentColor" aria-hidden="true">
-      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path>
-    </svg>
-    <span class="wa-pulse" aria-hidden="true"></span>
-  </button>
-  <div class="wa-menu" id="waMenu" role="menu">
-    <a href="https://wa.me/85296783958?text=Hello%20Duopudun%2C%20I%27d%20like%20to%20inquire%20about%20your%20energy%20storage%20products." class="wa-menu-item" role="menuitem" target="_blank" rel="noopener noreferrer">
-      <span class="wa-menu-icon">💼</span>
-      <span class="wa-menu-text">
-        <strong>Business</strong>
-        <small>+852 9678 3958</small>
-      </span>
-    </a>
-    <a href="https://wa.me/85270783958?text=Hello%20Duopudun%2C%20I%20need%20technical%20support." class="wa-menu-item" role="menuitem" target="_blank" rel="noopener noreferrer">
-      <span class="wa-menu-icon">🛠️</span>
-      <span class="wa-menu-text">
-        <strong>Support</strong>
-        <small>+852 7078 3958</small>
-      </span>
-    </a>
-  </div>
-</div>
-
-
-
-<script type="module">const n=document.getElementById("waBtn"),t=document.getElementById("waMenu");n&&t&&(n.addEventListener("click",e=>{e.stopPropagation(),t.classList.toggle("open")}),document.addEventListener("click",e=>{!t.contains(e.target)&&e.target!==n&&t.classList.remove("open")}),document.addEventListener("keydown",e=>{e.key==="Escape"&&t.classList.remove("open")}));</script>
+  <script type="module">
+    const n = document.getElementById("waBtn"),
+      t = document.getElementById("waMenu");
+    n && t && (n.addEventListener("click", e => {
+      e.stopPropagation(), t.classList.toggle("open")
+    }), document.addEventListener("click", e => {
+      !t.contains(e.target) && e.target !== n && t.classList.remove("open")
+    }), document.addEventListener("keydown", e => {
+      e.key === "Escape" && t.classList.remove("open")
+    }));
+  </script>
 </body>
+
 </html>
