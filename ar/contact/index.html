@@ -19,7 +19,7 @@
   <link rel="alternate" hreflang="ar" href="https://duopudun.com/ar/contact/">
   <link rel="alternate" hreflang="zh-Hant" href="https://duopudun.com/zh-Hant/contact/">
   <link rel="alternate" hreflang="x-default" href="https://duopudun.com/en/contact/">
-  <link rel="stylesheet" href="/_assets/Layout.Dk53qlD-.css">
+  <link rel="stylesheet" href="/_assets/Layout.FtX4l551.css">
   <link rel="stylesheet" href="/_assets/contact.HqsQVuWD.css">
 </head>
 
@@ -187,7 +187,7 @@
         </div>
 
         <div class="contact-form-wrap" data-astro-cid-gwrhl7xa>
-          <form class="contact-form" id="contactForm" data-sent="Sent" data-success="✓ تم الإرسال — سنرد خلال 24 ساعة." data-error-required="يرجى ملء جميع الحقول المطلوبة." data-error-network="فشل الإرسال. يرجى مراسلتنا عبر البريد الإلكتروني أو واتساب مباشرة." data-error-verify="يرجى إكمال التحقق أولاً." data-endpoint="/api/contact" novalidate data-astro-cid-gwrhl7xa>
+          <form class="contact-form" id="contactForm" data-sent="Sent" data-success="✓ تم الإرسال — سنرد خلال 24 ساعة." data-error-required="يرجى ملء جميع الحقول المطلوبة." data-error-network="فشل الإرسال. يرجى مراسلتنا عبر البريد الإلكتروني أو واتساب مباشرة." data-error-verify="يرجى إكمال التحقق أولاً." data-policy-prefix="استفسار عن سياسة" data-endpoint="/api/contact" novalidate data-astro-cid-gwrhl7xa>
             <h3 data-astro-cid-gwrhl7xa>إرسال استفسار</h3>
 
             <div class="form-row" data-astro-cid-gwrhl7xa>
@@ -227,7 +227,7 @@
               <label for="product" data-astro-cid-gwrhl7xa>المنتج المهتم به</label>
               <select id="product" name="product" data-astro-cid-gwrhl7xa>
                 <option value data-astro-cid-gwrhl7xa></option>
-                <option value="السلسلة المحمولة M1 / M2" data-astro-cid-gwrhl7xa>السلسلة المحمولة M1 / M2</option>
+                <option value="السلسلة المحمولة M1" data-astro-cid-gwrhl7xa>السلسلة المحمولة M1</option>
                 <option value="All-in-One Series A5 / Q5 / A8 / T10 / T15" data-astro-cid-gwrhl7xa>All-in-One Series A5 / Q5 / A8 / T10 / T15</option>
                 <option value="Stackable Series T30 / T45 / T60" data-astro-cid-gwrhl7xa>Stackable Series T30 / T45 / T60</option>
                 <option value="سلسلة البطاريات الجدارية D5 / D10 / D20" data-astro-cid-gwrhl7xa>سلسلة البطاريات الجدارية D5 / D10 / D20</option>
@@ -288,53 +288,61 @@
     <script src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit" async defer></script>
     <script type="module">
       const e = document.getElementById("contactForm"),
-        t = document.getElementById("formStatus"),
-        u = document.getElementById("turnstileWidget");
-      let a = "",
-        i = null;
-      const f = async () => {
-        for (let r = 0; r < 50; r += 1) {
-          const n = window.turnstile;
-          if (n) return n;
-          await new Promise(o => setTimeout(o, 100))
+        n = document.getElementById("formStatus"),
+        u = new URLSearchParams(window.location.search);
+      if (e && u.get("topic") === "policy") {
+        const s = u.get("policy")?.trim(),
+          t = e.elements.namedItem("message");
+        s && t && !t.value && (t.value = `${e.dataset.policyPrefix||"Policy enquiry"}: ${s}
+
+`)
+      }
+      const d = document.getElementById("turnstileWidget");
+      let r = "",
+        o = null;
+      const p = async () => {
+        for (let s = 0; s < 50; s += 1) {
+          const t = window.turnstile;
+          if (t) return t;
+          await new Promise(i => setTimeout(i, 100))
         }
         throw new Error("Turnstile did not load")
-      }, p = () => {
-        !t || !e || (t.className = "form-status error", t.textContent = e.dataset.errorNetwork || "Submission is not configured.")
-      }, w = async () => {
-        if (!(!e || !u)) try {
-          const r = e.dataset.endpoint || "/api/contact",
-            n = await fetch(r, {
+      }, w = () => {
+        !n || !e || (n.className = "form-status error", n.textContent = e.dataset.errorNetwork || "Submission is not configured.")
+      }, y = async () => {
+        if (!(!e || !d)) try {
+          const s = e.dataset.endpoint || "/api/contact",
+            t = await fetch(s, {
               headers: {
                 Accept: "application/json"
               }
             });
-          if (!n.ok) throw new Error("Form configuration is unavailable");
-          const o = await n.json();
-          if (!o.turnstileSiteKey) throw new Error("Turnstile site key is missing");
-          i = (await f()).render(u, {
-            sitekey: o.turnstileSiteKey,
+          if (!t.ok) throw new Error("Form configuration is unavailable");
+          const i = await t.json();
+          if (!i.turnstileSiteKey) throw new Error("Turnstile site key is missing");
+          o = (await p()).render(d, {
+            sitekey: i.turnstileSiteKey,
             action: "turnstile-spin-v2",
             theme: "light",
             callback: m => {
-              a = m
+              r = m
             },
             "expired-callback": () => {
-              a = ""
+              r = ""
             },
             "error-callback": () => {
-              a = ""
+              r = ""
             }
           })
         } catch {
-          p()
+          w()
         }
       };
-      w();
-      e && e.addEventListener("submit", async r => {
-        r.preventDefault();
-        const n = e.querySelector("button[type=submit]"),
-          o = e.dataset.endpoint || "/api/contact",
+      y();
+      e && e.addEventListener("submit", async s => {
+        s.preventDefault();
+        const t = e.querySelector("button[type=submit]"),
+          i = e.dataset.endpoint || "/api/contact",
           l = {
             name: e.elements.namedItem("name").value.trim(),
             email: e.elements.namedItem("email").value.trim(),
@@ -345,27 +353,27 @@
             product: e.elements.namedItem("product").value,
             message: e.elements.namedItem("message").value.trim(),
             website: e.elements.namedItem("website").value,
-            turnstileToken: a,
+            turnstileToken: r,
             pageLang: document.documentElement.lang,
             pageUrl: location.href
           },
           m = ["name", "email", "country", "whatsapp", "message"];
-        for (const s of m)
-          if (!l[s]) {
-            t && (t.className = "form-status error", t.textContent = e.dataset.errorRequired || "Please fill in all required fields."), e.elements.namedItem(s).focus();
+        for (const a of m)
+          if (!l[a]) {
+            n && (n.className = "form-status error", n.textContent = e.dataset.errorRequired || "Please fill in all required fields."), e.elements.namedItem(a).focus();
             return
           } if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(l.email)) {
-          t && (t.className = "form-status error", t.textContent = e.dataset.errorRequired || "Please enter a valid email address."), e.elements.namedItem("email").focus();
+          n && (n.className = "form-status error", n.textContent = e.dataset.errorRequired || "Please enter a valid email address."), e.elements.namedItem("email").focus();
           return
         }
-        if (!a) {
-          t && (t.className = "form-status error", t.textContent = e.dataset.errorVerify || "Please complete the verification.");
+        if (!r) {
+          n && (n.className = "form-status error", n.textContent = e.dataset.errorVerify || "Please complete the verification.");
           return
         }
-        const d = n?.textContent || "";
-        n && (n.disabled = !0, n.textContent = "…");
+        const f = t?.textContent || "";
+        t && (t.disabled = !0, t.textContent = "…");
         try {
-          const s = await fetch(o, {
+          const a = await fetch(i, {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
@@ -373,14 +381,14 @@
             },
             body: JSON.stringify(l)
           });
-          if (!s.ok) throw new Error("Server returned " + s.status);
-          n && (n.textContent = "✓ " + (e.dataset.sent || "Sent"), n.style.background = "#059669"), t && (t.className = "form-status success", t.textContent = e.dataset.success || ""), e.reset(), a = "";
+          if (!a.ok) throw new Error("Server returned " + a.status);
+          t && (t.textContent = "✓ " + (e.dataset.sent || "Sent"), t.style.background = "#059669"), n && (n.className = "form-status success", n.textContent = e.dataset.success || ""), e.reset(), r = "";
           const c = window.turnstile;
-          c && i !== null && c.reset(i)
+          c && o !== null && c.reset(o)
         } catch {
-          n && (n.disabled = !1, n.textContent = d || "Send"), a = "";
-          const s = window.turnstile;
-          s && i !== null && s.reset(i), t && (t.className = "form-status error", t.textContent = e.dataset.errorNetwork || "Submission failed.")
+          t && (t.disabled = !1, t.textContent = f || "Send"), r = "";
+          const a = window.turnstile;
+          a && o !== null && a.reset(o), n && (n.className = "form-status error", n.textContent = e.dataset.errorNetwork || "Submission failed.")
         }
       });
     </script>
@@ -413,13 +421,27 @@
           </div>
           <div class="footer-col">
             <h4>الدعم</h4>
-            <p>مكتب هونغ كونغ</p>
-            <p>دعم تقني عالمي على مدار الساعة</p>
+            <a href="/ar/shipping-policy">سياسة الشحن</a>
+            <a href="/ar/warranty-policy">سياسة الضمان</a>
+            <a href="/ar/return-refund-policy">سياسة الإرجاع والاسترداد</a>
+            <a href="/ar/contact">دعم تقني عالمي على مدار الساعة</a>
+          </div>
+          <div class="footer-col">
+            <h4>الشؤون القانونية</h4>
+            <a href="/ar/privacy-policy">سياسة الخصوصية</a>
+            <a href="/ar/terms-of-service">شروط الخدمة</a>
           </div>
         </div>
       </div>
       <div class="footer-bottom">
         <p>© 2026 Duopudun. جميع الحقوق محفوظة.</p>
+        <nav class="footer-policy-links" aria-label="السياسات العامة">
+          <a href="/ar/privacy-policy">سياسة الخصوصية</a>
+          <a href="/ar/terms-of-service">شروط الخدمة</a>
+          <a href="/ar/shipping-policy">سياسة الشحن</a>
+          <a href="/ar/warranty-policy">سياسة الضمان</a>
+          <a href="/ar/return-refund-policy">سياسة الإرجاع والاسترداد</a>
+        </nav>
         <div class="social-bar" data-astro-cid-aushcpd5>
           <a href="https://facebook.com/DuopudunEnergy" class="social-icon" aria-label="Facebook" title="Facebook" target="_blank" rel="noopener noreferrer" data-astro-cid-aushcpd5>
             <span class="social-icon-inner" style="--s-color: #1877F2" data-astro-cid-aushcpd5>
