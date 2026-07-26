@@ -20,7 +20,7 @@
   <link rel="alternate" hreflang="zh-Hant" href="https://duopudun.com/zh-Hant/contact/">
   <link rel="alternate" hreflang="x-default" href="https://duopudun.com/en/contact/">
   <link rel="stylesheet" href="/_assets/Layout.Dk53qlD-.css">
-  <link rel="stylesheet" href="/_assets/contact.B4m3x5Fp.css">
+  <link rel="stylesheet" href="/_assets/contact.HqsQVuWD.css">
 </head>
 
 <body>
@@ -181,13 +181,13 @@
           <div class="cert-list" data-astro-cid-gwrhl7xa>
             <p style="font-weight:600;margin-bottom:12px" data-astro-cid-gwrhl7xa>Supported certifications &amp; markets:</p>
             <div class="cert-tags" data-astro-cid-gwrhl7xa>
-              <span data-astro-cid-gwrhl7xa>IEC 62619</span><span data-astro-cid-gwrhl7xa>CE</span><span data-astro-cid-gwrhl7xa>RoHS</span><span data-astro-cid-gwrhl7xa>UN38.3</span><span data-astro-cid-gwrhl7xa>Southeast Asia</span><span data-astro-cid-gwrhl7xa>Middle East</span><span data-astro-cid-gwrhl7xa>Africa</span><span data-astro-cid-gwrhl7xa>Commercial</span>
+              <span data-astro-cid-gwrhl7xa>IEC 62619</span><span data-astro-cid-gwrhl7xa>CE</span><span data-astro-cid-gwrhl7xa>RoHS</span><span data-astro-cid-gwrhl7xa>UN38.3</span><span data-astro-cid-gwrhl7xa>Southeast Asia</span><span data-astro-cid-gwrhl7xa>Middle East</span><span data-astro-cid-gwrhl7xa>Africa</span><span data-astro-cid-gwrhl7xa>Europe</span>
             </div>
           </div>
         </div>
 
         <div class="contact-form-wrap" data-astro-cid-gwrhl7xa>
-          <form class="contact-form" id="contactForm" data-sent="Sent" data-success="✓ Sent — we will reply within 24 hours." data-error-required="Please fill in all required fields." data-error-network="Submission failed. Please email us directly or use WhatsApp." data-use-backend="false" data-endpoint novalidate data-astro-cid-gwrhl7xa>
+          <form class="contact-form" id="contactForm" data-sent="Sent" data-success="✓ Sent — we will reply within 24 hours." data-error-required="Please fill in all required fields." data-error-network="Submission failed. Please email us directly or use WhatsApp." data-error-verify="Please complete the verification." data-endpoint="/api/contact" novalidate data-astro-cid-gwrhl7xa>
             <h3 data-astro-cid-gwrhl7xa>Send Inquiry</h3>
 
             <div class="form-row" data-astro-cid-gwrhl7xa>
@@ -241,6 +241,12 @@
               <textarea id="message" name="message" rows="5" placeholder="Describe your project: power needs, capacity, application, target market, etc." required data-astro-cid-gwrhl7xa></textarea>
             </div>
 
+            <div class="form-honeypot" aria-hidden="true" data-astro-cid-gwrhl7xa>
+              <label for="website" data-astro-cid-gwrhl7xa>Website</label>
+              <input type="text" id="website" name="website" tabindex="-1" autocomplete="off" data-astro-cid-gwrhl7xa>
+            </div>
+
+            <div class="turnstile-container" id="turnstileWidget" data-astro-cid-gwrhl7xa></div>
             <button type="submit" class="btn-primary" style="width:100%" data-astro-cid-gwrhl7xa>Send</button>
             <div class="form-status" id="formStatus" role="status" aria-live="polite" data-astro-cid-gwrhl7xa></div>
           </form>
@@ -279,15 +285,57 @@
       </div>
     </section>
 
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit" async defer></script>
     <script type="module">
       const e = document.getElementById("contactForm"),
-        t = document.getElementById("formStatus");
-      e && e.addEventListener("submit", async i => {
-        i.preventDefault();
-        const a = e.querySelector("button[type=submit]"),
-          l = e.dataset.useBackend === "true",
-          r = e.dataset.endpoint || "",
-          n = {
+        t = document.getElementById("formStatus"),
+        u = document.getElementById("turnstileWidget");
+      let a = "",
+        i = null;
+      const f = async () => {
+        for (let r = 0; r < 50; r += 1) {
+          const n = window.turnstile;
+          if (n) return n;
+          await new Promise(o => setTimeout(o, 100))
+        }
+        throw new Error("Turnstile did not load")
+      }, p = () => {
+        !t || !e || (t.className = "form-status error", t.textContent = e.dataset.errorNetwork || "Submission is not configured.")
+      }, w = async () => {
+        if (!(!e || !u)) try {
+          const r = e.dataset.endpoint || "/api/contact",
+            n = await fetch(r, {
+              headers: {
+                Accept: "application/json"
+              }
+            });
+          if (!n.ok) throw new Error("Form configuration is unavailable");
+          const o = await n.json();
+          if (!o.turnstileSiteKey) throw new Error("Turnstile site key is missing");
+          i = (await f()).render(u, {
+            sitekey: o.turnstileSiteKey,
+            action: "turnstile-spin-v2",
+            theme: "light",
+            callback: m => {
+              a = m
+            },
+            "expired-callback": () => {
+              a = ""
+            },
+            "error-callback": () => {
+              a = ""
+            }
+          })
+        } catch {
+          p()
+        }
+      };
+      w();
+      e && e.addEventListener("submit", async r => {
+        r.preventDefault();
+        const n = e.querySelector("button[type=submit]"),
+          o = e.dataset.endpoint || "/api/contact",
+          l = {
             name: e.elements.namedItem("name").value.trim(),
             email: e.elements.namedItem("email").value.trim(),
             company: e.elements.namedItem("company").value.trim(),
@@ -296,39 +344,43 @@
             moq: e.elements.namedItem("moq").value.trim(),
             product: e.elements.namedItem("product").value,
             message: e.elements.namedItem("message").value.trim(),
-            _submitted_at: new Date().toISOString(),
-            _page_lang: document.documentElement.lang,
-            _page_url: location.href
+            website: e.elements.namedItem("website").value,
+            turnstileToken: a,
+            pageLang: document.documentElement.lang,
+            pageUrl: location.href
           },
-          d = ["name", "email", "country", "whatsapp", "message"];
-        for (const s of d)
-          if (!n[s]) {
+          m = ["name", "email", "country", "whatsapp", "message"];
+        for (const s of m)
+          if (!l[s]) {
             t && (t.className = "form-status error", t.textContent = e.dataset.errorRequired || "Please fill in all required fields."), e.elements.namedItem(s).focus();
             return
-          } if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(n.email)) {
-          t && (t.className = "form-status error", t.textContent = "✗ " + (e.dataset.errorRequired || "Please enter a valid email address.")), e.elements.namedItem("email").focus();
+          } if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(l.email)) {
+          t && (t.className = "form-status error", t.textContent = e.dataset.errorRequired || "Please enter a valid email address."), e.elements.namedItem("email").focus();
           return
         }
-        const o = a?.textContent || "";
-        if (a && (a.disabled = !0, a.textContent = "…"), !l) {
-          a && (a.disabled = !1, a.textContent = o), t && (t.className = "form-status error", t.textContent = e.dataset.errorNetwork || "Submission is not configured. Please contact us by email or WhatsApp.");
+        if (!a) {
+          t && (t.className = "form-status error", t.textContent = e.dataset.errorVerify || "Please complete the verification.");
           return
         }
+        const d = n?.textContent || "";
+        n && (n.disabled = !0, n.textContent = "…");
         try {
-          const s = r.includes("formspree.io"),
-            m = await fetch(r, {
-              method: "POST",
-              headers: s ? {
-                Accept: "application/json"
-              } : {
-                "Content-Type": "application/json"
-              },
-              body: s ? new FormData(e) : JSON.stringify(n)
-            });
-          if (m.ok) a && (a.textContent = "✓ " + (e.dataset.sent || "Sent"), a.style.background = "#059669"), t && (t.className = "form-status success", t.textContent = e.dataset.success || ""), e.reset();
-          else throw new Error("Server returned " + m.status)
+          const s = await fetch(o, {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              Accept: "application/json"
+            },
+            body: JSON.stringify(l)
+          });
+          if (!s.ok) throw new Error("Server returned " + s.status);
+          n && (n.textContent = "✓ " + (e.dataset.sent || "Sent"), n.style.background = "#059669"), t && (t.className = "form-status success", t.textContent = e.dataset.success || ""), e.reset(), a = "";
+          const c = window.turnstile;
+          c && i !== null && c.reset(i)
         } catch {
-          a && (a.disabled = !1, a.textContent = o || "Send"), t && (t.className = "form-status error", t.textContent = e.dataset.errorNetwork || "Submission failed.")
+          n && (n.disabled = !1, n.textContent = d || "Send"), a = "";
+          const s = window.turnstile;
+          s && i !== null && s.reset(i), t && (t.className = "form-status error", t.textContent = e.dataset.errorNetwork || "Submission failed.")
         }
       });
     </script>
