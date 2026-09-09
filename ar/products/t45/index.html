@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ar" data-lang="ar" data-lang-en="/en/products/t45/" data-lang-zh="/zh/products/t45/">
+<html lang="ar" dir="rtl" data-lang="ar" data-lang-en="/en/products/t45/" data-lang-zh="/zh/products/t45/">
 
 <head>
   <meta charset="UTF-8">
@@ -7,6 +7,56 @@
   <title>T45 تخزين قابل للتكديس</title>
   <meta name="description" content="حزمة بطارية معيارية 15 كيلوواط ساعة × 3 · بصمة صغيرة · مظهر نظيف · مثالي للسكني والتجاري الصغير.">
   <link rel="canonical" href="https://duopudun.com/ar/products/t45/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Duopudun">
+  <meta property="og:title" content="T45 تخزين قابل للتكديس">
+  <meta property="og:description" content="حزمة بطارية معيارية 15 كيلوواط ساعة × 3 · بصمة صغيرة · مظهر نظيف · مثالي للسكني والتجاري الصغير.">
+  <meta property="og:url" content="https://duopudun.com/ar/products/t45/">
+  <meta property="og:image" content="https://duopudun.com/uploads/products/t45/main.webp">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="T45 تخزين قابل للتكديس">
+  <meta name="twitter:description" content="حزمة بطارية معيارية 15 كيلوواط ساعة × 3 · بصمة صغيرة · مظهر نظيف · مثالي للسكني والتجاري الصغير.">
+  <meta name="twitter:image" content="https://duopudun.com/uploads/products/t45/main.webp">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [{
+        "@type": "Organization",
+        "@id": "https://duopudun.com/#organization",
+        "name": "Duopudun",
+        "url": "https://duopudun.com/",
+        "logo": "https://duopudun.com/Duopudun_logo.png"
+      }, {
+        "@type": "Product",
+        "name": "T45 تخزين قابل للتكديس",
+        "description": "حزمة بطارية معيارية 15 كيلوواط ساعة × 3 · بصمة صغيرة · مظهر نظيف · مثالي للسكني والتجاري الصغير.",
+        "model": "T45",
+        "sku": "T45",
+        "brand": {
+          "@type": "Brand",
+          "name": "Duopudun"
+        },
+        "image": "https://duopudun.com/uploads/products/t45/main.webp",
+        "additionalProperty": [{
+          "@type": "PropertyValue",
+          "name": "السعة",
+          "value": "45.21kWh"
+        }, {
+          "@type": "PropertyValue",
+          "name": "طاقة الإخراج",
+          "value": "6kW"
+        }, {
+          "@type": "PropertyValue",
+          "name": "الجهد القياسي",
+          "value": "230VAC"
+        }, {
+          "@type": "PropertyValue",
+          "name": "تبديل UPS",
+          "value": "10ms"
+        }]
+      }]
+    }
+  </script>
   <link rel="icon" type="image/png" href="/favicon-logo.png" sizes="178x160">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,8 +69,15 @@
   <link rel="alternate" hreflang="ar" href="https://duopudun.com/ar/products/t45/">
   <link rel="alternate" hreflang="zh-Hant" href="https://duopudun.com/zh-Hant/products/t45/">
   <link rel="alternate" hreflang="x-default" href="https://duopudun.com/en/products/t45/">
-  <link rel="stylesheet" href="/_assets/Layout.Bsqp905Y.css">
-  <link rel="stylesheet" href="/_assets/_slug_.BZ79t5Pm.css">
+  <link rel="stylesheet" href="/_assets/Layout.BymaFkJ1.css">
+  <style>
+    img[data-astro-cid-shljrivk] {
+      display: block;
+      max-width: 100%;
+      height: auto
+    }
+  </style>
+  <link rel="stylesheet" href="/_assets/_slug_.oytD1yKG.css">
 </head>
 
 <body>
@@ -38,7 +95,7 @@
       </nav>
 
       <div class="lang-dropdown">
-        <button class="lang-toggle" aria-label="Switch language">
+        <button class="lang-toggle" aria-label="Switch language" aria-expanded="false" aria-controls="languageMenu">
           <span class="lang-toggle-flag">
             <img src="/flags/sa.png" alt="AR" width="22" height="15" style="vertical-align:middle;border-radius:2px">
           </span>
@@ -47,7 +104,7 @@
             <path d="M3 5l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
           </svg>
         </button>
-        <div class="lang-menu">
+        <div class="lang-menu" id="languageMenu">
           <a href="/zh/products/t45/" class="lang-option" data-lang="zh">
             <span class="lang-option-flag">
               <img src="/flags/cn.png" alt="ZH" width="22" height="15" style="vertical-align:middle;border-radius:2px">
@@ -82,7 +139,7 @@
         </div>
       </div>
 
-      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu">
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu" aria-expanded="false" aria-controls="mobileNav">
         <span></span><span></span><span></span>
       </button>
     </div>
@@ -98,22 +155,29 @@
   </header>
 
   <script type="module">
-    const r = document.getElementById("mobileMenuBtn"),
-      t = document.getElementById("mobileNav");
-    r?.addEventListener("click", () => {
-      t && (t.style.display = t.style.display === "none" ? "flex" : "none")
+    const s = document.getElementById("mobileMenuBtn"),
+      a = document.getElementById("mobileNav");
+    s?.addEventListener("click", () => {
+      a && (a.style.display = a.style.display === "none" ? "flex" : "none", s?.setAttribute("aria-expanded", String(a.style.display === "flex")))
     });
     document.querySelectorAll(".lang-dropdown").forEach(e => {
-      const l = e.querySelector(".lang-toggle"),
+      const t = e.querySelector(".lang-toggle"),
         n = e.querySelector(".lang-menu");
-      !l || !n || l.addEventListener("click", c => {
-        c.stopPropagation(), document.querySelectorAll(".lang-menu.open").forEach(o => {
+      !t || !n || (t.addEventListener("click", l => {
+        l.stopPropagation(), document.querySelectorAll(".lang-menu.open").forEach(o => {
           o !== n && o.classList.remove("open")
-        }), n.classList.toggle("open")
-      })
+        }), n.classList.toggle("open"), t.setAttribute("aria-expanded", String(n.classList.contains("open")))
+      }), e.addEventListener("keydown", l => {
+        l.key === "Escape" && (n.classList.remove("open"), t.setAttribute("aria-expanded", "false"), t.focus())
+      }), e.addEventListener("focusout", l => {
+        e.contains(l.relatedTarget) || (n.classList.remove("open"), t.setAttribute("aria-expanded", "false"))
+      }))
     });
     document.addEventListener("click", () => {
-      document.querySelectorAll(".lang-menu.open").forEach(e => e.classList.remove("open"))
+      document.querySelectorAll(".lang-menu.open").forEach(e => e.classList.remove("open")), document.querySelectorAll(".lang-toggle").forEach(e => e.setAttribute("aria-expanded", "false"))
+    });
+    document.addEventListener("keydown", e => {
+      e.key === "Escape" && a?.style.display === "flex" && (a.style.display = "none", s?.setAttribute("aria-expanded", "false"), s?.focus())
     });
   </script>
 
@@ -122,48 +186,48 @@
     <div class="pm-page" data-astro-cid-x26yjsfs>
       <section class="pm-hero" id="overview" data-astro-cid-x26yjsfs>
         <div class="pm-container" data-astro-cid-x26yjsfs>
-          <div class="pm-hero-card" style="--pm-hero-image: url('/uploads/products/t45/main.webp')" data-astro-cid-x26yjsfs>
+          <div class="pm-hero-card" style="--pm-hero-image: url('/uploads/previews/e34ce81c17000d20-960.webp')" data-astro-cid-x26yjsfs>
             <div class="pm-hero-grid" data-astro-cid-x26yjsfs>
               <div class="pm-hero-copy" data-astro-cid-x26yjsfs>
-                <div class="pm-kicker" data-astro-cid-x26yjsfs>T45 Stackable Energy Storage System</div>
-                <h1 data-astro-cid-x26yjsfs>All-in-one Home Solar Energy Storage System <span data-astro-cid-x26yjsfs>T45</span></h1>
-                <p class="pm-hero-sub" data-astro-cid-x26yjsfs>15kWh × 3 modular battery pack · Minimal footprint · Clean look · Ideal for residential &amp; small commercial.</p>
+                <div class="pm-kicker" data-astro-cid-x26yjsfs>T45 تخزين قابل للتكديس</div>
+                <h1 data-astro-cid-x26yjsfs>T45 تخزين قابل للتكديس</h1>
+                <p class="pm-hero-sub" data-astro-cid-x26yjsfs>حزمة بطارية معيارية 15 كيلوواط ساعة × 3 · بصمة صغيرة · مظهر نظيف · مثالي للسكني والتجاري الصغير.</p>
                 <ul class="pm-bullets" data-astro-cid-x26yjsfs>
-                  <li data-astro-cid-x26yjsfs>45.21kWh energy capacity</li>
-                  <li data-astro-cid-x26yjsfs>6kW output capability</li>
-                  <li data-astro-cid-x26yjsfs>230VAC output voltage</li>
-                  <li data-astro-cid-x26yjsfs>9kW PV input</li>
+                  <li data-astro-cid-x26yjsfs>سعة الطاقة 45.21kWh</li>
+                  <li data-astro-cid-x26yjsfs>قدرة الخرج 6kW</li>
+                  <li data-astro-cid-x26yjsfs>جهد الخرج 230VAC</li>
+                  <li data-astro-cid-x26yjsfs>الدخل الكهروضوئي 9kW</li>
                 </ul>
                 <div class="pm-hero-actions" data-astro-cid-x26yjsfs>
-                  <a class="pm-btn pm-btn-primary" href="/ar/contact" data-astro-cid-x26yjsfs>Get a Quote</a>
-                  <a class="pm-btn pm-btn-secondary" href="#specs" data-astro-cid-x26yjsfs>View Specifications</a>
+                  <a class="pm-btn pm-btn-primary" href="/ar/contact?product=t45&amp;source=%2Far%2Fproducts%2Ft45%2F" data-astro-cid-x26yjsfs>طلب عرض سعر</a>
+                  <a class="pm-btn pm-btn-secondary" href="#specs" data-astro-cid-x26yjsfs>عرض المواصفات</a>
                 </div>
                 <div class="pm-hero-spec-strip" data-astro-cid-x26yjsfs>
                   <div data-astro-cid-x26yjsfs>
                     <b data-astro-cid-x26yjsfs>45.21kWh</b>
-                    <span data-astro-cid-x26yjsfs>Battery capacity</span>
+                    <span data-astro-cid-x26yjsfs>سعة البطارية</span>
                   </div>
                   <div data-astro-cid-x26yjsfs>
                     <b data-astro-cid-x26yjsfs>6kW / 6kVA</b>
-                    <span data-astro-cid-x26yjsfs>Rated output power</span>
+                    <span data-astro-cid-x26yjsfs>قدرة الخرج الاسمية</span>
                   </div>
                   <div data-astro-cid-x26yjsfs>
                     <b data-astro-cid-x26yjsfs>230VAC</b>
-                    <span data-astro-cid-x26yjsfs>Voltage platform</span>
+                    <span data-astro-cid-x26yjsfs>جهد النظام</span>
                   </div>
                   <div data-astro-cid-x26yjsfs>
                     <b data-astro-cid-x26yjsfs>IP21</b>
-                    <span data-astro-cid-x26yjsfs>Protection rating</span>
+                    <span data-astro-cid-x26yjsfs>درجة الحماية</span>
                   </div>
                 </div>
               </div>
               <div class="pm-hero-visual" data-astro-cid-x26yjsfs>
-                <img src="/uploads/products/t45/main.webp" alt="T45 product overview" loading="eager" data-astro-cid-x26yjsfs>
+                <img src="/uploads/previews/e34ce81c17000d20-960.webp" srcset="/uploads/previews/e34ce81c17000d20-480.webp 480w, /uploads/previews/e34ce81c17000d20-960.webp 960w" sizes="(max-width: 768px) 90vw, 480px" width="1200" height="1499" alt="T45 تخزين قابل للتكديس" loading="eager" fetchpriority="high" decoding="async" data-astro-cid-shljrivk>
               </div>
             </div>
 
             <div class="pm-home-loads-overlay" aria-hidden="true" data-astro-cid-x26yjsfs>
-              <div class="pm-home-loads-title" data-astro-cid-x26yjsfs>Home Loads</div>
+              <div class="pm-home-loads-title" data-astro-cid-x26yjsfs>الأحمال المنزلية</div>
               <div class="pm-home-loads-icons" data-astro-cid-x26yjsfs>
                 <div class="pm-home-load-icon pm-lamp" data-astro-cid-x26yjsfs>
                   <svg viewBox="0 0 48 60" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" data-astro-cid-x26yjsfs>
@@ -212,32 +276,32 @@
             <div class="pm-stat" data-astro-cid-x26yjsfs>
               <div class="pm-stat-icon" data-astro-cid-x26yjsfs>🔋</div>
               <b data-astro-cid-x26yjsfs>45.21kWh</b>
-              <span data-astro-cid-x26yjsfs>Battery capacity</span>
+              <span data-astro-cid-x26yjsfs>سعة البطارية</span>
             </div>
             <div class="pm-stat" data-astro-cid-x26yjsfs>
               <div class="pm-stat-icon" data-astro-cid-x26yjsfs>〰</div>
               <b data-astro-cid-x26yjsfs>6kW / 6kVA</b>
-              <span data-astro-cid-x26yjsfs>Rated output power</span>
+              <span data-astro-cid-x26yjsfs>قدرة الخرج الاسمية</span>
             </div>
             <div class="pm-stat" data-astro-cid-x26yjsfs>
               <div class="pm-stat-icon" data-astro-cid-x26yjsfs>⚡</div>
               <b data-astro-cid-x26yjsfs>230VAC</b>
-              <span data-astro-cid-x26yjsfs>Voltage platform</span>
+              <span data-astro-cid-x26yjsfs>جهد النظام</span>
             </div>
             <div class="pm-stat" data-astro-cid-x26yjsfs>
               <div class="pm-stat-icon" data-astro-cid-x26yjsfs>🛡</div>
               <b data-astro-cid-x26yjsfs>IP21</b>
-              <span data-astro-cid-x26yjsfs>Protection rating</span>
+              <span data-astro-cid-x26yjsfs>درجة الحماية</span>
             </div>
             <div class="pm-stat" data-astro-cid-x26yjsfs>
               <div class="pm-stat-icon" data-astro-cid-x26yjsfs>✓</div>
               <b data-astro-cid-x26yjsfs>UN38.3 MSDS IEC 62619</b>
-              <span data-astro-cid-x26yjsfs>Certification</span>
+              <span data-astro-cid-x26yjsfs>الشهادات</span>
             </div>
             <div class="pm-stat" data-astro-cid-x26yjsfs>
               <div class="pm-stat-icon" data-astro-cid-x26yjsfs>▦</div>
-              <b data-astro-cid-x26yjsfs>Expandable</b>
-              <span data-astro-cid-x26yjsfs>Expandable system design</span>
+              <b data-astro-cid-x26yjsfs>قابل للتوسعة</b>
+              <span data-astro-cid-x26yjsfs>تصميم نظام قابل للتوسعة</span>
             </div>
           </div>
         </div>
@@ -245,29 +309,29 @@
       <section class="pm-section pm-white" id="features" data-astro-cid-x26yjsfs>
         <div class="pm-container" data-astro-cid-x26yjsfs>
           <div class="pm-section-title-row" data-astro-cid-x26yjsfs>
-            <h2 data-astro-cid-x26yjsfs>Core product highlights</h2>
-            <p data-astro-cid-x26yjsfs>T45 is built for backup power, solar energy storage, and daily energy management, combining battery storage, inverter output, and system protection in an easy-to-deploy solution.</p>
+            <h2 data-astro-cid-x26yjsfs>أبرز مزايا المنتج</h2>
+            <p data-astro-cid-x26yjsfs>يجمع T45 بين تخزين البطارية وخرج العاكس وحماية النظام للطاقة الاحتياطية والتخزين الشمسي وإدارة الطاقة اليومية.</p>
           </div>
           <div class="pm-features" data-astro-cid-x26yjsfs>
             <article class="pm-feature" data-astro-cid-x26yjsfs>
               <div class="pm-feature-ico" data-astro-cid-x26yjsfs>🔋</div>
-              <h3 data-astro-cid-x26yjsfs>Reliable battery system</h3>
-              <p data-astro-cid-x26yjsfs>Capacity and cycle-life oriented design for home and project backup needs.</p>
+              <h3 data-astro-cid-x26yjsfs>نظام بطارية موثوق</h3>
+              <p data-astro-cid-x26yjsfs>تصميم يركز على السعة وعمر الدورات لتلبية احتياجات الطاقة الاحتياطية للمنازل والمشاريع.</p>
             </article>
             <article class="pm-feature" data-astro-cid-x26yjsfs>
               <div class="pm-feature-ico" data-astro-cid-x26yjsfs>〰</div>
-              <h3 data-astro-cid-x26yjsfs>Stable output capability</h3>
-              <p data-astro-cid-x26yjsfs>Supports common appliances, lighting, communication devices, and critical loads.</p>
+              <h3 data-astro-cid-x26yjsfs>قدرة الخرج Stable</h3>
+              <p data-astro-cid-x26yjsfs>يدعم الأجهزة الشائعة والإضاءة ومعدات الاتصال والأحمال الأساسية.</p>
             </article>
             <article class="pm-feature" data-astro-cid-x26yjsfs>
               <div class="pm-feature-ico" data-astro-cid-x26yjsfs>☀</div>
-              <h3 data-astro-cid-x26yjsfs>Solar-ready usage</h3>
-              <p data-astro-cid-x26yjsfs>Can work with solar input and local energy-use strategies to improve self-consumption.</p>
+              <h3 data-astro-cid-x26yjsfs>جاهز للاستخدام مع الطاقة الشمسية</h3>
+              <p data-astro-cid-x26yjsfs>يمكن دمجه مع دخل شمسي واستراتيجيات استخدام الطاقة المحلية لتحسين الاستهلاك الذاتي.</p>
             </article>
             <article class="pm-feature" data-astro-cid-x26yjsfs>
               <div class="pm-feature-ico" data-astro-cid-x26yjsfs>🛡</div>
-              <h3 data-astro-cid-x26yjsfs>Deployment friendly</h3>
-              <p data-astro-cid-x26yjsfs>Clear parameters help distributors, installers, and end customers evaluate configuration quickly.</p>
+              <h3 data-astro-cid-x26yjsfs>سهولة التركيب</h3>
+              <p data-astro-cid-x26yjsfs>تساعد المعلمات الواضحة الموزعين والمركبين والعملاء على تقييم التكوين بسرعة.</p>
             </article>
           </div>
         </div>
@@ -276,33 +340,33 @@
       <section class="pm-section" id="applications" data-astro-cid-x26yjsfs>
         <div class="pm-container" data-astro-cid-x26yjsfs>
           <div class="pm-section-title-row" data-astro-cid-x26yjsfs>
-            <h2 data-astro-cid-x26yjsfs>Application scenarios</h2>
-            <p data-astro-cid-x26yjsfs>T45 is designed for practical energy storage applications including backup power, solar energy use, and project-based power support.</p>
+            <h2 data-astro-cid-x26yjsfs>سيناريوهات الاستخدام</h2>
+            <p data-astro-cid-x26yjsfs>صُمم T45 لتطبيقات تخزين الطاقة والطاقة الاحتياطية واستخدام الطاقة الشمسية حسب احتياجات المشروع.</p>
           </div>
           <div class="pm-scenarios" data-astro-cid-x26yjsfs>
             <article class="pm-scenario" data-astro-cid-x26yjsfs>
-              <img src="/uploads/products/scenarios/home-backup.webp" alt="Home Backup" loading="lazy" data-astro-cid-x26yjsfs>
-              <b data-astro-cid-x26yjsfs>Home Backup</b>
+              <img src="/uploads/products/scenarios/home-backup.webp" alt="طاقة احتياطية للمنزل" loading="lazy" data-astro-cid-x26yjsfs>
+              <b data-astro-cid-x26yjsfs>طاقة احتياطية للمنزل</b>
             </article>
             <article class="pm-scenario" data-astro-cid-x26yjsfs>
-              <img src="/uploads/products/a8/scenarios/island-house.webp" alt="Rooftop Solar Storage" loading="lazy" data-astro-cid-x26yjsfs>
-              <b data-astro-cid-x26yjsfs>Rooftop Solar Storage</b>
+              <img src="/uploads/products/a8/scenarios/island-house.webp" alt="تخزين الطاقة الشمسية للأسطح" loading="lazy" data-astro-cid-x26yjsfs>
+              <b data-astro-cid-x26yjsfs>تخزين الطاقة الشمسية للأسطح</b>
             </article>
             <article class="pm-scenario" data-astro-cid-x26yjsfs>
-              <img src="/uploads/products/a8/scenarios/farm-poultry.webp" alt="Stackable Expansion" loading="lazy" data-astro-cid-x26yjsfs>
-              <b data-astro-cid-x26yjsfs>Stackable Expansion</b>
+              <img src="/uploads/products/a8/scenarios/farm-poultry.webp" alt="توسعة بالتكديس" loading="lazy" data-astro-cid-x26yjsfs>
+              <b data-astro-cid-x26yjsfs>توسعة بالتكديس</b>
             </article>
             <article class="pm-scenario" data-astro-cid-x26yjsfs>
-              <img src="/uploads/products/scenarios/small-shop-backup.webp" alt="Small Shop Backup" loading="lazy" data-astro-cid-x26yjsfs>
-              <b data-astro-cid-x26yjsfs>Small Shop Backup</b>
+              <img src="/uploads/products/scenarios/small-shop-backup.webp" alt="طاقة احتياطية للمتاجر الصغيرة" loading="lazy" data-astro-cid-x26yjsfs>
+              <b data-astro-cid-x26yjsfs>طاقة احتياطية للمتاجر الصغيرة</b>
             </article>
             <article class="pm-scenario" data-astro-cid-x26yjsfs>
-              <img src="/uploads/products/a8/scenarios/remote-site.webp" alt="EV Charging Backup" loading="lazy" data-astro-cid-x26yjsfs>
-              <b data-astro-cid-x26yjsfs>EV Charging Backup</b>
+              <img src="/uploads/products/a8/scenarios/remote-site.webp" alt="طاقة احتياطية لشحن المركبات الكهربائية" loading="lazy" data-astro-cid-x26yjsfs>
+              <b data-astro-cid-x26yjsfs>طاقة احتياطية لشحن المركبات الكهربائية</b>
             </article>
             <article class="pm-scenario" data-astro-cid-x26yjsfs>
-              <img src="/uploads/products/a8/scenarios/server-room.webp" alt="Project Power System" loading="lazy" data-astro-cid-x26yjsfs>
-              <b data-astro-cid-x26yjsfs>Project Power System</b>
+              <img src="/uploads/products/a8/scenarios/server-room.webp" alt="نظام طاقة للمشروع" loading="lazy" data-astro-cid-x26yjsfs>
+              <b data-astro-cid-x26yjsfs>نظام طاقة للمشروع</b>
             </article>
           </div>
         </div>
@@ -312,134 +376,135 @@
         <div class="pm-container pm-split" data-astro-cid-x26yjsfs>
           <div data-astro-cid-x26yjsfs>
             <div class="pm-section-title-row pm-stack-title" data-astro-cid-x26yjsfs>
-              <h2 data-astro-cid-x26yjsfs>Common home appliances running time</h2>
-              <p data-astro-cid-x26yjsfs>The estimates below use one formula based on product energy capacity and appliance wattage. Actual runtime varies by load, temperature, and system efficiency.</p>
+              <h2 data-astro-cid-x26yjsfs>مدة تشغيل الأجهزة المنزلية</h2>
+              <p data-astro-cid-x26yjsfs>مدة تشغيل نظرية لجهاز واحد: السعة الاسمية مقسومة على قدرة الجهاز، دون خسائر التحويل والطاقة الاحتياطية. تعتمد المدة الفعلية على السعة القابلة للاستخدام ودورات الحمل والظروف. تحقق من قدرة العاكس وأحمال بدء التشغيل.</p>
+
             </div>
             <div class="pm-runtime-grid" data-astro-cid-x26yjsfs>
               <div class="pm-appliance" data-astro-cid-x26yjsfs>
-                <b data-astro-cid-x26yjsfs>Air Conditioner</b>
+                <b data-astro-cid-x26yjsfs>مكيف هواء</b>
                 <small data-astro-cid-x26yjsfs>(1080 W)</small>
-                <img src="/uploads/products/a8/appliances/ac.webp" alt="Air Conditioner" loading="lazy" data-astro-cid-x26yjsfs>
-                <div class="pm-time" data-astro-cid-x26yjsfs>Approx. 42 h</div>
+                <img src="/uploads/products/a8/appliances/ac.webp" alt="مكيف هواء" loading="lazy" data-astro-cid-x26yjsfs>
+                <div class="pm-time" data-astro-cid-x26yjsfs>حوالي 42 ساعة</div>
               </div>
               <div class="pm-appliance" data-astro-cid-x26yjsfs>
-                <b data-astro-cid-x26yjsfs>Refrigerator</b>
+                <b data-astro-cid-x26yjsfs>ثلاجة</b>
                 <small data-astro-cid-x26yjsfs>(800 W)</small>
-                <img src="/uploads/products/a8/appliances/fridge.webp" alt="Refrigerator" loading="lazy" data-astro-cid-x26yjsfs>
-                <div class="pm-time" data-astro-cid-x26yjsfs>Approx. 57 h</div>
+                <img src="/uploads/products/a8/appliances/fridge.webp" alt="ثلاجة" loading="lazy" data-astro-cid-x26yjsfs>
+                <div class="pm-time" data-astro-cid-x26yjsfs>حوالي 57 ساعة</div>
               </div>
               <div class="pm-appliance" data-astro-cid-x26yjsfs>
-                <b data-astro-cid-x26yjsfs>Washing Machine</b>
+                <b data-astro-cid-x26yjsfs>غسالة</b>
                 <small data-astro-cid-x26yjsfs>(800 W)</small>
-                <img src="/uploads/products/a8/appliances/washer.webp" alt="Washing Machine" loading="lazy" data-astro-cid-x26yjsfs>
-                <div class="pm-time" data-astro-cid-x26yjsfs>Approx. 57 h</div>
+                <img src="/uploads/products/a8/appliances/washer.webp" alt="غسالة" loading="lazy" data-astro-cid-x26yjsfs>
+                <div class="pm-time" data-astro-cid-x26yjsfs>حوالي 57 ساعة</div>
               </div>
               <div class="pm-appliance" data-astro-cid-x26yjsfs>
-                <b data-astro-cid-x26yjsfs>Vacuum Cleaner</b>
+                <b data-astro-cid-x26yjsfs>مكنسة كهربائية</b>
                 <small data-astro-cid-x26yjsfs>(1000 W)</small>
-                <img src="/uploads/products/a8/appliances/vacuum.webp" alt="Vacuum Cleaner" loading="lazy" data-astro-cid-x26yjsfs>
-                <div class="pm-time" data-astro-cid-x26yjsfs>Approx. 45 h</div>
+                <img src="/uploads/products/a8/appliances/vacuum.webp" alt="مكنسة كهربائية" loading="lazy" data-astro-cid-x26yjsfs>
+                <div class="pm-time" data-astro-cid-x26yjsfs>حوالي 45 ساعة</div>
               </div>
               <div class="pm-appliance" data-astro-cid-x26yjsfs>
-                <b data-astro-cid-x26yjsfs>Microwave Oven</b>
+                <b data-astro-cid-x26yjsfs>فرن ميكروويف</b>
                 <small data-astro-cid-x26yjsfs>(500 W)</small>
-                <img src="/uploads/products/a8/appliances/microwave.webp" alt="Microwave Oven" loading="lazy" data-astro-cid-x26yjsfs>
-                <div class="pm-time" data-astro-cid-x26yjsfs>Approx. 90 h</div>
+                <img src="/uploads/products/a8/appliances/microwave.webp" alt="فرن ميكروويف" loading="lazy" data-astro-cid-x26yjsfs>
+                <div class="pm-time" data-astro-cid-x26yjsfs>حوالي 90 ساعة</div>
               </div>
               <div class="pm-appliance" data-astro-cid-x26yjsfs>
-                <b data-astro-cid-x26yjsfs>Rice Cooker</b>
+                <b data-astro-cid-x26yjsfs>جهاز طهي الأرز</b>
                 <small data-astro-cid-x26yjsfs>(850 W)</small>
-                <img src="/uploads/products/a8/appliances/ricecooker.webp" alt="Rice Cooker" loading="lazy" data-astro-cid-x26yjsfs>
-                <div class="pm-time" data-astro-cid-x26yjsfs>Approx. 53 h</div>
+                <img src="/uploads/products/a8/appliances/ricecooker.webp" alt="جهاز طهي الأرز" loading="lazy" data-astro-cid-x26yjsfs>
+                <div class="pm-time" data-astro-cid-x26yjsfs>حوالي 53 ساعة</div>
               </div>
               <div class="pm-appliance" data-astro-cid-x26yjsfs>
-                <b data-astro-cid-x26yjsfs>Induction Cooker</b>
+                <b data-astro-cid-x26yjsfs>موقد حث كهربائي</b>
                 <small data-astro-cid-x26yjsfs>(1100 W)</small>
-                <img src="/uploads/products/a8/appliances/induction.webp" alt="Induction Cooker" loading="lazy" data-astro-cid-x26yjsfs>
-                <div class="pm-time" data-astro-cid-x26yjsfs>Approx. 41 h</div>
+                <img src="/uploads/products/a8/appliances/induction.webp" alt="موقد حث كهربائي" loading="lazy" data-astro-cid-x26yjsfs>
+                <div class="pm-time" data-astro-cid-x26yjsfs>حوالي 41 ساعة</div>
               </div>
               <div class="pm-appliance" data-astro-cid-x26yjsfs>
-                <b data-astro-cid-x26yjsfs>Cooker Hood</b>
+                <b data-astro-cid-x26yjsfs>شفاط مطبخ</b>
                 <small data-astro-cid-x26yjsfs>(350 W)</small>
-                <img src="/uploads/products/a8/appliances/hood.webp" alt="Cooker Hood" loading="lazy" data-astro-cid-x26yjsfs>
-                <div class="pm-time" data-astro-cid-x26yjsfs>Approx. 129 h</div>
+                <img src="/uploads/products/a8/appliances/hood.webp" alt="شفاط مطبخ" loading="lazy" data-astro-cid-x26yjsfs>
+                <div class="pm-time" data-astro-cid-x26yjsfs>حوالي 129 ساعة</div>
               </div>
             </div>
           </div>
 
           <aside class="pm-specs" data-astro-cid-x26yjsfs>
-            <h3 data-astro-cid-x26yjsfs>Technical Specifications</h3>
+            <h3 data-astro-cid-x26yjsfs>المواصفات التقنية</h3>
             <table class="pm-spec-table" data-astro-cid-x26yjsfs>
               <tbody data-astro-cid-x26yjsfs>
 
                 <tr data-astro-cid-x26yjsfs>
-                  <th colspan="2" data-astro-cid-x26yjsfs>AC Output</th>
+                  <th colspan="2" data-astro-cid-x26yjsfs>خرج التيار المتردد</th>
                 </tr>
                 <tr data-astro-cid-x26yjsfs>
-                  <td data-astro-cid-x26yjsfs>Rated output power</td>
+                  <td data-astro-cid-x26yjsfs>قدرة الخرج الاسمية</td>
                   <td data-astro-cid-x26yjsfs>6kW / 6kVA</td>
                 </tr>
                 <tr data-astro-cid-x26yjsfs>
-                  <td data-astro-cid-x26yjsfs>Rated output voltage</td>
+                  <td data-astro-cid-x26yjsfs>جهد الخرج Rated</td>
                   <td data-astro-cid-x26yjsfs>230VAC</td>
                 </tr>
                 <tr data-astro-cid-x26yjsfs>
-                  <td data-astro-cid-x26yjsfs>Peak power</td>
+                  <td data-astro-cid-x26yjsfs>قدرة الذروة</td>
                   <td data-astro-cid-x26yjsfs>12kVA</td>
                 </tr>
                 <tr data-astro-cid-x26yjsfs>
-                  <td data-astro-cid-x26yjsfs>UPS switchover time</td>
+                  <td data-astro-cid-x26yjsfs>زمن تحويل UPS</td>
                   <td data-astro-cid-x26yjsfs>10ms</td>
                 </tr>
                 <tr data-astro-cid-x26yjsfs>
-                  <th colspan="2" data-astro-cid-x26yjsfs>Battery &amp; PV Input</th>
+                  <th colspan="2" data-astro-cid-x26yjsfs>البطارية والدخل الكهروضوئي</th>
                 </tr>
                 <tr data-astro-cid-x26yjsfs>
-                  <td data-astro-cid-x26yjsfs>Battery cell</td>
-                  <td data-astro-cid-x26yjsfs>A-Grade LiFePO4</td>
+                  <td data-astro-cid-x26yjsfs>خلية البطارية</td>
+                  <td data-astro-cid-x26yjsfs>LiFePO4 من الفئة A</td>
                 </tr>
                 <tr data-astro-cid-x26yjsfs>
-                  <td data-astro-cid-x26yjsfs>Battery capacity</td>
+                  <td data-astro-cid-x26yjsfs>سعة البطارية</td>
                   <td data-astro-cid-x26yjsfs>45.21kWh</td>
                 </tr>
                 <tr data-astro-cid-x26yjsfs>
-                  <td data-astro-cid-x26yjsfs>PV max input power</td>
+                  <td data-astro-cid-x26yjsfs>قدرة الدخل الكهروضوئي القصوى</td>
                   <td data-astro-cid-x26yjsfs>9kW</td>
                 </tr>
                 <tr data-astro-cid-x26yjsfs>
-                  <td data-astro-cid-x26yjsfs>MPPT voltage range</td>
+                  <td data-astro-cid-x26yjsfs>نطاق جهد MPPT</td>
                   <td data-astro-cid-x26yjsfs>60-450VDC</td>
                 </tr>
                 <tr data-astro-cid-x26yjsfs>
-                  <th colspan="2" data-astro-cid-x26yjsfs>Installation &amp; Compliance</th>
+                  <th colspan="2" data-astro-cid-x26yjsfs>التركيب والامتثال</th>
                 </tr>
                 <tr data-astro-cid-x26yjsfs>
-                  <td data-astro-cid-x26yjsfs>Cycle life</td>
-                  <td data-astro-cid-x26yjsfs>6000 cycles (80% retention)</td>
+                  <td data-astro-cid-x26yjsfs>عمر الدورات</td>
+                  <td data-astro-cid-x26yjsfs>6000 دورة (الاحتفاظ بنسبة 80% من السعة)</td>
                 </tr>
                 <tr data-astro-cid-x26yjsfs>
-                  <td data-astro-cid-x26yjsfs>Dimensions</td>
+                  <td data-astro-cid-x26yjsfs>الأبعاد</td>
                   <td data-astro-cid-x26yjsfs>666 x 430 x 1162mm</td>
                 </tr>
                 <tr data-astro-cid-x26yjsfs>
-                  <td data-astro-cid-x26yjsfs>Net weight</td>
+                  <td data-astro-cid-x26yjsfs>الوزن الصافي</td>
                   <td data-astro-cid-x26yjsfs>380kg</td>
                 </tr>
                 <tr data-astro-cid-x26yjsfs>
-                  <td data-astro-cid-x26yjsfs>Installation</td>
-                  <td data-astro-cid-x26yjsfs>Floor / wheel / wall-mounted</td>
+                  <td data-astro-cid-x26yjsfs>التركيب</td>
+                  <td data-astro-cid-x26yjsfs>أرضي / بعجلات / جداري</td>
                 </tr>
                 <tr data-astro-cid-x26yjsfs>
-                  <td data-astro-cid-x26yjsfs>IP grade</td>
+                  <td data-astro-cid-x26yjsfs>درجة IP</td>
                   <td data-astro-cid-x26yjsfs>IP21</td>
                 </tr>
                 <tr data-astro-cid-x26yjsfs>
-                  <td data-astro-cid-x26yjsfs>Certification</td>
+                  <td data-astro-cid-x26yjsfs>الشهادات</td>
                   <td data-astro-cid-x26yjsfs>UN38.3 MSDS IEC 62619</td>
                 </tr>
               </tbody>
             </table>
-            <p class="pm-spec-note" data-astro-cid-x26yjsfs>For project selection, confirm load type, installation method, solar input conditions, and target backup time before configuration.</p>
+            <p class="pm-spec-note" data-astro-cid-x26yjsfs>تُختار المعدات المساندة بشكل منفصل. تعتمد الواجهات والتوافق على الطراز وتكوين المشروع.</p>
           </aside>
         </div>
       </section>
@@ -447,24 +512,24 @@
       <section class="pm-section" id="accessories" data-astro-cid-x26yjsfs>
         <div class="pm-container" data-astro-cid-x26yjsfs>
           <div class="pm-section-title-row" data-astro-cid-x26yjsfs>
-            <h2 data-astro-cid-x26yjsfs>Optional accessories</h2>
-            <p data-astro-cid-x26yjsfs>Extend the system with solar input, EV charging, and backup generation options for a more complete energy solution.</p>
+            <h2 data-astro-cid-x26yjsfs>ملحقات اختيارية</h2>
+            <p data-astro-cid-x26yjsfs>تُختار المعدات المساندة بشكل منفصل. تعتمد الواجهات والتوافق على الطراز وتكوين المشروع.</p>
           </div>
           <div class="pm-accessories" data-astro-cid-x26yjsfs>
             <article class="pm-accessory" data-astro-cid-x26yjsfs>
-              <img src="/uploads/products/a8/accessories/pv-modules.webp" alt="PV Modules" loading="lazy" data-astro-cid-x26yjsfs>
-              <h3 data-astro-cid-x26yjsfs>PV Modules</h3>
-              <p data-astro-cid-x26yjsfs>Pair with solar input to support daily self-consumption and off-grid supply.</p>
+              <img src="/uploads/products/a8/accessories/pv-modules.webp" alt="وحدات كهروضوئية" loading="lazy" data-astro-cid-x26yjsfs>
+              <h3 data-astro-cid-x26yjsfs>وحدات كهروضوئية</h3>
+              <p data-astro-cid-x26yjsfs>تُدمج مع دخل شمسي لدعم الاستهلاك الذاتي اليومي والإمداد خارج الشبكة.</p>
             </article>
             <article class="pm-accessory" data-astro-cid-x26yjsfs>
-              <img src="/uploads/products/a8/accessories/ev-charger.webp" alt="EV Charging Option" loading="lazy" data-astro-cid-x26yjsfs>
-              <h3 data-astro-cid-x26yjsfs>EV Charging Option</h3>
-              <p data-astro-cid-x26yjsfs>For projects that need home energy storage and EV charging coordination.</p>
+              <img src="/uploads/products/a8/accessories/ev-charger.webp" alt="خيار شحن المركبات الكهربائية" loading="lazy" data-astro-cid-x26yjsfs>
+              <h3 data-astro-cid-x26yjsfs>خيار شحن المركبات الكهربائية</h3>
+              <p data-astro-cid-x26yjsfs>للمشاريع التي تحتاج إلى تنسيق تخزين الطاقة المنزلية وشحن المركبات الكهربائية.</p>
             </article>
             <article class="pm-accessory" data-astro-cid-x26yjsfs>
-              <img src="/uploads/products/a8/accessories/generator.webp" alt="Backup Generator" loading="lazy" data-astro-cid-x26yjsfs>
-              <h3 data-astro-cid-x26yjsfs>Backup Generator</h3>
-              <p data-astro-cid-x26yjsfs>Adds another backup source for long outages or remote sites.</p>
+              <img src="/uploads/products/a8/accessories/generator.webp" alt="مولد احتياطي" loading="lazy" data-astro-cid-x26yjsfs>
+              <h3 data-astro-cid-x26yjsfs>مولد احتياطي</h3>
+              <p data-astro-cid-x26yjsfs>يضيف مصدرًا احتياطيًا للانقطاعات الطويلة أو المواقع النائية.</p>
             </article>
           </div>
         </div>
@@ -473,26 +538,26 @@
       <section class="pm-section pm-white" id="sales-pages" data-astro-cid-x26yjsfs>
         <div class="pm-container" data-astro-cid-x26yjsfs>
           <div class="pm-section-title-row" data-astro-cid-x26yjsfs>
-            <h2 data-astro-cid-x26yjsfs>Product materials and technical overview</h2>
-            <p data-astro-cid-x26yjsfs>Review key selling points, system structure, application scenarios, and core configuration details for project evaluation.</p>
+            <h2 data-astro-cid-x26yjsfs>وثائق المنتج والنظرة التقنية</h2>
+            <p data-astro-cid-x26yjsfs>راجع المواصفات وهيكل النظام والتطبيقات المناسبة لمشروعك.</p>
           </div>
           <div class="pm-sales-pages" data-astro-cid-x26yjsfs>
             <article class="pm-sales-page" data-astro-cid-x26yjsfs>
               <a href="/uploads/products/t45/sales-pages/P25-T45.webp" target="_blank" rel="noopener noreferrer" data-astro-cid-x26yjsfs>
-                <img src="/uploads/products/t45/sales-pages/P25-T45.webp" alt="Product overview" loading="lazy" data-astro-cid-x26yjsfs>
+                <img src="/uploads/previews/6a0fa5ee36884744-960.webp" srcset="/uploads/previews/6a0fa5ee36884744-480.webp 480w, /uploads/previews/6a0fa5ee36884744-960.webp 960w" sizes="(max-width: 768px) 90vw, 480px" width="1600" height="1999" alt="نظرة عامة على المنتج" loading="lazy" fetchpriority="auto" decoding="async" data-astro-cid-shljrivk>
               </a>
               <div class="pm-sales-meta" data-astro-cid-x26yjsfs>
-                <h3 data-astro-cid-x26yjsfs>Product overview</h3>
-                <span data-astro-cid-x26yjsfs>Benefits and applications</span>
+                <h3 data-astro-cid-x26yjsfs>نظرة عامة على المنتج</h3>
+                <span data-astro-cid-x26yjsfs>المزايا والتطبيقات</span>
               </div>
             </article>
             <article class="pm-sales-page" data-astro-cid-x26yjsfs>
               <a href="/uploads/products/t45/sales-pages/P26-T45.webp" target="_blank" rel="noopener noreferrer" data-astro-cid-x26yjsfs>
-                <img src="/uploads/products/t45/sales-pages/P26-T45.webp" alt="Technical overview" loading="lazy" data-astro-cid-x26yjsfs>
+                <img src="/uploads/previews/0786cbc6062d98b4-960.webp" srcset="/uploads/previews/0786cbc6062d98b4-480.webp 480w, /uploads/previews/0786cbc6062d98b4-960.webp 960w" sizes="(max-width: 768px) 90vw, 480px" width="1600" height="1999" alt="نظرة تقنية" loading="lazy" fetchpriority="auto" decoding="async" data-astro-cid-shljrivk>
               </a>
               <div class="pm-sales-meta" data-astro-cid-x26yjsfs>
-                <h3 data-astro-cid-x26yjsfs>Technical overview</h3>
-                <span data-astro-cid-x26yjsfs>Configuration and structure</span>
+                <h3 data-astro-cid-x26yjsfs>نظرة تقنية</h3>
+                <span data-astro-cid-x26yjsfs>التكوين والهيكل</span>
               </div>
             </article>
           </div>
@@ -503,12 +568,12 @@
         <div class="pm-container" data-astro-cid-x26yjsfs>
           <div class="pm-cta" data-astro-cid-x26yjsfs>
             <div data-astro-cid-x26yjsfs>
-              <h2 data-astro-cid-x26yjsfs>Explore the T45 product brochure</h2>
-              <p data-astro-cid-x26yjsfs>Use the T45 product materials to review core specifications, application scenarios, and optional configurations, then contact Duopudun for a suitable solution.</p>
+              <h2 data-astro-cid-x26yjsfs>اطّلع على وثائق المنتج T45</h2>
+              <p data-astro-cid-x26yjsfs>راجع مواصفات T45 وتطبيقاته وخياراته، ثم تواصل مع Duopudun للحصول على حل مناسب.</p>
             </div>
             <div class="pm-cta-actions" data-astro-cid-x26yjsfs>
-              <a class="pm-btn pm-btn-secondary" href="/ar/contact" data-astro-cid-x26yjsfs>View Product Brochure</a>
-              <a class="pm-btn pm-btn-primary" href="/ar/contact" data-astro-cid-x26yjsfs>Get a Quote</a>
+              <a class="pm-btn pm-btn-secondary" href="#sales-pages" data-astro-cid-x26yjsfs>وثائق المنتج والنظرة التقنية</a>
+              <a class="pm-btn pm-btn-primary" href="/ar/contact?product=t45&amp;source=%2Far%2Fproducts%2Ft45%2F" data-astro-cid-x26yjsfs>طلب عرض سعر</a>
             </div>
           </div>
         </div>
@@ -632,13 +697,13 @@
       <div class="footer-contact">
         <span>Hong Kong</span>
         <span class="sep">|</span>
-        <span>Dexon@duopudun.com</span>
+        <a href="mailto:Dexon@duopudun.com">Dexon@duopudun.com</a>
         <span class="sep">|</span>
         <span class="footer-phones">
-          <span>+852 9678 3958</span>
-          <span>+86 130 6689 5078</span>
+          <a href="tel:+85296783958" dir="ltr">+852 9678 3958</a>
+          <a href="tel:+8613066895078" dir="ltr">+86 130 6689 5078</a>
         </span>
-        <span class="right">Duopudun is operated by Huizhou Duopudun Energy Storage Technology Co., Ltd.</span>
+        <span class="right">تدير Duopudun شركة Huizhou Duopudun Energy Storage Technology Co., Ltd.</span>
       </div>
     </div>
   </footer>

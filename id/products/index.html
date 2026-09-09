@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="id" data-lang="id" data-lang-en="/en/products/" data-lang-zh="/zh/products/">
+<html lang="id" dir="ltr" data-lang="id" data-lang-en="/en/products/" data-lang-zh="/zh/products/">
 
 <head>
   <meta charset="UTF-8">
@@ -7,6 +7,28 @@
   <title>Produk | Duopudun</title>
   <meta name="description" content="Solusi penyimpanan energi lengkap: portabel, perumahan, komersial. 1.0kWh–61.0kWh.">
   <link rel="canonical" href="https://duopudun.com/id/products/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Duopudun">
+  <meta property="og:title" content="Produk | Duopudun">
+  <meta property="og:description" content="Solusi penyimpanan energi lengkap: portabel, perumahan, komersial. 1.0kWh–61.0kWh.">
+  <meta property="og:url" content="https://duopudun.com/id/products/">
+  <meta property="og:image" content="https://duopudun.com/uploads/products/a8/main.webp">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Produk | Duopudun">
+  <meta name="twitter:description" content="Solusi penyimpanan energi lengkap: portabel, perumahan, komersial. 1.0kWh–61.0kWh.">
+  <meta name="twitter:image" content="https://duopudun.com/uploads/products/a8/main.webp">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [{
+        "@type": "Organization",
+        "@id": "https://duopudun.com/#organization",
+        "name": "Duopudun",
+        "url": "https://duopudun.com/",
+        "logo": "https://duopudun.com/Duopudun_logo.png"
+      }]
+    }
+  </script>
   <link rel="icon" type="image/png" href="/favicon-logo.png" sizes="178x160">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,7 +41,7 @@
   <link rel="alternate" hreflang="ar" href="https://duopudun.com/ar/products/">
   <link rel="alternate" hreflang="zh-Hant" href="https://duopudun.com/zh-Hant/products/">
   <link rel="alternate" hreflang="x-default" href="https://duopudun.com/en/products/">
-  <link rel="stylesheet" href="/_assets/Layout.Bsqp905Y.css">
+  <link rel="stylesheet" href="/_assets/Layout.BymaFkJ1.css">
   <style>
     .site-page-hero[data-astro-cid-s5hxusys] {
       box-sizing: border-box;
@@ -133,7 +155,14 @@
       }
     }
   </style>
-  <link rel="stylesheet" href="/_assets/products.JM1v14S-.css">
+  <link rel="stylesheet" href="/_assets/products.B38W7XIR.css">
+  <style>
+    img[data-astro-cid-shljrivk] {
+      display: block;
+      max-width: 100%;
+      height: auto
+    }
+  </style>
 </head>
 
 <body>
@@ -151,7 +180,7 @@
       </nav>
 
       <div class="lang-dropdown">
-        <button class="lang-toggle" aria-label="Switch language">
+        <button class="lang-toggle" aria-label="Switch language" aria-expanded="false" aria-controls="languageMenu">
           <span class="lang-toggle-flag">
             <img src="/flags/id.png" alt="ID" width="22" height="15" style="vertical-align:middle;border-radius:2px">
           </span>
@@ -160,7 +189,7 @@
             <path d="M3 5l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
           </svg>
         </button>
-        <div class="lang-menu">
+        <div class="lang-menu" id="languageMenu">
           <a href="/zh/products/" class="lang-option" data-lang="zh">
             <span class="lang-option-flag">
               <img src="/flags/cn.png" alt="ZH" width="22" height="15" style="vertical-align:middle;border-radius:2px">
@@ -195,7 +224,7 @@
         </div>
       </div>
 
-      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu">
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu" aria-expanded="false" aria-controls="mobileNav">
         <span></span><span></span><span></span>
       </button>
     </div>
@@ -211,22 +240,29 @@
   </header>
 
   <script type="module">
-    const r = document.getElementById("mobileMenuBtn"),
-      t = document.getElementById("mobileNav");
-    r?.addEventListener("click", () => {
-      t && (t.style.display = t.style.display === "none" ? "flex" : "none")
+    const s = document.getElementById("mobileMenuBtn"),
+      a = document.getElementById("mobileNav");
+    s?.addEventListener("click", () => {
+      a && (a.style.display = a.style.display === "none" ? "flex" : "none", s?.setAttribute("aria-expanded", String(a.style.display === "flex")))
     });
     document.querySelectorAll(".lang-dropdown").forEach(e => {
-      const l = e.querySelector(".lang-toggle"),
+      const t = e.querySelector(".lang-toggle"),
         n = e.querySelector(".lang-menu");
-      !l || !n || l.addEventListener("click", c => {
-        c.stopPropagation(), document.querySelectorAll(".lang-menu.open").forEach(o => {
+      !t || !n || (t.addEventListener("click", l => {
+        l.stopPropagation(), document.querySelectorAll(".lang-menu.open").forEach(o => {
           o !== n && o.classList.remove("open")
-        }), n.classList.toggle("open")
-      })
+        }), n.classList.toggle("open"), t.setAttribute("aria-expanded", String(n.classList.contains("open")))
+      }), e.addEventListener("keydown", l => {
+        l.key === "Escape" && (n.classList.remove("open"), t.setAttribute("aria-expanded", "false"), t.focus())
+      }), e.addEventListener("focusout", l => {
+        e.contains(l.relatedTarget) || (n.classList.remove("open"), t.setAttribute("aria-expanded", "false"))
+      }))
     });
     document.addEventListener("click", () => {
-      document.querySelectorAll(".lang-menu.open").forEach(e => e.classList.remove("open"))
+      document.querySelectorAll(".lang-menu.open").forEach(e => e.classList.remove("open")), document.querySelectorAll(".lang-toggle").forEach(e => e.setAttribute("aria-expanded", "false"))
+    });
+    document.addEventListener("keydown", e => {
+      e.key === "Escape" && a?.style.display === "flex" && (a.style.display = "none", s?.setAttribute("aria-expanded", "false"), s?.focus())
     });
   </script>
 
@@ -244,15 +280,15 @@
         <div class="page-stats" style="--stats-columns:3" data-astro-cid-mk3nblm4>
           <div class="page-stat" data-astro-cid-mk3nblm4>
             <b data-astro-cid-mk3nblm4>5</b>
-            <span data-astro-cid-mk3nblm4>product series</span>
+            <span data-astro-cid-mk3nblm4>Seri produk</span>
           </div>
           <div class="page-stat" data-astro-cid-mk3nblm4>
-            <b data-astro-cid-mk3nblm4>1.28-61.0kWh</b>
-            <span data-astro-cid-mk3nblm4>capacity range</span>
+            <b data-astro-cid-mk3nblm4>1.28-61 kWh</b>
+            <span data-astro-cid-mk3nblm4>Rentang kapasitas</span>
           </div>
           <div class="page-stat" data-astro-cid-mk3nblm4>
             <b data-astro-cid-mk3nblm4>22</b>
-            <span data-astro-cid-mk3nblm4>current models</span>
+            <span data-astro-cid-mk3nblm4>Model tersedia</span>
           </div>
         </div>
       </div>
@@ -265,7 +301,7 @@
             <span class="product-tag" data-astro-cid-am7tunks>Seri Portable</span>
             <h2 class="series-name" data-astro-cid-am7tunks>Seri Portabel</h2>
             <p class="product-desc" data-astro-cid-am7tunks>Kapasitas 1-5kWh dan output 1-3,6kW, desain ringkas, pengisian PV/DC/AC, serta gelombang sinus murni untuk kerja luar ruangan, daya cadangan, dan perjalanan kendaraan.</p>
-            <div class="series-range" data-astro-cid-am7tunks>1.28-5.12kWh portable backup</div>
+            <div class="series-range" data-astro-cid-am7tunks>1.28-2.63 kWh</div>
             <div class="model-groups" aria-label="Seri Portabel" data-astro-cid-am7tunks>
               <div class="model-group" data-astro-cid-am7tunks>
 
@@ -277,16 +313,16 @@
           </div>
 
           <a href="/id/products/m1" class="product-visual" aria-label="Seri Portabel" data-astro-cid-am7tunks>
-            <img src="/uploads/products/m1/main.webp" alt="Seri Portabel" loading="lazy" data-astro-cid-am7tunks>
+            <img src="/uploads/previews/dafea711b03dc984-960.webp" srcset="/uploads/previews/dafea711b03dc984-480.webp 480w, /uploads/previews/dafea711b03dc984-960.webp 960w" sizes="(max-width: 768px) 90vw, 480px" width="1200" height="1499" alt="Seri Portabel" loading="lazy" fetchpriority="auto" decoding="async" data-astro-cid-shljrivk>
           </a>
         </div>
 
         <div class="product-card-side" data-astro-cid-am7tunks>
           <div class="series-meta" data-astro-cid-am7tunks>
-            <span data-astro-cid-am7tunks>Featured model</span>
+            <span data-astro-cid-am7tunks>Model unggulan</span>
             <b data-astro-cid-am7tunks>M1</b>
           </div>
-          <p class="featured-note" data-astro-cid-am7tunks>1.28-5.12kWh portable backup</p>
+          <p class="featured-note" data-astro-cid-am7tunks>1.28-2.63 kWh</p>
           <div class="specs-grid" data-astro-cid-am7tunks>
             <div class="spec-chip spec-chip-primary" data-astro-cid-am7tunks>
               <span data-astro-cid-am7tunks>Kapasitas</span>
@@ -314,8 +350,8 @@
             </div>
           </div>
           <div class="product-ctas" data-astro-cid-am7tunks>
-            <a href="/id/products/m1" class="btn-outline" data-astro-cid-am7tunks>View details</a>
-            <a href="/id/contact" class="btn-primary" data-astro-cid-am7tunks>Dapatkan Penawaran →</a>
+            <a href="/id/products/m1" class="btn-outline" data-astro-cid-am7tunks>Lihat detail</a>
+            <a href="/id/contact?product=m1&amp;source=%2Fid%2Fproducts%2F" class="btn-primary" data-astro-cid-am7tunks>Dapatkan Penawaran →</a>
           </div>
         </div>
       </section>
@@ -325,7 +361,7 @@
             <span class="product-tag" data-astro-cid-am7tunks>Seri All-in-One</span>
             <h2 class="series-name" data-astro-cid-am7tunks>Seri All-in-One</h2>
             <p class="product-desc" data-astro-cid-am7tunks>Kapasitas 2,56–16kWh, output 1,2–6kW, MPPT 99,5%, 4 mode pengisian, daya pengisian dapat disesuaikan, desain modular, tampilan bersih, hemat ruang interior, pemasangan dan penerapan yang sangat mudah.</p>
-            <div class="series-range" data-astro-cid-am7tunks>2.56-16kWh all-in-one storage</div>
+            <div class="series-range" data-astro-cid-am7tunks>2.56-15 kWh</div>
             <div class="model-groups" aria-label="Seri All-in-One" data-astro-cid-am7tunks>
               <div class="model-group" data-astro-cid-am7tunks>
 
@@ -337,16 +373,16 @@
           </div>
 
           <a href="/id/products/a8" class="product-visual" aria-label="Seri All-in-One" data-astro-cid-am7tunks>
-            <img src="/uploads/products/a8/main.webp" alt="Seri All-in-One" loading="lazy" data-astro-cid-am7tunks>
+            <img src="/uploads/previews/62cbf91077f9f621-960.webp" srcset="/uploads/previews/62cbf91077f9f621-480.webp 480w, /uploads/previews/62cbf91077f9f621-960.webp 960w" sizes="(max-width: 768px) 90vw, 480px" width="1200" height="1499" alt="Seri All-in-One" loading="lazy" fetchpriority="auto" decoding="async" data-astro-cid-shljrivk>
           </a>
         </div>
 
         <div class="product-card-side" data-astro-cid-am7tunks>
           <div class="series-meta" data-astro-cid-am7tunks>
-            <span data-astro-cid-am7tunks>Featured model</span>
+            <span data-astro-cid-am7tunks>Model unggulan</span>
             <b data-astro-cid-am7tunks>A8</b>
           </div>
-          <p class="featured-note" data-astro-cid-am7tunks>2.56-16kWh all-in-one storage</p>
+          <p class="featured-note" data-astro-cid-am7tunks>2.56-15 kWh</p>
           <div class="specs-grid" data-astro-cid-am7tunks>
             <div class="spec-chip spec-chip-primary" data-astro-cid-am7tunks>
               <span data-astro-cid-am7tunks>Kapasitas</span>
@@ -366,8 +402,8 @@
             </div>
           </div>
           <div class="product-ctas" data-astro-cid-am7tunks>
-            <a href="/id/products/a8" class="btn-outline" data-astro-cid-am7tunks>View details</a>
-            <a href="/id/contact" class="btn-primary" data-astro-cid-am7tunks>Dapatkan Penawaran →</a>
+            <a href="/id/products/a8" class="btn-outline" data-astro-cid-am7tunks>Lihat detail</a>
+            <a href="/id/contact?product=a8&amp;source=%2Fid%2Fproducts%2F" class="btn-primary" data-astro-cid-am7tunks>Dapatkan Penawaran →</a>
           </div>
         </div>
       </section>
@@ -377,16 +413,16 @@
             <span class="product-tag" data-astro-cid-am7tunks>Seri Stackable</span>
             <h2 class="series-name" data-astro-cid-am7tunks>Seri Stackable</h2>
             <p class="product-desc" data-astro-cid-am7tunks>Desain modular stackable dengan modul baterai 48V/104Ah/5kWh, dapat dikonfigurasi 10–20kWh, inverter 6kW.</p>
-            <div class="series-range" data-astro-cid-am7tunks>Stackable expansion / high-power output</div>
+            <div class="series-range" data-astro-cid-am7tunks>15.07-60.28 kWh</div>
             <div class="model-groups" aria-label="Seri Stackable" data-astro-cid-am7tunks>
               <div class="model-group" data-astro-cid-am7tunks>
-                <span class="model-group-label" data-astro-cid-am7tunks>T Series</span>
+                <span class="model-group-label" data-astro-cid-am7tunks>Seri T</span>
                 <div class="model-chip-row" data-astro-cid-am7tunks>
                   <a href="/id/products/t15pro" class="model-chip " data-astro-cid-am7tunks>T15Pro</a><a href="/id/products/t30" class="model-chip " data-astro-cid-am7tunks>T30</a><a href="/id/products/t45" class="model-chip " data-astro-cid-am7tunks>T45</a><a href="/id/products/t60" class="model-chip " data-astro-cid-am7tunks>T60</a>
                 </div>
               </div>
               <div class="model-group" data-astro-cid-am7tunks>
-                <span class="model-group-label" data-astro-cid-am7tunks>K Series</span>
+                <span class="model-group-label" data-astro-cid-am7tunks>Seri K</span>
                 <div class="model-chip-row" data-astro-cid-am7tunks>
                   <a href="/id/products/k15" class="model-chip " data-astro-cid-am7tunks>K15</a><a href="/id/products/k16" class="model-chip " data-astro-cid-am7tunks>K16</a><a href="/id/products/k30" class="model-chip model-chip-featured" data-astro-cid-am7tunks>K30</a><a href="/id/products/k32" class="model-chip " data-astro-cid-am7tunks>K32</a><a href="/id/products/k45" class="model-chip " data-astro-cid-am7tunks>K45</a><a href="/id/products/k60" class="model-chip " data-astro-cid-am7tunks>K60</a>
                 </div>
@@ -395,16 +431,16 @@
           </div>
 
           <a href="/id/products/k30" class="product-visual" aria-label="Seri Stackable" data-astro-cid-am7tunks>
-            <img src="/uploads/products/k30/main.webp" alt="Seri Stackable" loading="lazy" data-astro-cid-am7tunks>
+            <img src="/uploads/previews/7efeac857b63f2bd-960.webp" srcset="/uploads/previews/7efeac857b63f2bd-480.webp 480w, /uploads/previews/7efeac857b63f2bd-960.webp 960w" sizes="(max-width: 768px) 90vw, 480px" width="1200" height="1499" alt="Seri Stackable" loading="lazy" fetchpriority="auto" decoding="async" data-astro-cid-shljrivk>
           </a>
         </div>
 
         <div class="product-card-side" data-astro-cid-am7tunks>
           <div class="series-meta" data-astro-cid-am7tunks>
-            <span data-astro-cid-am7tunks>Featured model</span>
+            <span data-astro-cid-am7tunks>Model unggulan</span>
             <b data-astro-cid-am7tunks>K30</b>
           </div>
-          <p class="featured-note" data-astro-cid-am7tunks>Stackable expansion / high-power output</p>
+          <p class="featured-note" data-astro-cid-am7tunks>15.07-60.28 kWh</p>
           <div class="specs-grid" data-astro-cid-am7tunks>
             <div class="spec-chip spec-chip-primary" data-astro-cid-am7tunks>
               <span data-astro-cid-am7tunks>Kapasitas</span>
@@ -424,8 +460,8 @@
             </div>
           </div>
           <div class="product-ctas" data-astro-cid-am7tunks>
-            <a href="/id/products/k30" class="btn-outline" data-astro-cid-am7tunks>View details</a>
-            <a href="/id/contact" class="btn-primary" data-astro-cid-am7tunks>Dapatkan Penawaran →</a>
+            <a href="/id/products/k30" class="btn-outline" data-astro-cid-am7tunks>Lihat detail</a>
+            <a href="/id/contact?product=k30&amp;source=%2Fid%2Fproducts%2F" class="btn-primary" data-astro-cid-am7tunks>Dapatkan Penawaran →</a>
           </div>
         </div>
       </section>
@@ -435,7 +471,7 @@
             <span class="product-tag" data-astro-cid-am7tunks>Seri Wall-Mount</span>
             <h2 class="series-name" data-astro-cid-am7tunks>Seri Baterai Dinding</h2>
             <p class="product-desc" data-astro-cid-am7tunks>Baterai LiFePO4 pasang dinding, kapasitas 5–20kWh, desain modular stackable, kompatibel dengan inverter multi-merek.</p>
-            <div class="series-range" data-astro-cid-am7tunks>Wall-mounted storage / unlimited space</div>
+            <div class="series-range" data-astro-cid-am7tunks>5 kWh</div>
             <div class="model-groups" aria-label="Seri Baterai Dinding" data-astro-cid-am7tunks>
               <div class="model-group" data-astro-cid-am7tunks>
 
@@ -447,16 +483,16 @@
           </div>
 
           <a href="/id/products/d5" class="product-visual" aria-label="Seri Baterai Dinding" data-astro-cid-am7tunks>
-            <img src="/uploads/products/d5/main.webp" alt="Seri Baterai Dinding" loading="lazy" data-astro-cid-am7tunks>
+            <img src="/uploads/previews/ac25b82ae67a2a4e-960.webp" srcset="/uploads/previews/ac25b82ae67a2a4e-480.webp 480w, /uploads/previews/ac25b82ae67a2a4e-960.webp 960w" sizes="(max-width: 768px) 90vw, 480px" width="1200" height="1499" alt="Seri Baterai Dinding" loading="lazy" fetchpriority="auto" decoding="async" data-astro-cid-shljrivk>
           </a>
         </div>
 
         <div class="product-card-side" data-astro-cid-am7tunks>
           <div class="series-meta" data-astro-cid-am7tunks>
-            <span data-astro-cid-am7tunks>Featured model</span>
+            <span data-astro-cid-am7tunks>Model unggulan</span>
             <b data-astro-cid-am7tunks>D5</b>
           </div>
-          <p class="featured-note" data-astro-cid-am7tunks>Wall-mounted storage / unlimited space</p>
+          <p class="featured-note" data-astro-cid-am7tunks>5 kWh</p>
           <div class="specs-grid" data-astro-cid-am7tunks>
             <div class="spec-chip spec-chip-primary" data-astro-cid-am7tunks>
               <span data-astro-cid-am7tunks>Kapasitas</span>
@@ -468,8 +504,8 @@
             </div>
           </div>
           <div class="product-ctas" data-astro-cid-am7tunks>
-            <a href="/id/products/d5" class="btn-outline" data-astro-cid-am7tunks>View details</a>
-            <a href="/id/contact" class="btn-primary" data-astro-cid-am7tunks>Dapatkan Penawaran →</a>
+            <a href="/id/products/d5" class="btn-outline" data-astro-cid-am7tunks>Lihat detail</a>
+            <a href="/id/contact?product=d5&amp;source=%2Fid%2Fproducts%2F" class="btn-primary" data-astro-cid-am7tunks>Dapatkan Penawaran →</a>
           </div>
         </div>
       </section>
@@ -479,7 +515,7 @@
             <span class="product-tag" data-astro-cid-am7tunks>Seri Kabinet HV</span>
             <h2 class="series-name" data-astro-cid-am7tunks>Seri Kabinet HV</h2>
             <p class="product-desc" data-astro-cid-am7tunks>Lemari all-in-one HV pendinginan cair (100kWh/200kWh), pendinginan cair + alami cerdas, IP54 luar ruangan.</p>
-            <div class="series-range" data-astro-cid-am7tunks>High-voltage cabinet / microgrid solution</div>
+            <div class="series-range" data-astro-cid-am7tunks>61 kWh</div>
             <div class="model-groups" aria-label="Seri Kabinet HV" data-astro-cid-am7tunks>
               <div class="model-group" data-astro-cid-am7tunks>
 
@@ -491,16 +527,16 @@
           </div>
 
           <a href="/id/products/h6050" class="product-visual" aria-label="Seri Kabinet HV" data-astro-cid-am7tunks>
-            <img src="/uploads/products/h6050/main.webp" alt="Seri Kabinet HV" loading="lazy" data-astro-cid-am7tunks>
+            <img src="/uploads/previews/7701190928d1c7d4-960.webp" srcset="/uploads/previews/7701190928d1c7d4-480.webp 480w, /uploads/previews/7701190928d1c7d4-960.webp 960w" sizes="(max-width: 768px) 90vw, 480px" width="1200" height="1499" alt="Seri Kabinet HV" loading="lazy" fetchpriority="auto" decoding="async" data-astro-cid-shljrivk>
           </a>
         </div>
 
         <div class="product-card-side" data-astro-cid-am7tunks>
           <div class="series-meta" data-astro-cid-am7tunks>
-            <span data-astro-cid-am7tunks>Featured model</span>
+            <span data-astro-cid-am7tunks>Model unggulan</span>
             <b data-astro-cid-am7tunks>H6050</b>
           </div>
-          <p class="featured-note" data-astro-cid-am7tunks>High-voltage cabinet / microgrid solution</p>
+          <p class="featured-note" data-astro-cid-am7tunks>61 kWh</p>
           <div class="specs-grid" data-astro-cid-am7tunks>
             <div class="spec-chip spec-chip-primary" data-astro-cid-am7tunks>
               <span data-astro-cid-am7tunks>Kapasitas</span>
@@ -516,8 +552,8 @@
             </div>
           </div>
           <div class="product-ctas" data-astro-cid-am7tunks>
-            <a href="/id/products/h6050" class="btn-outline" data-astro-cid-am7tunks>View details</a>
-            <a href="/id/contact" class="btn-primary" data-astro-cid-am7tunks>Dapatkan Penawaran →</a>
+            <a href="/id/products/h6050" class="btn-outline" data-astro-cid-am7tunks>Lihat detail</a>
+            <a href="/id/contact?product=h6050&amp;source=%2Fid%2Fproducts%2F" class="btn-primary" data-astro-cid-am7tunks>Dapatkan Penawaran →</a>
           </div>
         </div>
       </section>
@@ -640,13 +676,13 @@
       <div class="footer-contact">
         <span>Hong Kong</span>
         <span class="sep">|</span>
-        <span>Dexon@duopudun.com</span>
+        <a href="mailto:Dexon@duopudun.com">Dexon@duopudun.com</a>
         <span class="sep">|</span>
         <span class="footer-phones">
-          <span>+852 9678 3958</span>
-          <span>+86 130 6689 5078</span>
+          <a href="tel:+85296783958" dir="ltr">+852 9678 3958</a>
+          <a href="tel:+8613066895078" dir="ltr">+86 130 6689 5078</a>
         </span>
-        <span class="right">Duopudun is operated by Huizhou Duopudun Energy Storage Technology Co., Ltd.</span>
+        <span class="right">Duopudun dioperasikan oleh Huizhou Duopudun Energy Storage Technology Co., Ltd.</span>
       </div>
     </div>
   </footer>

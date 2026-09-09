@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-CN" data-lang="zh" data-lang-en="/en/products/k16/" data-lang-zh="/zh/products/k16/">
+<html lang="zh-CN" dir="ltr" data-lang="zh" data-lang-en="/en/products/k16/" data-lang-zh="/zh/products/k16/">
 
 <head>
   <meta charset="UTF-8">
@@ -7,6 +7,56 @@
   <title>K16 堆叠式储能</title>
   <meta name="description" content="可内置7kW EV充电器 · 10kW输出 · 双路MPPT · 落地安装 · 极少占地 · 极简外观 · 适用于家庭和办公场所等。">
   <link rel="canonical" href="https://duopudun.com/zh/products/k16/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Duopudun">
+  <meta property="og:title" content="K16 堆叠式储能">
+  <meta property="og:description" content="可内置7kW EV充电器 · 10kW输出 · 双路MPPT · 落地安装 · 极少占地 · 极简外观 · 适用于家庭和办公场所等。">
+  <meta property="og:url" content="https://duopudun.com/zh/products/k16/">
+  <meta property="og:image" content="https://duopudun.com/uploads/products/k16/main.webp">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="K16 堆叠式储能">
+  <meta name="twitter:description" content="可内置7kW EV充电器 · 10kW输出 · 双路MPPT · 落地安装 · 极少占地 · 极简外观 · 适用于家庭和办公场所等。">
+  <meta name="twitter:image" content="https://duopudun.com/uploads/products/k16/main.webp">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [{
+        "@type": "Organization",
+        "@id": "https://duopudun.com/#organization",
+        "name": "Duopudun",
+        "url": "https://duopudun.com/",
+        "logo": "https://duopudun.com/Duopudun_logo.png"
+      }, {
+        "@type": "Product",
+        "name": "K16 堆叠式储能",
+        "description": "可内置7kW EV充电器 · 10kW输出 · 双路MPPT · 落地安装 · 极少占地 · 极简外观 · 适用于家庭和办公场所等。",
+        "model": "K16",
+        "sku": "K16",
+        "brand": {
+          "@type": "Brand",
+          "name": "Duopudun"
+        },
+        "image": "https://duopudun.com/uploads/products/k16/main.webp",
+        "additionalProperty": [{
+          "@type": "PropertyValue",
+          "name": "电池容量",
+          "value": "16kWh"
+        }, {
+          "@type": "PropertyValue",
+          "name": "输出功率",
+          "value": "10kW"
+        }, {
+          "@type": "PropertyValue",
+          "name": "EV充电",
+          "value": "7kW"
+        }, {
+          "@type": "PropertyValue",
+          "name": "MPPT效率",
+          "value": "99.5%"
+        }]
+      }]
+    }
+  </script>
   <link rel="icon" type="image/png" href="/favicon-logo.png" sizes="178x160">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,8 +69,15 @@
   <link rel="alternate" hreflang="ar" href="https://duopudun.com/ar/products/k16/">
   <link rel="alternate" hreflang="zh-Hant" href="https://duopudun.com/zh-Hant/products/k16/">
   <link rel="alternate" hreflang="x-default" href="https://duopudun.com/en/products/k16/">
-  <link rel="stylesheet" href="/_assets/Layout.Bsqp905Y.css">
-  <link rel="stylesheet" href="/_assets/_slug_.BZ79t5Pm.css">
+  <link rel="stylesheet" href="/_assets/Layout.BymaFkJ1.css">
+  <style>
+    img[data-astro-cid-shljrivk] {
+      display: block;
+      max-width: 100%;
+      height: auto
+    }
+  </style>
+  <link rel="stylesheet" href="/_assets/_slug_.oytD1yKG.css">
 </head>
 
 <body>
@@ -38,7 +95,7 @@
       </nav>
 
       <div class="lang-dropdown">
-        <button class="lang-toggle" aria-label="Switch language">
+        <button class="lang-toggle" aria-label="Switch language" aria-expanded="false" aria-controls="languageMenu">
           <span class="lang-toggle-flag">
             <img src="/flags/cn.png" alt="ZH" width="22" height="15" style="vertical-align:middle;border-radius:2px">
           </span>
@@ -47,7 +104,7 @@
             <path d="M3 5l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
           </svg>
         </button>
-        <div class="lang-menu">
+        <div class="lang-menu" id="languageMenu">
           <a href="/zh/products/k16/" class="lang-option" data-lang="zh">
             <span class="lang-option-flag">
               <img src="/flags/cn.png" alt="ZH" width="22" height="15" style="vertical-align:middle;border-radius:2px">
@@ -82,7 +139,7 @@
         </div>
       </div>
 
-      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu">
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu" aria-expanded="false" aria-controls="mobileNav">
         <span></span><span></span><span></span>
       </button>
     </div>
@@ -98,22 +155,29 @@
   </header>
 
   <script type="module">
-    const r = document.getElementById("mobileMenuBtn"),
-      t = document.getElementById("mobileNav");
-    r?.addEventListener("click", () => {
-      t && (t.style.display = t.style.display === "none" ? "flex" : "none")
+    const s = document.getElementById("mobileMenuBtn"),
+      a = document.getElementById("mobileNav");
+    s?.addEventListener("click", () => {
+      a && (a.style.display = a.style.display === "none" ? "flex" : "none", s?.setAttribute("aria-expanded", String(a.style.display === "flex")))
     });
     document.querySelectorAll(".lang-dropdown").forEach(e => {
-      const l = e.querySelector(".lang-toggle"),
+      const t = e.querySelector(".lang-toggle"),
         n = e.querySelector(".lang-menu");
-      !l || !n || l.addEventListener("click", c => {
-        c.stopPropagation(), document.querySelectorAll(".lang-menu.open").forEach(o => {
+      !t || !n || (t.addEventListener("click", l => {
+        l.stopPropagation(), document.querySelectorAll(".lang-menu.open").forEach(o => {
           o !== n && o.classList.remove("open")
-        }), n.classList.toggle("open")
-      })
+        }), n.classList.toggle("open"), t.setAttribute("aria-expanded", String(n.classList.contains("open")))
+      }), e.addEventListener("keydown", l => {
+        l.key === "Escape" && (n.classList.remove("open"), t.setAttribute("aria-expanded", "false"), t.focus())
+      }), e.addEventListener("focusout", l => {
+        e.contains(l.relatedTarget) || (n.classList.remove("open"), t.setAttribute("aria-expanded", "false"))
+      }))
     });
     document.addEventListener("click", () => {
-      document.querySelectorAll(".lang-menu.open").forEach(e => e.classList.remove("open"))
+      document.querySelectorAll(".lang-menu.open").forEach(e => e.classList.remove("open")), document.querySelectorAll(".lang-toggle").forEach(e => e.setAttribute("aria-expanded", "false"))
+    });
+    document.addEventListener("keydown", e => {
+      e.key === "Escape" && a?.style.display === "flex" && (a.style.display = "none", s?.setAttribute("aria-expanded", "false"), s?.focus())
     });
   </script>
 
@@ -122,11 +186,11 @@
     <div class="pm-page" data-astro-cid-x26yjsfs>
       <section class="pm-hero" id="overview" data-astro-cid-x26yjsfs>
         <div class="pm-container" data-astro-cid-x26yjsfs>
-          <div class="pm-hero-card" style="--pm-hero-image: url('/uploads/products/k16/main.webp')" data-astro-cid-x26yjsfs>
+          <div class="pm-hero-card" style="--pm-hero-image: url('/uploads/previews/d7acda5ed773ddaf-960.webp')" data-astro-cid-x26yjsfs>
             <div class="pm-hero-grid" data-astro-cid-x26yjsfs>
               <div class="pm-hero-copy" data-astro-cid-x26yjsfs>
                 <div class="pm-kicker" data-astro-cid-x26yjsfs>K16 堆叠式储能系统</div>
-                <h1 data-astro-cid-x26yjsfs>一体化家用太阳能储能系统 <span data-astro-cid-x26yjsfs>K16</span></h1>
+                <h1 data-astro-cid-x26yjsfs>K16 堆叠式储能</h1>
                 <p class="pm-hero-sub" data-astro-cid-x26yjsfs>可内置7kW EV充电器 · 10kW输出 · 双路MPPT · 落地安装 · 极少占地 · 极简外观 · 适用于家庭和办公场所等。</p>
                 <ul class="pm-bullets" data-astro-cid-x26yjsfs>
                   <li data-astro-cid-x26yjsfs>16kWh 储能容量</li>
@@ -135,7 +199,7 @@
                   <li data-astro-cid-x26yjsfs>IP21 防护等级</li>
                 </ul>
                 <div class="pm-hero-actions" data-astro-cid-x26yjsfs>
-                  <a class="pm-btn pm-btn-primary" href="/zh/contact" data-astro-cid-x26yjsfs>立即询价</a>
+                  <a class="pm-btn pm-btn-primary" href="/zh/contact?product=k16&amp;source=%2Fzh%2Fproducts%2Fk16%2F" data-astro-cid-x26yjsfs>立即询价</a>
                   <a class="pm-btn pm-btn-secondary" href="#specs" data-astro-cid-x26yjsfs>查看规格</a>
                 </div>
                 <div class="pm-hero-spec-strip" data-astro-cid-x26yjsfs>
@@ -158,7 +222,7 @@
                 </div>
               </div>
               <div class="pm-hero-visual" data-astro-cid-x26yjsfs>
-                <img src="/uploads/products/k16/main.webp" alt="K16 product overview" loading="eager" data-astro-cid-x26yjsfs>
+                <img src="/uploads/previews/d7acda5ed773ddaf-960.webp" srcset="/uploads/previews/d7acda5ed773ddaf-480.webp 480w, /uploads/previews/d7acda5ed773ddaf-960.webp 960w" sizes="(max-width: 768px) 90vw, 480px" width="1200" height="1499" alt="K16 堆叠式储能" loading="eager" fetchpriority="high" decoding="async" data-astro-cid-shljrivk>
               </div>
             </div>
 
@@ -313,7 +377,8 @@
           <div data-astro-cid-x26yjsfs>
             <div class="pm-section-title-row pm-stack-title" data-astro-cid-x26yjsfs>
               <h2 data-astro-cid-x26yjsfs>常见家电续航时间</h2>
-              <p data-astro-cid-x26yjsfs>以下续航按产品电量和家电功率统一估算，实际时间会受负载波动、环境温度和系统效率影响。</p>
+              <p data-astro-cid-x26yjsfs>按标称容量 ÷ 单台家电功率估算的理论续航，不计转换损耗和备用电量。实际时间取决于放电深度、负载启停和环境；请确认逆变器功率及启动负载。</p>
+
             </div>
             <div class="pm-runtime-grid" data-astro-cid-x26yjsfs>
               <div class="pm-appliance" data-astro-cid-x26yjsfs>
@@ -401,7 +466,7 @@
                 </tr>
               </tbody>
             </table>
-            <p class="pm-spec-note" data-astro-cid-x26yjsfs>项目选型时，建议结合负载类型、安装方式、光伏输入条件和目标备电时长确认配置。</p>
+            <p class="pm-spec-note" data-astro-cid-x26yjsfs>配套设备需单独选配，接口与兼容性以所选型号和项目配置为准。</p>
           </aside>
         </div>
       </section>
@@ -410,7 +475,7 @@
         <div class="pm-container" data-astro-cid-x26yjsfs>
           <div class="pm-section-title-row" data-astro-cid-x26yjsfs>
             <h2 data-astro-cid-x26yjsfs>可选配件</h2>
-            <p data-astro-cid-x26yjsfs>可根据应用场景搭配光伏输入、电动汽车充电和备用发电设备，形成更完整的能源方案。</p>
+            <p data-astro-cid-x26yjsfs>配套设备需单独选配，接口与兼容性以所选型号和项目配置为准。</p>
           </div>
           <div class="pm-accessories" data-astro-cid-x26yjsfs>
             <article class="pm-accessory" data-astro-cid-x26yjsfs>
@@ -436,12 +501,12 @@
         <div class="pm-container" data-astro-cid-x26yjsfs>
           <div class="pm-section-title-row" data-astro-cid-x26yjsfs>
             <h2 data-astro-cid-x26yjsfs>产品资料与技术概览</h2>
-            <p data-astro-cid-x26yjsfs>了解产品核心卖点、系统结构、应用场景和关键配置，帮助快速判断是否适合你的项目需求。</p>
+            <p data-astro-cid-x26yjsfs>了解核心参数、系统结构与应用场景，评估产品是否适合你的项目。</p>
           </div>
           <div class="pm-sales-pages" data-astro-cid-x26yjsfs>
             <article class="pm-sales-page" data-astro-cid-x26yjsfs>
               <a href="/uploads/products/k16/sales-pages/P15-K16.webp" target="_blank" rel="noopener noreferrer" data-astro-cid-x26yjsfs>
-                <img src="/uploads/products/k16/sales-pages/P15-K16.webp" alt="产品概览" loading="lazy" data-astro-cid-x26yjsfs>
+                <img src="/uploads/previews/7803d7ef3c8fec5b-960.webp" srcset="/uploads/previews/7803d7ef3c8fec5b-480.webp 480w, /uploads/previews/7803d7ef3c8fec5b-960.webp 960w" sizes="(max-width: 768px) 90vw, 480px" width="1600" height="1999" alt="产品概览" loading="lazy" fetchpriority="auto" decoding="async" data-astro-cid-shljrivk>
               </a>
               <div class="pm-sales-meta" data-astro-cid-x26yjsfs>
                 <h3 data-astro-cid-x26yjsfs>产品概览</h3>
@@ -450,7 +515,7 @@
             </article>
             <article class="pm-sales-page" data-astro-cid-x26yjsfs>
               <a href="/uploads/products/k16/sales-pages/P16-K16.webp" target="_blank" rel="noopener noreferrer" data-astro-cid-x26yjsfs>
-                <img src="/uploads/products/k16/sales-pages/P16-K16.webp" alt="技术概览" loading="lazy" data-astro-cid-x26yjsfs>
+                <img src="/uploads/previews/a1afda920853c645-960.webp" srcset="/uploads/previews/a1afda920853c645-480.webp 480w, /uploads/previews/a1afda920853c645-960.webp 960w" sizes="(max-width: 768px) 90vw, 480px" width="1600" height="1999" alt="技术概览" loading="lazy" fetchpriority="auto" decoding="async" data-astro-cid-shljrivk>
               </a>
               <div class="pm-sales-meta" data-astro-cid-x26yjsfs>
                 <h3 data-astro-cid-x26yjsfs>技术概览</h3>
@@ -469,8 +534,8 @@
               <p data-astro-cid-x26yjsfs>通过 K16 产品资料快速了解核心规格、应用场景和可选配置，并联系 Duopudun 团队讨论适合你的方案。</p>
             </div>
             <div class="pm-cta-actions" data-astro-cid-x26yjsfs>
-              <a class="pm-btn pm-btn-secondary" href="/zh/contact" data-astro-cid-x26yjsfs>查看产品手册</a>
-              <a class="pm-btn pm-btn-primary" href="/zh/contact" data-astro-cid-x26yjsfs>立即询价</a>
+              <a class="pm-btn pm-btn-secondary" href="#sales-pages" data-astro-cid-x26yjsfs>产品资料与技术概览</a>
+              <a class="pm-btn pm-btn-primary" href="/zh/contact?product=k16&amp;source=%2Fzh%2Fproducts%2Fk16%2F" data-astro-cid-x26yjsfs>立即询价</a>
             </div>
           </div>
         </div>
@@ -594,11 +659,11 @@
       <div class="footer-contact">
         <span>香港</span>
         <span class="sep">|</span>
-        <span>Dexon@duopudun.com</span>
+        <a href="mailto:Dexon@duopudun.com">Dexon@duopudun.com</a>
         <span class="sep">|</span>
         <span class="footer-phones">
-          <span>+852 9678 3958</span>
-          <span>+86 130 6689 5078</span>
+          <a href="tel:+85296783958" dir="ltr">+852 9678 3958</a>
+          <a href="tel:+8613066895078" dir="ltr">+86 130 6689 5078</a>
         </span>
         <span class="right">Duopudun is operated by Huizhou Duopudun Energy Storage Technology Co., Ltd.</span>
       </div>

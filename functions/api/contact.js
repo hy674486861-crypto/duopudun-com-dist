@@ -17,6 +17,37 @@ const FIELD_LIMITS = {
   pageUrl: 500,
 };
 
+const MAX_BODY_BYTES = 32_000;
+const UPSTREAM_TIMEOUT_MS = 8_000;
+
+async function readJson(request) {
+  if (Number(request.headers.get('Content-Length')) > MAX_BODY_BYTES) {
+    throw new RangeError('payload_too_large');
+  }
+  const reader = request.body?.getReader();
+  if (!reader) throw new SyntaxError('invalid_json');
+  const chunks = [];
+  let size = 0;
+  try {
+    while (true) {
+      const { done, value } = await reader.read();
+      if (done) break;
+      size += value.byteLength;
+      if (size > MAX_BODY_BYTES) {
+        void reader.cancel().catch(() => {});
+        throw new RangeError('payload_too_large');
+      }
+      chunks.push(value);
+    }
+  } finally {
+    reader.releaseLock();
+  }
+  const bytes = new Uint8Array(size);
+  let offset = 0;
+  for (const chunk of chunks) { bytes.set(chunk, offset); offset += chunk.byteLength; }
+  return JSON.parse(new TextDecoder().decode(bytes));
+}
+
 function json(body, status = 200) {
   return new Response(JSON.stringify(body), { status, headers: JSON_HEADERS });
 }
@@ -49,6 +80,7 @@ function validateFields(input) {
 
 async function validateTurnstile(token, request, env) {
   const response = await fetch('https://challenges.cloudflare.com/turnstile/v0/siteverify', {
+    signal: AbortSignal.timeout(UPSTREAM_TIMEOUT_MS),
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
@@ -61,7 +93,8 @@ async function validateTurnstile(token, request, env) {
 
   if (!response.ok) return false;
   const result = await response.json();
-  return result.success === true && result.action === 'turnstile-spin-v2';
+  return result.success === true && result.action === 'turnstile-spin-v2'
+    && result.hostname === new URL(request.url).hostname;
 }
 
 async function getZohoAccessToken(env) {
@@ -73,6 +106,7 @@ async function getZohoAccessToken(env) {
     grant_type: 'refresh_token',
   });
   const response = await fetch(`${accountsUrl}/oauth/v2/token`, {
+    signal: AbortSignal.timeout(UPSTREAM_TIMEOUT_MS),
     method: 'POST',
     headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
     body,
@@ -130,13 +164,11 @@ export async function onRequestPost({ request, env }) {
   const origin = request.headers.get('Origin');
   if (origin && origin !== requestUrl.origin) return json({ ok: false, error: 'forbidden' }, 403);
 
-  const contentLength = Number(request.headers.get('Content-Length') || 0);
-  if (contentLength > 32_000) return json({ ok: false, error: 'payload_too_large' }, 413);
-
   let input;
   try {
-    input = await request.json();
-  } catch {
+    input = await readJson(request);
+  } catch (error) {
+    if (error instanceof RangeError) return json({ ok: false, error: 'payload_too_large' }, 413);
     return json({ ok: false, error: 'invalid_json' }, 400);
   }
   if (!input || typeof input !== 'object' || Array.isArray(input)) {
@@ -150,14 +182,21 @@ export async function onRequestPost({ request, env }) {
   if (!fields) return json({ ok: false, error: 'invalid_fields' }, 400);
 
   const turnstileToken = clean(input.turnstileToken);
-  if (!turnstileToken || !(await validateTurnstile(turnstileToken, request, env))) {
+  if (!turnstileToken || turnstileToken.length > 2048) {
     return json({ ok: false, error: 'verification_failed' }, 400);
   }
 
+  let stage = 'verification';
   try {
+    if (!(await validateTurnstile(turnstileToken, request, env))) {
+      return json({ ok: false, error: 'verification_failed' }, 400);
+    }
+    stage = 'oauth';
     const accessToken = await getZohoAccessToken(env);
+    stage = 'delivery';
     const mailApiUrl = (env.ZOHO_MAIL_API_URL || 'https://mail.zoho.com').replace(/\/$/, '');
     const response = await fetch(`${mailApiUrl}/api/accounts/${encodeURIComponent(env.ZOHO_ACCOUNT_ID)}/messages`, {
+      signal: AbortSignal.timeout(UPSTREAM_TIMEOUT_MS),
       method: 'POST',
       headers: {
         Accept: 'application/json',
@@ -175,9 +214,13 @@ export async function onRequestPost({ request, env }) {
     });
 
     if (!response.ok) throw new Error(`Zoho send request failed: ${response.status}`);
+    const result = await response.json();
+    if (result.status?.code && Number(result.status.code) !== 200) {
+      throw new Error('Zoho did not accept the message');
+    }
     return json({ ok: true });
   } catch (error) {
-    console.error(error instanceof Error ? error.message : 'Contact form delivery failed');
-    return json({ ok: false, error: 'delivery_failed' }, 502);
+    console.error(JSON.stringify({ event: 'contact_failed', stage, type: error?.name || 'Error' }));
+    return json({ ok: false, error: stage === 'verification' ? 'verification_unavailable' : 'delivery_failed' }, 502);
   }
 }

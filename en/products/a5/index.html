@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-lang="en" data-lang-en="/en/products/a5/" data-lang-zh="/zh/products/a5/">
+<html lang="en" dir="ltr" data-lang="en" data-lang-en="/en/products/a5/" data-lang-zh="/zh/products/a5/">
 
 <head>
   <meta charset="UTF-8">
@@ -7,6 +7,56 @@
   <title>A5 Home Energy Storage</title>
   <meta name="description" content="Outdoor tool backup support · Two installation methods · 4 charging modes · Minimal footprint · Ideal for residential &amp; outdoor backup.">
   <link rel="canonical" href="https://duopudun.com/en/products/a5/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Duopudun">
+  <meta property="og:title" content="A5 Home Energy Storage">
+  <meta property="og:description" content="Outdoor tool backup support · Two installation methods · 4 charging modes · Minimal footprint · Ideal for residential &amp; outdoor backup.">
+  <meta property="og:url" content="https://duopudun.com/en/products/a5/">
+  <meta property="og:image" content="https://duopudun.com/uploads/products/a5/main.webp">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="A5 Home Energy Storage">
+  <meta name="twitter:description" content="Outdoor tool backup support · Two installation methods · 4 charging modes · Minimal footprint · Ideal for residential &amp; outdoor backup.">
+  <meta name="twitter:image" content="https://duopudun.com/uploads/products/a5/main.webp">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [{
+        "@type": "Organization",
+        "@id": "https://duopudun.com/#organization",
+        "name": "Duopudun",
+        "url": "https://duopudun.com/",
+        "logo": "https://duopudun.com/Duopudun_logo.png"
+      }, {
+        "@type": "Product",
+        "name": "A5 Home Energy Storage",
+        "description": "Outdoor tool backup support · Two installation methods · 4 charging modes · Minimal footprint · Ideal for residential & outdoor backup.",
+        "model": "A5",
+        "sku": "A5",
+        "brand": {
+          "@type": "Brand",
+          "name": "Duopudun"
+        },
+        "image": "https://duopudun.com/uploads/products/a5/main.webp",
+        "additionalProperty": [{
+          "@type": "PropertyValue",
+          "name": "Capacity",
+          "value": "5.27kWh"
+        }, {
+          "@type": "PropertyValue",
+          "name": "Output Power",
+          "value": "3.6kW"
+        }, {
+          "@type": "PropertyValue",
+          "name": "MPPT Efficiency",
+          "value": "99.5%"
+        }, {
+          "@type": "PropertyValue",
+          "name": "Voltage Standard",
+          "value": "48V"
+        }]
+      }]
+    }
+  </script>
   <link rel="icon" type="image/png" href="/favicon-logo.png" sizes="178x160">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,8 +69,15 @@
   <link rel="alternate" hreflang="ar" href="https://duopudun.com/ar/products/a5/">
   <link rel="alternate" hreflang="zh-Hant" href="https://duopudun.com/zh-Hant/products/a5/">
   <link rel="alternate" hreflang="x-default" href="https://duopudun.com/en/products/a5/">
-  <link rel="stylesheet" href="/_assets/Layout.Bsqp905Y.css">
-  <link rel="stylesheet" href="/_assets/_slug_.BZ79t5Pm.css">
+  <link rel="stylesheet" href="/_assets/Layout.BymaFkJ1.css">
+  <style>
+    img[data-astro-cid-shljrivk] {
+      display: block;
+      max-width: 100%;
+      height: auto
+    }
+  </style>
+  <link rel="stylesheet" href="/_assets/_slug_.oytD1yKG.css">
 </head>
 
 <body>
@@ -38,7 +95,7 @@
       </nav>
 
       <div class="lang-dropdown">
-        <button class="lang-toggle" aria-label="Switch language">
+        <button class="lang-toggle" aria-label="Switch language" aria-expanded="false" aria-controls="languageMenu">
           <span class="lang-toggle-flag">
             <img src="/flags/gb.png" alt="EN" width="22" height="15" style="vertical-align:middle;border-radius:2px">
           </span>
@@ -47,7 +104,7 @@
             <path d="M3 5l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
           </svg>
         </button>
-        <div class="lang-menu">
+        <div class="lang-menu" id="languageMenu">
           <a href="/zh/products/a5/" class="lang-option" data-lang="zh">
             <span class="lang-option-flag">
               <img src="/flags/cn.png" alt="ZH" width="22" height="15" style="vertical-align:middle;border-radius:2px">
@@ -82,7 +139,7 @@
         </div>
       </div>
 
-      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu">
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu" aria-expanded="false" aria-controls="mobileNav">
         <span></span><span></span><span></span>
       </button>
     </div>
@@ -98,22 +155,29 @@
   </header>
 
   <script type="module">
-    const r = document.getElementById("mobileMenuBtn"),
-      t = document.getElementById("mobileNav");
-    r?.addEventListener("click", () => {
-      t && (t.style.display = t.style.display === "none" ? "flex" : "none")
+    const s = document.getElementById("mobileMenuBtn"),
+      a = document.getElementById("mobileNav");
+    s?.addEventListener("click", () => {
+      a && (a.style.display = a.style.display === "none" ? "flex" : "none", s?.setAttribute("aria-expanded", String(a.style.display === "flex")))
     });
     document.querySelectorAll(".lang-dropdown").forEach(e => {
-      const l = e.querySelector(".lang-toggle"),
+      const t = e.querySelector(".lang-toggle"),
         n = e.querySelector(".lang-menu");
-      !l || !n || l.addEventListener("click", c => {
-        c.stopPropagation(), document.querySelectorAll(".lang-menu.open").forEach(o => {
+      !t || !n || (t.addEventListener("click", l => {
+        l.stopPropagation(), document.querySelectorAll(".lang-menu.open").forEach(o => {
           o !== n && o.classList.remove("open")
-        }), n.classList.toggle("open")
-      })
+        }), n.classList.toggle("open"), t.setAttribute("aria-expanded", String(n.classList.contains("open")))
+      }), e.addEventListener("keydown", l => {
+        l.key === "Escape" && (n.classList.remove("open"), t.setAttribute("aria-expanded", "false"), t.focus())
+      }), e.addEventListener("focusout", l => {
+        e.contains(l.relatedTarget) || (n.classList.remove("open"), t.setAttribute("aria-expanded", "false"))
+      }))
     });
     document.addEventListener("click", () => {
-      document.querySelectorAll(".lang-menu.open").forEach(e => e.classList.remove("open"))
+      document.querySelectorAll(".lang-menu.open").forEach(e => e.classList.remove("open")), document.querySelectorAll(".lang-toggle").forEach(e => e.setAttribute("aria-expanded", "false"))
+    });
+    document.addEventListener("keydown", e => {
+      e.key === "Escape" && a?.style.display === "flex" && (a.style.display = "none", s?.setAttribute("aria-expanded", "false"), s?.focus())
     });
   </script>
 
@@ -122,11 +186,11 @@
     <div class="pm-page" data-astro-cid-x26yjsfs>
       <section class="pm-hero" id="overview" data-astro-cid-x26yjsfs>
         <div class="pm-container" data-astro-cid-x26yjsfs>
-          <div class="pm-hero-card" style="--pm-hero-image: url('/uploads/products/a5/main.webp')" data-astro-cid-x26yjsfs>
+          <div class="pm-hero-card" style="--pm-hero-image: url('/uploads/previews/23dfca40416b8622-960.webp')" data-astro-cid-x26yjsfs>
             <div class="pm-hero-grid" data-astro-cid-x26yjsfs>
               <div class="pm-hero-copy" data-astro-cid-x26yjsfs>
                 <div class="pm-kicker" data-astro-cid-x26yjsfs>A5 Home Energy Storage System</div>
-                <h1 data-astro-cid-x26yjsfs>All-in-one Home Solar Energy Storage System <span data-astro-cid-x26yjsfs>A5</span></h1>
+                <h1 data-astro-cid-x26yjsfs>A5 Home Energy Storage</h1>
                 <p class="pm-hero-sub" data-astro-cid-x26yjsfs>Outdoor tool backup support · Two installation methods · 4 charging modes · Minimal footprint · Ideal for residential &amp; outdoor backup.</p>
                 <ul class="pm-bullets" data-astro-cid-x26yjsfs>
                   <li data-astro-cid-x26yjsfs>5.27kWh energy capacity</li>
@@ -135,7 +199,7 @@
                   <li data-astro-cid-x26yjsfs>IP23 protection rating</li>
                 </ul>
                 <div class="pm-hero-actions" data-astro-cid-x26yjsfs>
-                  <a class="pm-btn pm-btn-primary" href="/en/contact" data-astro-cid-x26yjsfs>Get a Quote</a>
+                  <a class="pm-btn pm-btn-primary" href="/en/contact?product=a5&amp;source=%2Fen%2Fproducts%2Fa5%2F" data-astro-cid-x26yjsfs>Get a Quote</a>
                   <a class="pm-btn pm-btn-secondary" href="#specs" data-astro-cid-x26yjsfs>View Specifications</a>
                 </div>
                 <div class="pm-hero-spec-strip" data-astro-cid-x26yjsfs>
@@ -158,7 +222,7 @@
                 </div>
               </div>
               <div class="pm-hero-visual" data-astro-cid-x26yjsfs>
-                <img src="/uploads/products/a5/main.webp" alt="A5 product overview" loading="eager" data-astro-cid-x26yjsfs>
+                <img src="/uploads/previews/23dfca40416b8622-960.webp" srcset="/uploads/previews/23dfca40416b8622-480.webp 480w, /uploads/previews/23dfca40416b8622-960.webp 960w" sizes="(max-width: 768px) 90vw, 480px" width="1200" height="1499" alt="A5 Home Energy Storage" loading="eager" fetchpriority="high" decoding="async" data-astro-cid-shljrivk>
               </div>
             </div>
 
@@ -313,7 +377,8 @@
           <div data-astro-cid-x26yjsfs>
             <div class="pm-section-title-row pm-stack-title" data-astro-cid-x26yjsfs>
               <h2 data-astro-cid-x26yjsfs>Common home appliances running time</h2>
-              <p data-astro-cid-x26yjsfs>The estimates below use one formula based on product energy capacity and appliance wattage. Actual runtime varies by load, temperature, and system efficiency.</p>
+              <p data-astro-cid-x26yjsfs>Theoretical single-appliance runtime: nominal capacity divided by appliance power, excluding conversion losses and reserve energy. Actual runtime depends on usable capacity, load cycles and conditions. Confirm inverter capacity and starting loads.</p>
+
             </div>
             <div class="pm-runtime-grid" data-astro-cid-x26yjsfs>
               <div class="pm-appliance" data-astro-cid-x26yjsfs>
@@ -401,7 +466,7 @@
                 </tr>
               </tbody>
             </table>
-            <p class="pm-spec-note" data-astro-cid-x26yjsfs>For project selection, confirm load type, installation method, solar input conditions, and target backup time before configuration.</p>
+            <p class="pm-spec-note" data-astro-cid-x26yjsfs>Companion equipment is selected separately. Interfaces and compatibility depend on the model and project configuration.</p>
           </aside>
         </div>
       </section>
@@ -410,7 +475,7 @@
         <div class="pm-container" data-astro-cid-x26yjsfs>
           <div class="pm-section-title-row" data-astro-cid-x26yjsfs>
             <h2 data-astro-cid-x26yjsfs>Optional accessories</h2>
-            <p data-astro-cid-x26yjsfs>Extend the system with solar input, EV charging, and backup generation options for a more complete energy solution.</p>
+            <p data-astro-cid-x26yjsfs>Companion equipment is selected separately. Interfaces and compatibility depend on the model and project configuration.</p>
           </div>
           <div class="pm-accessories" data-astro-cid-x26yjsfs>
             <article class="pm-accessory" data-astro-cid-x26yjsfs>
@@ -436,12 +501,12 @@
         <div class="pm-container" data-astro-cid-x26yjsfs>
           <div class="pm-section-title-row" data-astro-cid-x26yjsfs>
             <h2 data-astro-cid-x26yjsfs>Product materials and technical overview</h2>
-            <p data-astro-cid-x26yjsfs>Review key selling points, system structure, application scenarios, and core configuration details for project evaluation.</p>
+            <p data-astro-cid-x26yjsfs>Review specifications, system structure and applications for your project.</p>
           </div>
           <div class="pm-sales-pages" data-astro-cid-x26yjsfs>
             <article class="pm-sales-page" data-astro-cid-x26yjsfs>
               <a href="/uploads/products/a5/sales-pages/P25-A5.webp" target="_blank" rel="noopener noreferrer" data-astro-cid-x26yjsfs>
-                <img src="/uploads/products/a5/sales-pages/P25-A5.webp" alt="Product overview" loading="lazy" data-astro-cid-x26yjsfs>
+                <img src="/uploads/previews/109c29702c69b355-960.webp" srcset="/uploads/previews/109c29702c69b355-480.webp 480w, /uploads/previews/109c29702c69b355-960.webp 960w" sizes="(max-width: 768px) 90vw, 480px" width="1600" height="1999" alt="Product overview" loading="lazy" fetchpriority="auto" decoding="async" data-astro-cid-shljrivk>
               </a>
               <div class="pm-sales-meta" data-astro-cid-x26yjsfs>
                 <h3 data-astro-cid-x26yjsfs>Product overview</h3>
@@ -450,7 +515,7 @@
             </article>
             <article class="pm-sales-page" data-astro-cid-x26yjsfs>
               <a href="/uploads/products/a5/sales-pages/P26-A5.webp" target="_blank" rel="noopener noreferrer" data-astro-cid-x26yjsfs>
-                <img src="/uploads/products/a5/sales-pages/P26-A5.webp" alt="Technical overview" loading="lazy" data-astro-cid-x26yjsfs>
+                <img src="/uploads/previews/c4be906f1c2f0ea2-960.webp" srcset="/uploads/previews/c4be906f1c2f0ea2-480.webp 480w, /uploads/previews/c4be906f1c2f0ea2-960.webp 960w" sizes="(max-width: 768px) 90vw, 480px" width="1600" height="1999" alt="Technical overview" loading="lazy" fetchpriority="auto" decoding="async" data-astro-cid-shljrivk>
               </a>
               <div class="pm-sales-meta" data-astro-cid-x26yjsfs>
                 <h3 data-astro-cid-x26yjsfs>Technical overview</h3>
@@ -469,8 +534,8 @@
               <p data-astro-cid-x26yjsfs>Use the A5 product materials to review core specifications, application scenarios, and optional configurations, then contact Duopudun for a suitable solution.</p>
             </div>
             <div class="pm-cta-actions" data-astro-cid-x26yjsfs>
-              <a class="pm-btn pm-btn-secondary" href="/en/contact" data-astro-cid-x26yjsfs>View Product Brochure</a>
-              <a class="pm-btn pm-btn-primary" href="/en/contact" data-astro-cid-x26yjsfs>Get a Quote</a>
+              <a class="pm-btn pm-btn-secondary" href="#sales-pages" data-astro-cid-x26yjsfs>Product materials and technical overview</a>
+              <a class="pm-btn pm-btn-primary" href="/en/contact?product=a5&amp;source=%2Fen%2Fproducts%2Fa5%2F" data-astro-cid-x26yjsfs>Get a Quote</a>
             </div>
           </div>
         </div>
@@ -594,11 +659,11 @@
       <div class="footer-contact">
         <span>Hong Kong</span>
         <span class="sep">|</span>
-        <span>Dexon@duopudun.com</span>
+        <a href="mailto:Dexon@duopudun.com">Dexon@duopudun.com</a>
         <span class="sep">|</span>
         <span class="footer-phones">
-          <span>+852 9678 3958</span>
-          <span>+86 130 6689 5078</span>
+          <a href="tel:+85296783958" dir="ltr">+852 9678 3958</a>
+          <a href="tel:+8613066895078" dir="ltr">+86 130 6689 5078</a>
         </span>
         <span class="right">Duopudun is operated by Huizhou Duopudun Energy Storage Technology Co., Ltd.</span>
       </div>

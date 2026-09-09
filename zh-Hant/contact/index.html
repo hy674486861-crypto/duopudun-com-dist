@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-TW" data-lang="zh-Hant" data-lang-en="/en/contact/" data-lang-zh="/zh/contact/">
+<html lang="zh-TW" dir="ltr" data-lang="zh-Hant" data-lang-en="/en/contact/" data-lang-zh="/zh/contact/">
 
 <head>
   <meta charset="UTF-8">
@@ -7,6 +7,28 @@
   <title>聯繫我們 | Duopudun</title>
   <meta name="description" content="聯繫多普盾获取產品報價和技術方案支援。香港聯絡處，24/7全球響應。">
   <link rel="canonical" href="https://duopudun.com/zh-Hant/contact/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Duopudun">
+  <meta property="og:title" content="聯繫我們 | Duopudun">
+  <meta property="og:description" content="聯繫多普盾获取產品報價和技術方案支援。香港聯絡處，24/7全球響應。">
+  <meta property="og:url" content="https://duopudun.com/zh-Hant/contact/">
+  <meta property="og:image" content="https://duopudun.com/uploads/products/a8/main.webp">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="聯繫我們 | Duopudun">
+  <meta name="twitter:description" content="聯繫多普盾获取產品報價和技術方案支援。香港聯絡處，24/7全球響應。">
+  <meta name="twitter:image" content="https://duopudun.com/uploads/products/a8/main.webp">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [{
+        "@type": "Organization",
+        "@id": "https://duopudun.com/#organization",
+        "name": "Duopudun",
+        "url": "https://duopudun.com/",
+        "logo": "https://duopudun.com/Duopudun_logo.png"
+      }]
+    }
+  </script>
   <link rel="icon" type="image/png" href="/favicon-logo.png" sizes="178x160">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,7 +41,7 @@
   <link rel="alternate" hreflang="ar" href="https://duopudun.com/ar/contact/">
   <link rel="alternate" hreflang="zh-Hant" href="https://duopudun.com/zh-Hant/contact/">
   <link rel="alternate" hreflang="x-default" href="https://duopudun.com/en/contact/">
-  <link rel="stylesheet" href="/_assets/Layout.Bsqp905Y.css">
+  <link rel="stylesheet" href="/_assets/Layout.BymaFkJ1.css">
   <style>
     .site-page-hero[data-astro-cid-s5hxusys] {
       box-sizing: border-box;
@@ -80,7 +102,7 @@
       }
     }
   </style>
-  <link rel="stylesheet" href="/_assets/contact.QX6DyXup.css">
+  <link rel="stylesheet" href="/_assets/contact.D5WxrkjQ.css">
 </head>
 
 <body>
@@ -98,7 +120,7 @@
       </nav>
 
       <div class="lang-dropdown">
-        <button class="lang-toggle" aria-label="Switch language">
+        <button class="lang-toggle" aria-label="Switch language" aria-expanded="false" aria-controls="languageMenu">
           <span class="lang-toggle-flag">
             <img src="/flags/hk.png" alt="ZH-Hant" width="22" height="15" style="vertical-align:middle;border-radius:2px">
           </span>
@@ -107,7 +129,7 @@
             <path d="M3 5l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
           </svg>
         </button>
-        <div class="lang-menu">
+        <div class="lang-menu" id="languageMenu">
           <a href="/zh/contact/" class="lang-option" data-lang="zh">
             <span class="lang-option-flag">
               <img src="/flags/cn.png" alt="ZH" width="22" height="15" style="vertical-align:middle;border-radius:2px">
@@ -142,7 +164,7 @@
         </div>
       </div>
 
-      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu">
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu" aria-expanded="false" aria-controls="mobileNav">
         <span></span><span></span><span></span>
       </button>
     </div>
@@ -158,22 +180,29 @@
   </header>
 
   <script type="module">
-    const r = document.getElementById("mobileMenuBtn"),
-      t = document.getElementById("mobileNav");
-    r?.addEventListener("click", () => {
-      t && (t.style.display = t.style.display === "none" ? "flex" : "none")
+    const s = document.getElementById("mobileMenuBtn"),
+      a = document.getElementById("mobileNav");
+    s?.addEventListener("click", () => {
+      a && (a.style.display = a.style.display === "none" ? "flex" : "none", s?.setAttribute("aria-expanded", String(a.style.display === "flex")))
     });
     document.querySelectorAll(".lang-dropdown").forEach(e => {
-      const l = e.querySelector(".lang-toggle"),
+      const t = e.querySelector(".lang-toggle"),
         n = e.querySelector(".lang-menu");
-      !l || !n || l.addEventListener("click", c => {
-        c.stopPropagation(), document.querySelectorAll(".lang-menu.open").forEach(o => {
+      !t || !n || (t.addEventListener("click", l => {
+        l.stopPropagation(), document.querySelectorAll(".lang-menu.open").forEach(o => {
           o !== n && o.classList.remove("open")
-        }), n.classList.toggle("open")
-      })
+        }), n.classList.toggle("open"), t.setAttribute("aria-expanded", String(n.classList.contains("open")))
+      }), e.addEventListener("keydown", l => {
+        l.key === "Escape" && (n.classList.remove("open"), t.setAttribute("aria-expanded", "false"), t.focus())
+      }), e.addEventListener("focusout", l => {
+        e.contains(l.relatedTarget) || (n.classList.remove("open"), t.setAttribute("aria-expanded", "false"))
+      }))
     });
     document.addEventListener("click", () => {
-      document.querySelectorAll(".lang-menu.open").forEach(e => e.classList.remove("open"))
+      document.querySelectorAll(".lang-menu.open").forEach(e => e.classList.remove("open")), document.querySelectorAll(".lang-toggle").forEach(e => e.setAttribute("aria-expanded", "false"))
+    });
+    document.addEventListener("keydown", e => {
+      e.key === "Escape" && a?.style.display === "flex" && (a.style.display = "none", s?.setAttribute("aria-expanded", "false"), s?.focus())
     });
   </script>
 
@@ -247,58 +276,75 @@
         </div>
 
         <div class="contact-form-wrap" data-astro-cid-gwrhl7xa>
-          <form class="contact-form" id="contactForm" data-sent="已發送" data-success="✓ 已發送 — 我們將在 24 小時內回覆。" data-error-required="請填寫所有必填項。" data-error-network="提交失敗，請直接發郵件或使用 WhatsApp 聯絡我們。" data-error-verify="請先完成人機驗證。" data-policy-prefix="政策諮詢" data-endpoint="/api/contact" novalidate data-astro-cid-gwrhl7xa>
+          <form class="contact-form" id="contactForm" data-sent="已發送" data-success="✓ 已發送 — 我們將在 24 小時內回覆。" data-error-required="請填寫所有必填項。" data-error-network="提交失敗，請直接發郵件或使用 WhatsApp 聯絡我們。" data-error-verify="請先完成人機驗證。" data-policy-prefix="政策諮詢" data-endpoint="/api/contact" data-error-verify-load="驗證暫時無法載入，請重試或透過郵件聯絡我們。" data-sending="正在提交..." data-submit="發送" data-astro-cid-gwrhl7xa>
             <h3 data-astro-cid-gwrhl7xa>發送詢盤</h3>
 
             <div class="form-row" data-astro-cid-gwrhl7xa>
               <div class="form-group" data-astro-cid-gwrhl7xa>
                 <label for="name" data-astro-cid-gwrhl7xa>姓名 *</label>
-                <input type="text" id="name" name="name" placeholder="您的姓名" required data-astro-cid-gwrhl7xa>
+                <input type="text" id="name" name="name" maxlength="120" autocomplete="name" placeholder="您的姓名" required data-astro-cid-gwrhl7xa>
               </div>
               <div class="form-group" data-astro-cid-gwrhl7xa>
                 <label for="email" data-astro-cid-gwrhl7xa>郵箱 *</label>
-                <input type="email" id="email" name="email" placeholder="your@email.com" required data-astro-cid-gwrhl7xa>
+                <input type="email" id="email" name="email" maxlength="254" autocomplete="email" placeholder="your@email.com" required data-astro-cid-gwrhl7xa>
               </div>
             </div>
 
             <div class="form-row" data-astro-cid-gwrhl7xa>
               <div class="form-group" data-astro-cid-gwrhl7xa>
                 <label for="company" data-astro-cid-gwrhl7xa>公司/组织</label>
-                <input type="text" id="company" name="company" placeholder="公司名称（选填）" data-astro-cid-gwrhl7xa>
+                <input type="text" id="company" name="company" maxlength="160" autocomplete="organization" placeholder="公司名称（选填）" data-astro-cid-gwrhl7xa>
               </div>
               <div class="form-group" data-astro-cid-gwrhl7xa>
                 <label for="country" data-astro-cid-gwrhl7xa>國家 / 地區 *</label>
-                <input type="text" id="country" name="country" placeholder="如：阿聯酋" required data-astro-cid-gwrhl7xa>
+                <input type="text" id="country" name="country" maxlength="120" autocomplete="country-name" placeholder="如：阿聯酋" required data-astro-cid-gwrhl7xa>
               </div>
             </div>
 
             <div class="form-row" data-astro-cid-gwrhl7xa>
               <div class="form-group" data-astro-cid-gwrhl7xa>
                 <label for="whatsapp" data-astro-cid-gwrhl7xa>WhatsApp 號碼 *</label>
-                <input type="tel" id="whatsapp" name="whatsapp" placeholder="+971 5x xxx xxxx（含國家區號）" required data-astro-cid-gwrhl7xa>
+                <input type="tel" id="whatsapp" name="whatsapp" maxlength="80" autocomplete="tel" placeholder="+971 5x xxx xxxx（含國家區號）" required data-astro-cid-gwrhl7xa>
               </div>
               <div class="form-group" data-astro-cid-gwrhl7xa>
                 <label for="moq" data-astro-cid-gwrhl7xa>預計採購量 (MOQ)</label>
-                <input type="text" id="moq" name="moq" placeholder="如：50 台 / 1×40HQ 貨櫃" data-astro-cid-gwrhl7xa>
+                <input type="text" id="moq" name="moq" maxlength="120" placeholder="如：50 台 / 1×40HQ 貨櫃" data-astro-cid-gwrhl7xa>
               </div>
             </div>
 
             <div class="form-group" data-astro-cid-gwrhl7xa>
               <label for="product" data-astro-cid-gwrhl7xa>感兴趣的產品</label>
               <select id="product" name="product" data-astro-cid-gwrhl7xa>
-                <option value data-astro-cid-gwrhl7xa></option>
-                <option value="攜帶式系列 M1 / M2" data-astro-cid-gwrhl7xa>攜帶式系列 M1 / M2</option>
-                <option value="一体式系列 A5 / Q5 / A8 / T10 / T15" data-astro-cid-gwrhl7xa>一体式系列 A5 / Q5 / A8 / T10 / T15</option>
-                <option value="堆叠式系列 T30 / T45 / T60" data-astro-cid-gwrhl7xa>堆叠式系列 T30 / T45 / T60</option>
-                <option value="壁挂式系列 D5 / D10 / D20" data-astro-cid-gwrhl7xa>壁挂式系列 D5 / D10 / D20</option>
-                <option value="微電網系列 / 高压一體机 / HB50 / HB30" data-astro-cid-gwrhl7xa>微電網系列 / 高压一體机 / HB50 / HB30</option>
-                <option value="定製方案" data-astro-cid-gwrhl7xa>定製方案</option>
+                <option value="" data-astro-cid-gwrhl7xa></option>
+                <option value="A5" data-slug="a5" data-astro-cid-gwrhl7xa>A5 - A5 家用儲能</option>
+                <option value="A8" data-slug="a8" data-astro-cid-gwrhl7xa>A8 - A8 家用儲能</option>
+                <option value="D5" data-slug="d5" data-astro-cid-gwrhl7xa>D5 - D5 壁掛式鋰電池</option>
+                <option value="E2" data-slug="e2" data-astro-cid-gwrhl7xa>E2 - E2 家用儲能</option>
+                <option value="E5" data-slug="e5" data-astro-cid-gwrhl7xa>E5 - E5 家用儲能</option>
+                <option value="H6030" data-slug="h6030" data-astro-cid-gwrhl7xa>H6030 - H6030 高壓櫃式儲能</option>
+                <option value="H6050" data-slug="h6050" data-astro-cid-gwrhl7xa>H6050 - H6050 高壓櫃式儲能</option>
+                <option value="K15" data-slug="k15" data-astro-cid-gwrhl7xa>K15 - K15 堆疊式儲能</option>
+                <option value="K16" data-slug="k16" data-astro-cid-gwrhl7xa>K16 - K16 堆疊式儲能</option>
+                <option value="K30" data-slug="k30" data-astro-cid-gwrhl7xa>K30 - K30 堆疊式儲能</option>
+                <option value="K32" data-slug="k32" data-astro-cid-gwrhl7xa>K32 - K32 堆疊式儲能</option>
+                <option value="K45" data-slug="k45" data-astro-cid-gwrhl7xa>K45 - K45 堆疊式儲能</option>
+                <option value="K60" data-slug="k60" data-astro-cid-gwrhl7xa>K60 - K60 堆疊式儲能</option>
+                <option value="M1" data-slug="m1" data-astro-cid-gwrhl7xa>M1 - M1 便攜儲能</option>
+                <option value="M2" data-slug="m2" data-astro-cid-gwrhl7xa>M2 - M2 便攜儲能</option>
+                <option value="Q5" data-slug="q5" data-astro-cid-gwrhl7xa>Q5 - Q5 家用儲能</option>
+                <option value="T10" data-slug="t10" data-astro-cid-gwrhl7xa>T10 - T10 堆疊式儲能</option>
+                <option value="T15" data-slug="t15" data-astro-cid-gwrhl7xa>T15 - T15 堆疊式儲能</option>
+                <option value="T15Pro" data-slug="t15pro" data-astro-cid-gwrhl7xa>T15Pro - T15Pro 堆疊式儲能</option>
+                <option value="T30" data-slug="t30" data-astro-cid-gwrhl7xa>T30 - T30 堆疊式儲能</option>
+                <option value="T45" data-slug="t45" data-astro-cid-gwrhl7xa>T45 - T45 堆疊式儲能</option>
+                <option value="T60" data-slug="t60" data-astro-cid-gwrhl7xa>T60 - T60 堆疊式儲能</option>
+                <option value="Custom Solution" data-astro-cid-gwrhl7xa>定製方案</option>
               </select>
             </div>
 
             <div class="form-group" data-astro-cid-gwrhl7xa>
               <label for="message" data-astro-cid-gwrhl7xa>留言 *</label>
-              <textarea id="message" name="message" rows="5" placeholder="請描述您的項目需求：功率需求、容量、應用場景、目标市場等" required data-astro-cid-gwrhl7xa></textarea>
+              <textarea id="message" name="message" rows="5" maxlength="5000" placeholder="請描述您的項目需求：功率需求、容量、應用場景、目标市場等" required data-astro-cid-gwrhl7xa></textarea>
             </div>
 
             <div class="form-honeypot" aria-hidden="true" data-astro-cid-gwrhl7xa>
@@ -307,6 +353,7 @@
             </div>
 
             <div class="turnstile-container" id="turnstileWidget" data-astro-cid-gwrhl7xa></div>
+            <button type="button" class="verification-retry" id="verificationRetry" hidden data-astro-cid-gwrhl7xa>重新載入驗證</button>
             <button type="submit" class="btn-primary" style="width:100%" data-astro-cid-gwrhl7xa>發送</button>
             <div class="form-status" id="formStatus" role="status" aria-live="polite" data-astro-cid-gwrhl7xa></div>
           </form>
@@ -335,7 +382,7 @@
             <h4 data-astro-cid-gwrhl7xa>壁挂式系列</h4>
             <p data-astro-cid-gwrhl7xa>壁挂式 LiFePO4 电池，5-20kWh 容量，堆叠式模块设计，兼容多品牌逆變器，即插即用。</p>
             <span class="hot-link" data-astro-cid-gwrhl7xa>瞭解更多</span>
-          </a><a href="/zh-Hant/products#hv-allin" class="hot-card" data-astro-cid-gwrhl7xa>
+          </a><a href="/zh-Hant/products#hv" class="hot-card" data-astro-cid-gwrhl7xa>
             <div class="hot-icon" data-astro-cid-gwrhl7xa>🏭</div>
             <h4 data-astro-cid-gwrhl7xa>高压一體机</h4>
             <p data-astro-cid-gwrhl7xa>30-50kW 高压一體机，IP54 防護，EMS/消防/空调一體化集成，适合戶外微網和电网侧儲能。</p>
@@ -345,110 +392,123 @@
       </div>
     </section>
 
-    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit" async defer></script>
     <script type="module">
-      const e = document.getElementById("contactForm"),
-        n = document.getElementById("formStatus"),
-        u = new URLSearchParams(window.location.search);
-      if (e && u.get("topic") === "policy") {
-        const a = u.get("policy")?.trim(),
-          t = e.elements.namedItem("message");
-        a && t && !t.value && (t.value = `${e.dataset.policyPrefix||"Policy enquiry"}: ${a}
+      const e = document.querySelector("#contactForm"),
+        g = document.querySelector("#formStatus"),
+        S = document.querySelector("#turnstileWidget"),
+        t = document.querySelector("#verificationRetry"),
+        d = e?.querySelector("button[type=submit]"),
+        s = () => window.turnstile;
+      let a = "",
+        m = null,
+        f = null,
+        y = !1,
+        u = !1;
 
-`)
+      function l(r, i = !1) {
+        g && (g.textContent = r, g.className = `form-status ${i?"error":"success"}`)
       }
-      const d = document.getElementById("turnstileWidget");
-      let r = "",
-        o = null;
-      const p = async () => {
-        for (let a = 0; a < 50; a += 1) {
-          const t = window.turnstile;
-          if (t) return t;
-          await new Promise(i => setTimeout(i, 100))
-        }
-        throw new Error("Turnstile did not load")
-      }, y = async () => {
-        if (!(!e || !d)) try {
-          const a = e.dataset.endpoint || "/api/contact",
-            t = await fetch(a, {
-              headers: {
-                Accept: "application/json"
-              }
-            });
-          if (!t.ok) throw new Error("Form configuration is unavailable");
-          const i = await t.json();
-          if (!i.turnstileSiteKey) throw new Error("Turnstile site key is missing");
-          o = (await p()).render(d, {
-            sitekey: i.turnstileSiteKey,
-            action: "turnstile-spin-v2",
-            theme: "light",
-            callback: m => {
-              r = m
-            },
-            "expired-callback": () => {
-              r = ""
-            },
-            "error-callback": () => {
-              r = ""
+
+      function q() {
+        return s() ? Promise.resolve(s()) : (document.getElementById("turnstileScript")?.remove(), new Promise((r, i) => {
+          const n = document.createElement("script");
+          n.id = "turnstileScript", n.src = "https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit", n.async = !0;
+          const o = window.setTimeout(() => i(new Error("verification_timeout")), 2e4);
+          n.onload = () => {
+            clearTimeout(o), s() ? r(s()) : i(new Error("verification_unavailable"))
+          }, n.onerror = () => {
+            clearTimeout(o), i(new Error("verification_unavailable"))
+          }, document.head.append(n)
+        }))
+      }
+
+      function b() {
+        return f || !e || !S || (t && (t.hidden = !0, t.disabled = !0), f = Promise.resolve().then(async () => {
+          try {
+            if (m !== null && s()) {
+              s().reset(m);
+              return
             }
-          })
-        } catch {
-          r = ""
-        }
-      };
-      y();
-      e && e.addEventListener("submit", async a => {
-        a.preventDefault();
-        const t = e.querySelector("button[type=submit]"),
-          i = e.dataset.endpoint || "/api/contact",
-          l = {
-            name: e.elements.namedItem("name").value.trim(),
-            email: e.elements.namedItem("email").value.trim(),
-            company: e.elements.namedItem("company").value.trim(),
-            country: e.elements.namedItem("country").value.trim(),
-            whatsapp: e.elements.namedItem("whatsapp").value.trim(),
-            moq: e.elements.namedItem("moq").value.trim(),
-            product: e.elements.namedItem("product").value,
-            message: e.elements.namedItem("message").value.trim(),
-            website: e.elements.namedItem("website").value,
-            turnstileToken: r,
-            pageLang: document.documentElement.lang,
-            pageUrl: location.href
-          },
-          m = ["name", "email", "country", "whatsapp", "message"];
-        for (const s of m)
-          if (!l[s]) {
-            n && (n.className = "form-status error", n.textContent = e.dataset.errorRequired || "Please fill in all required fields."), e.elements.namedItem(s).focus();
+            const r = await fetch(e.dataset.endpoint, {
+              signal: AbortSignal.timeout(1e4)
+            });
+            if (!r.ok) throw new Error("configuration_unavailable");
+            const i = await r.json();
+            if (!i.turnstileSiteKey) throw new Error("configuration_unavailable");
+            m = (await q()).render(S, {
+              sitekey: i.turnstileSiteKey,
+              action: "turnstile-spin-v2",
+              theme: "light",
+              size: "flexible",
+              callback: o => {
+                a = o, t && (t.hidden = !0), !y && u && l(""), u = !1
+              },
+              "expired-callback": () => {
+                a = ""
+              },
+              "error-callback": () => {
+                a = "", u = !0, l(e.dataset.errorVerifyLoad, !0), t && (t.hidden = !1, t.disabled = !1)
+              }
+            })
+          } catch {
+            a = "", u = !0, l(e.dataset.errorVerifyLoad, !0), t && (t.hidden = !1)
+          } finally {
+            t && (t.disabled = !1), f = null
+          }
+        })), f
+      }
+      if (e && d) {
+        const r = new URLSearchParams(location.search),
+          i = e.elements.namedItem("product"),
+          n = r.get("product")?.toLowerCase(),
+          o = [...i.options].find(v => v.dataset.slug === n);
+        o && (i.value = o.value);
+        const h = e.elements.namedItem("message");
+        r.get("topic") === "policy" && r.get("policy") && !h.value && (h.value = `${e.dataset.policyPrefix}: ${r.get("policy").slice(0,200)}
+
+`), t?.addEventListener("click", () => {
+          b()
+        }), window.addEventListener("online", () => {
+          a || b()
+        }), b(), e.addEventListener("submit", async v => {
+          if (v.preventDefault(), y || !e.reportValidity()) return;
+          if (!a) {
+            u = !0, l(e.dataset.errorVerify, !0), t && (t.hidden = !1);
             return
-          } if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(l.email)) {
-          n && (n.className = "form-status error", n.textContent = e.dataset.errorRequired || "Please enter a valid email address."), e.elements.namedItem("email").focus();
-          return
-        }
-        if (!r) {
-          n && (n.className = "form-status error", n.textContent = e.dataset.errorVerify || "Please complete the verification.");
-          return
-        }
-        const f = t?.textContent || "";
-        t && (t.disabled = !0, t.textContent = "…");
-        try {
-          const s = await fetch(i, {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-              Accept: "application/json"
-            },
-            body: JSON.stringify(l)
-          });
-          if (!s.ok) throw new Error("Server returned " + s.status);
-          t && (t.textContent = "✓ " + (e.dataset.sent || "Sent"), t.style.background = "#059669"), n && (n.className = "form-status success", n.textContent = e.dataset.success || ""), e.reset(), r = "";
-          const c = window.turnstile;
-          c && o !== null && c.reset(o)
-        } catch {
-          t && (t.disabled = !1, t.textContent = f || "Send"), r = "";
-          const s = window.turnstile;
-          s && o !== null && s.reset(o), n && (n.className = "form-status error", n.textContent = e.dataset.errorNetwork || "Submission failed.")
-        }
-      });
+          }
+          y = !0, d.disabled = !0, d.textContent = e.dataset.sending, e.setAttribute("aria-busy", "true"), l("");
+          const k = Object.fromEntries(new FormData(e)),
+            w = r.get("source"),
+            L = w && /^\/[a-zA-Z0-9/-]+$/.test(w) ? w : location.pathname;
+          try {
+            const c = await fetch(e.dataset.endpoint, {
+                method: "POST",
+                headers: {
+                  "Content-Type": "application/json",
+                  Accept: "application/json"
+                },
+                signal: AbortSignal.timeout(3e4),
+                body: JSON.stringify({
+                  ...k,
+                  turnstileToken: a,
+                  pageLang: document.documentElement.lang,
+                  pageUrl: new URL(L, location.origin).href.slice(0, 500)
+                })
+              }),
+              p = await c.json();
+            if (!c.ok || p.ok !== !0) {
+              const E = ["verification_failed", "verification_unavailable"].includes(p.error);
+              throw u = E, new Error(E ? e.dataset.errorVerify : e.dataset.errorNetwork)
+            }
+            e.reset(), o && (i.value = o.value), l(e.dataset.success)
+          } catch (c) {
+            const p = c instanceof Error && [e.dataset.errorVerify, e.dataset.errorNetwork].includes(c.message);
+            l(p ? c.message : e.dataset.errorNetwork, !0)
+          } finally {
+            a = "", y = !1, m !== null && s()?.reset(m), d.disabled = !1, d.textContent = e.dataset.submit, e.removeAttribute("aria-busy")
+          }
+        })
+      }
     </script>
 
   </main>
@@ -568,11 +628,11 @@
       <div class="footer-contact">
         <span>Hong Kong</span>
         <span class="sep">|</span>
-        <span>Dexon@duopudun.com</span>
+        <a href="mailto:Dexon@duopudun.com">Dexon@duopudun.com</a>
         <span class="sep">|</span>
         <span class="footer-phones">
-          <span>+852 9678 3958</span>
-          <span>+86 130 6689 5078</span>
+          <a href="tel:+85296783958" dir="ltr">+852 9678 3958</a>
+          <a href="tel:+8613066895078" dir="ltr">+86 130 6689 5078</a>
         </span>
         <span class="right">Duopudun is operated by Huizhou Duopudun Energy Storage Technology Co., Ltd.</span>
       </div>

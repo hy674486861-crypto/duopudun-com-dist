@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr" data-lang="fr" data-lang-en="/en/shipping-policy/" data-lang-zh="/zh/shipping-policy/">
+<html lang="fr" dir="ltr" data-lang="fr" data-lang-en="/en/shipping-policy/" data-lang-zh="/zh/shipping-policy/">
 
 <head>
   <meta charset="UTF-8">
@@ -7,6 +7,28 @@
   <title>Politique d&#39;expédition | Duopudun</title>
   <meta name="description" content="Dispositions générales d'expédition des systèmes de stockage, batteries au lithium et commandes de projets internationaux.">
   <link rel="canonical" href="https://duopudun.com/fr/shipping-policy/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Duopudun">
+  <meta property="og:title" content="Politique d'expédition | Duopudun">
+  <meta property="og:description" content="Dispositions générales d'expédition des systèmes de stockage, batteries au lithium et commandes de projets internationaux.">
+  <meta property="og:url" content="https://duopudun.com/fr/shipping-policy/">
+  <meta property="og:image" content="https://duopudun.com/uploads/products/a8/main.webp">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Politique d'expédition | Duopudun">
+  <meta name="twitter:description" content="Dispositions générales d'expédition des systèmes de stockage, batteries au lithium et commandes de projets internationaux.">
+  <meta name="twitter:image" content="https://duopudun.com/uploads/products/a8/main.webp">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [{
+        "@type": "Organization",
+        "@id": "https://duopudun.com/#organization",
+        "name": "Duopudun",
+        "url": "https://duopudun.com/",
+        "logo": "https://duopudun.com/Duopudun_logo.png"
+      }]
+    }
+  </script>
   <link rel="icon" type="image/png" href="/favicon-logo.png" sizes="178x160">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,7 +42,7 @@
   <link rel="alternate" hreflang="zh-Hant" href="https://duopudun.com/zh-Hant/shipping-policy/">
   <link rel="alternate" hreflang="x-default" href="https://duopudun.com/en/shipping-policy/">
   <link rel="stylesheet" href="/_assets/_policy_.BuwZz9pV.css">
-  <link rel="stylesheet" href="/_assets/Layout.Bsqp905Y.css">
+  <link rel="stylesheet" href="/_assets/Layout.BymaFkJ1.css">
 </head>
 
 <body>
@@ -38,7 +60,7 @@
       </nav>
 
       <div class="lang-dropdown">
-        <button class="lang-toggle" aria-label="Switch language">
+        <button class="lang-toggle" aria-label="Switch language" aria-expanded="false" aria-controls="languageMenu">
           <span class="lang-toggle-flag">
             <img src="/flags/fr.png" alt="FR" width="22" height="15" style="vertical-align:middle;border-radius:2px">
           </span>
@@ -47,7 +69,7 @@
             <path d="M3 5l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
           </svg>
         </button>
-        <div class="lang-menu">
+        <div class="lang-menu" id="languageMenu">
           <a href="/zh/shipping-policy/" class="lang-option" data-lang="zh">
             <span class="lang-option-flag">
               <img src="/flags/cn.png" alt="ZH" width="22" height="15" style="vertical-align:middle;border-radius:2px">
@@ -82,7 +104,7 @@
         </div>
       </div>
 
-      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu">
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu" aria-expanded="false" aria-controls="mobileNav">
         <span></span><span></span><span></span>
       </button>
     </div>
@@ -98,22 +120,29 @@
   </header>
 
   <script type="module">
-    const r = document.getElementById("mobileMenuBtn"),
-      t = document.getElementById("mobileNav");
-    r?.addEventListener("click", () => {
-      t && (t.style.display = t.style.display === "none" ? "flex" : "none")
+    const s = document.getElementById("mobileMenuBtn"),
+      a = document.getElementById("mobileNav");
+    s?.addEventListener("click", () => {
+      a && (a.style.display = a.style.display === "none" ? "flex" : "none", s?.setAttribute("aria-expanded", String(a.style.display === "flex")))
     });
     document.querySelectorAll(".lang-dropdown").forEach(e => {
-      const l = e.querySelector(".lang-toggle"),
+      const t = e.querySelector(".lang-toggle"),
         n = e.querySelector(".lang-menu");
-      !l || !n || l.addEventListener("click", c => {
-        c.stopPropagation(), document.querySelectorAll(".lang-menu.open").forEach(o => {
+      !t || !n || (t.addEventListener("click", l => {
+        l.stopPropagation(), document.querySelectorAll(".lang-menu.open").forEach(o => {
           o !== n && o.classList.remove("open")
-        }), n.classList.toggle("open")
-      })
+        }), n.classList.toggle("open"), t.setAttribute("aria-expanded", String(n.classList.contains("open")))
+      }), e.addEventListener("keydown", l => {
+        l.key === "Escape" && (n.classList.remove("open"), t.setAttribute("aria-expanded", "false"), t.focus())
+      }), e.addEventListener("focusout", l => {
+        e.contains(l.relatedTarget) || (n.classList.remove("open"), t.setAttribute("aria-expanded", "false"))
+      }))
     });
     document.addEventListener("click", () => {
-      document.querySelectorAll(".lang-menu.open").forEach(e => e.classList.remove("open"))
+      document.querySelectorAll(".lang-menu.open").forEach(e => e.classList.remove("open")), document.querySelectorAll(".lang-toggle").forEach(e => e.setAttribute("aria-expanded", "false"))
+    });
+    document.addEventListener("keydown", e => {
+      e.key === "Escape" && a?.style.display === "flex" && (a.style.display = "none", s?.setAttribute("aria-expanded", "false"), s?.focus())
     });
   </script>
 
@@ -300,13 +329,13 @@
       <div class="footer-contact">
         <span>Hong Kong</span>
         <span class="sep">|</span>
-        <span>Dexon@duopudun.com</span>
+        <a href="mailto:Dexon@duopudun.com">Dexon@duopudun.com</a>
         <span class="sep">|</span>
         <span class="footer-phones">
-          <span>+852 9678 3958</span>
-          <span>+86 130 6689 5078</span>
+          <a href="tel:+85296783958" dir="ltr">+852 9678 3958</a>
+          <a href="tel:+8613066895078" dir="ltr">+86 130 6689 5078</a>
         </span>
-        <span class="right">Duopudun is operated by Huizhou Duopudun Energy Storage Technology Co., Ltd.</span>
+        <span class="right">Duopudun est exploité par Huizhou Duopudun Energy Storage Technology Co., Ltd.</span>
       </div>
     </div>
   </footer>

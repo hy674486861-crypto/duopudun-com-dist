@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-TW" data-lang="zh-Hant" data-lang-en="/en/products/e2/" data-lang-zh="/zh/products/e2/">
+<html lang="zh-TW" dir="ltr" data-lang="zh-Hant" data-lang-en="/en/products/e2/" data-lang-zh="/zh/products/e2/">
 
 <head>
   <meta charset="UTF-8">
@@ -7,6 +7,52 @@
   <title>E2 家用儲能</title>
   <meta name="description" content="2.56kWh家用儲能 · 1.2kW輸出 · 穩定LiFePO4 · 壁掛安裝 · 滿足基本備用電源需求。">
   <link rel="canonical" href="https://duopudun.com/zh-Hant/products/e2/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Duopudun">
+  <meta property="og:title" content="E2 家用儲能">
+  <meta property="og:description" content="2.56kWh家用儲能 · 1.2kW輸出 · 穩定LiFePO4 · 壁掛安裝 · 滿足基本備用電源需求。">
+  <meta property="og:url" content="https://duopudun.com/zh-Hant/products/e2/">
+  <meta property="og:image" content="https://duopudun.com/uploads/products/e2/main.webp">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="E2 家用儲能">
+  <meta name="twitter:description" content="2.56kWh家用儲能 · 1.2kW輸出 · 穩定LiFePO4 · 壁掛安裝 · 滿足基本備用電源需求。">
+  <meta name="twitter:image" content="https://duopudun.com/uploads/products/e2/main.webp">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [{
+        "@type": "Organization",
+        "@id": "https://duopudun.com/#organization",
+        "name": "Duopudun",
+        "url": "https://duopudun.com/",
+        "logo": "https://duopudun.com/Duopudun_logo.png"
+      }, {
+        "@type": "Product",
+        "name": "E2 家用儲能",
+        "description": "2.56kWh家用儲能 · 1.2kW輸出 · 穩定LiFePO4 · 壁掛安裝 · 滿足基本備用電源需求。",
+        "model": "E2",
+        "sku": "E2",
+        "brand": {
+          "@type": "Brand",
+          "name": "Duopudun"
+        },
+        "image": "https://duopudun.com/uploads/products/e2/main.webp",
+        "additionalProperty": [{
+          "@type": "PropertyValue",
+          "name": "電池容量",
+          "value": "2.56kWh"
+        }, {
+          "@type": "PropertyValue",
+          "name": "輸出功率",
+          "value": "1.2kW"
+        }, {
+          "@type": "PropertyValue",
+          "name": "電壓制式",
+          "value": "48V"
+        }]
+      }]
+    }
+  </script>
   <link rel="icon" type="image/png" href="/favicon-logo.png" sizes="178x160">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,8 +65,15 @@
   <link rel="alternate" hreflang="ar" href="https://duopudun.com/ar/products/e2/">
   <link rel="alternate" hreflang="zh-Hant" href="https://duopudun.com/zh-Hant/products/e2/">
   <link rel="alternate" hreflang="x-default" href="https://duopudun.com/en/products/e2/">
-  <link rel="stylesheet" href="/_assets/Layout.Bsqp905Y.css">
-  <link rel="stylesheet" href="/_assets/_slug_.BZ79t5Pm.css">
+  <link rel="stylesheet" href="/_assets/Layout.BymaFkJ1.css">
+  <style>
+    img[data-astro-cid-shljrivk] {
+      display: block;
+      max-width: 100%;
+      height: auto
+    }
+  </style>
+  <link rel="stylesheet" href="/_assets/_slug_.oytD1yKG.css">
 </head>
 
 <body>
@@ -38,7 +91,7 @@
       </nav>
 
       <div class="lang-dropdown">
-        <button class="lang-toggle" aria-label="Switch language">
+        <button class="lang-toggle" aria-label="Switch language" aria-expanded="false" aria-controls="languageMenu">
           <span class="lang-toggle-flag">
             <img src="/flags/hk.png" alt="ZH-Hant" width="22" height="15" style="vertical-align:middle;border-radius:2px">
           </span>
@@ -47,7 +100,7 @@
             <path d="M3 5l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
           </svg>
         </button>
-        <div class="lang-menu">
+        <div class="lang-menu" id="languageMenu">
           <a href="/zh/products/e2/" class="lang-option" data-lang="zh">
             <span class="lang-option-flag">
               <img src="/flags/cn.png" alt="ZH" width="22" height="15" style="vertical-align:middle;border-radius:2px">
@@ -82,7 +135,7 @@
         </div>
       </div>
 
-      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu">
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu" aria-expanded="false" aria-controls="mobileNav">
         <span></span><span></span><span></span>
       </button>
     </div>
@@ -98,22 +151,29 @@
   </header>
 
   <script type="module">
-    const r = document.getElementById("mobileMenuBtn"),
-      t = document.getElementById("mobileNav");
-    r?.addEventListener("click", () => {
-      t && (t.style.display = t.style.display === "none" ? "flex" : "none")
+    const s = document.getElementById("mobileMenuBtn"),
+      a = document.getElementById("mobileNav");
+    s?.addEventListener("click", () => {
+      a && (a.style.display = a.style.display === "none" ? "flex" : "none", s?.setAttribute("aria-expanded", String(a.style.display === "flex")))
     });
     document.querySelectorAll(".lang-dropdown").forEach(e => {
-      const l = e.querySelector(".lang-toggle"),
+      const t = e.querySelector(".lang-toggle"),
         n = e.querySelector(".lang-menu");
-      !l || !n || l.addEventListener("click", c => {
-        c.stopPropagation(), document.querySelectorAll(".lang-menu.open").forEach(o => {
+      !t || !n || (t.addEventListener("click", l => {
+        l.stopPropagation(), document.querySelectorAll(".lang-menu.open").forEach(o => {
           o !== n && o.classList.remove("open")
-        }), n.classList.toggle("open")
-      })
+        }), n.classList.toggle("open"), t.setAttribute("aria-expanded", String(n.classList.contains("open")))
+      }), e.addEventListener("keydown", l => {
+        l.key === "Escape" && (n.classList.remove("open"), t.setAttribute("aria-expanded", "false"), t.focus())
+      }), e.addEventListener("focusout", l => {
+        e.contains(l.relatedTarget) || (n.classList.remove("open"), t.setAttribute("aria-expanded", "false"))
+      }))
     });
     document.addEventListener("click", () => {
-      document.querySelectorAll(".lang-menu.open").forEach(e => e.classList.remove("open"))
+      document.querySelectorAll(".lang-menu.open").forEach(e => e.classList.remove("open")), document.querySelectorAll(".lang-toggle").forEach(e => e.setAttribute("aria-expanded", "false"))
+    });
+    document.addEventListener("keydown", e => {
+      e.key === "Escape" && a?.style.display === "flex" && (a.style.display = "none", s?.setAttribute("aria-expanded", "false"), s?.focus())
     });
   </script>
 
@@ -122,11 +182,11 @@
     <div class="pm-page" data-astro-cid-x26yjsfs>
       <section class="pm-hero" id="overview" data-astro-cid-x26yjsfs>
         <div class="pm-container" data-astro-cid-x26yjsfs>
-          <div class="pm-hero-card" style="--pm-hero-image: url('/uploads/products/e2/main.webp')" data-astro-cid-x26yjsfs>
+          <div class="pm-hero-card" style="--pm-hero-image: url('/uploads/previews/459a9c9416a01064-960.webp')" data-astro-cid-x26yjsfs>
             <div class="pm-hero-grid" data-astro-cid-x26yjsfs>
               <div class="pm-hero-copy" data-astro-cid-x26yjsfs>
                 <div class="pm-kicker" data-astro-cid-x26yjsfs>E2 家用儲能系統</div>
-                <h1 data-astro-cid-x26yjsfs>一體化家用太陽能儲能系統 <span data-astro-cid-x26yjsfs>E2</span></h1>
+                <h1 data-astro-cid-x26yjsfs>E2 家用儲能</h1>
                 <p class="pm-hero-sub" data-astro-cid-x26yjsfs>2.56kWh家用儲能 · 1.2kW輸出 · 穩定LiFePO4 · 壁掛安裝 · 滿足基本備用電源需求。</p>
                 <ul class="pm-bullets" data-astro-cid-x26yjsfs>
                   <li data-astro-cid-x26yjsfs>2.56kWh 儲能容量</li>
@@ -135,7 +195,7 @@
                   <li data-astro-cid-x26yjsfs>IP21 防護等級</li>
                 </ul>
                 <div class="pm-hero-actions" data-astro-cid-x26yjsfs>
-                  <a class="pm-btn pm-btn-primary" href="/zh-Hant/contact" data-astro-cid-x26yjsfs>立即詢價</a>
+                  <a class="pm-btn pm-btn-primary" href="/zh-Hant/contact?product=e2&amp;source=%2Fzh-Hant%2Fproducts%2Fe2%2F" data-astro-cid-x26yjsfs>立即詢價</a>
                   <a class="pm-btn pm-btn-secondary" href="#specs" data-astro-cid-x26yjsfs>查看規格</a>
                 </div>
                 <div class="pm-hero-spec-strip" data-astro-cid-x26yjsfs>
@@ -158,7 +218,7 @@
                 </div>
               </div>
               <div class="pm-hero-visual" data-astro-cid-x26yjsfs>
-                <img src="/uploads/products/e2/main.webp" alt="E2 product overview" loading="eager" data-astro-cid-x26yjsfs>
+                <img src="/uploads/previews/459a9c9416a01064-960.webp" srcset="/uploads/previews/459a9c9416a01064-480.webp 480w, /uploads/previews/459a9c9416a01064-960.webp 960w" sizes="(max-width: 768px) 90vw, 480px" width="1200" height="1499" alt="E2 家用儲能" loading="eager" fetchpriority="high" decoding="async" data-astro-cid-shljrivk>
               </div>
             </div>
 
@@ -236,7 +296,7 @@
             </div>
             <div class="pm-stat" data-astro-cid-x26yjsfs>
               <div class="pm-stat-icon" data-astro-cid-x26yjsfs>📱</div>
-              <b data-astro-cid-x26yjsfs>Smart-ready</b>
+              <b data-astro-cid-x26yjsfs>智慧管理</b>
               <span data-astro-cid-x26yjsfs>智慧能源管理</span>
             </div>
           </div>
@@ -313,56 +373,57 @@
           <div data-astro-cid-x26yjsfs>
             <div class="pm-section-title-row pm-stack-title" data-astro-cid-x26yjsfs>
               <h2 data-astro-cid-x26yjsfs>常見家電續航時間</h2>
-              <p data-astro-cid-x26yjsfs>以下續航按產品電量和家電功率統一估算，實際時間會受負載波動、環境溫度和系統效率影響。</p>
+              <p data-astro-cid-x26yjsfs>按標稱容量 ÷ 單台家電功率估算的理論續航，不計轉換損耗和備用電量。實際時間取決於放電深度、負載啟停和環境；請確認逆變器功率及啟動負載。</p>
+
             </div>
             <div class="pm-runtime-grid" data-astro-cid-x26yjsfs>
               <div class="pm-appliance" data-astro-cid-x26yjsfs>
                 <b data-astro-cid-x26yjsfs>空調</b>
                 <small data-astro-cid-x26yjsfs>(1080 W)</small>
                 <img src="/uploads/products/a8/appliances/ac.webp" alt="空調" loading="lazy" data-astro-cid-x26yjsfs>
-                <div class="pm-time" data-astro-cid-x26yjsfs>约 2.4 小时</div>
+                <div class="pm-time" data-astro-cid-x26yjsfs>約 2.4 小時</div>
               </div>
               <div class="pm-appliance" data-astro-cid-x26yjsfs>
                 <b data-astro-cid-x26yjsfs>冰箱</b>
                 <small data-astro-cid-x26yjsfs>(800 W)</small>
                 <img src="/uploads/products/a8/appliances/fridge.webp" alt="冰箱" loading="lazy" data-astro-cid-x26yjsfs>
-                <div class="pm-time" data-astro-cid-x26yjsfs>约 3.2 小时</div>
+                <div class="pm-time" data-astro-cid-x26yjsfs>約 3.2 小時</div>
               </div>
               <div class="pm-appliance" data-astro-cid-x26yjsfs>
                 <b data-astro-cid-x26yjsfs>洗衣機</b>
                 <small data-astro-cid-x26yjsfs>(800 W)</small>
                 <img src="/uploads/products/a8/appliances/washer.webp" alt="洗衣機" loading="lazy" data-astro-cid-x26yjsfs>
-                <div class="pm-time" data-astro-cid-x26yjsfs>约 3.2 小时</div>
+                <div class="pm-time" data-astro-cid-x26yjsfs>約 3.2 小時</div>
               </div>
               <div class="pm-appliance" data-astro-cid-x26yjsfs>
                 <b data-astro-cid-x26yjsfs>吸塵器</b>
                 <small data-astro-cid-x26yjsfs>(1000 W)</small>
                 <img src="/uploads/products/a8/appliances/vacuum.webp" alt="吸塵器" loading="lazy" data-astro-cid-x26yjsfs>
-                <div class="pm-time" data-astro-cid-x26yjsfs>约 2.6 小时</div>
+                <div class="pm-time" data-astro-cid-x26yjsfs>約 2.6 小時</div>
               </div>
               <div class="pm-appliance" data-astro-cid-x26yjsfs>
                 <b data-astro-cid-x26yjsfs>微波爐</b>
                 <small data-astro-cid-x26yjsfs>(500 W)</small>
                 <img src="/uploads/products/a8/appliances/microwave.webp" alt="微波爐" loading="lazy" data-astro-cid-x26yjsfs>
-                <div class="pm-time" data-astro-cid-x26yjsfs>约 5.1 小时</div>
+                <div class="pm-time" data-astro-cid-x26yjsfs>約 5.1 小時</div>
               </div>
               <div class="pm-appliance" data-astro-cid-x26yjsfs>
                 <b data-astro-cid-x26yjsfs>電鍋</b>
                 <small data-astro-cid-x26yjsfs>(850 W)</small>
                 <img src="/uploads/products/a8/appliances/ricecooker.webp" alt="電鍋" loading="lazy" data-astro-cid-x26yjsfs>
-                <div class="pm-time" data-astro-cid-x26yjsfs>约 3 小时</div>
+                <div class="pm-time" data-astro-cid-x26yjsfs>約 3 小時</div>
               </div>
               <div class="pm-appliance" data-astro-cid-x26yjsfs>
                 <b data-astro-cid-x26yjsfs>電磁爐</b>
                 <small data-astro-cid-x26yjsfs>(1100 W)</small>
                 <img src="/uploads/products/a8/appliances/induction.webp" alt="電磁爐" loading="lazy" data-astro-cid-x26yjsfs>
-                <div class="pm-time" data-astro-cid-x26yjsfs>约 2.3 小时</div>
+                <div class="pm-time" data-astro-cid-x26yjsfs>約 2.3 小時</div>
               </div>
               <div class="pm-appliance" data-astro-cid-x26yjsfs>
                 <b data-astro-cid-x26yjsfs>抽油煙機</b>
                 <small data-astro-cid-x26yjsfs>(350 W)</small>
                 <img src="/uploads/products/a8/appliances/hood.webp" alt="抽油煙機" loading="lazy" data-astro-cid-x26yjsfs>
-                <div class="pm-time" data-astro-cid-x26yjsfs>约 7.3 小时</div>
+                <div class="pm-time" data-astro-cid-x26yjsfs>約 7.3 小時</div>
               </div>
             </div>
           </div>
@@ -397,7 +458,7 @@
                 </tr>
               </tbody>
             </table>
-            <p class="pm-spec-note" data-astro-cid-x26yjsfs>項目選型時，建議結合負載類型、安裝方式、光電輸入條件和目標備電時長確認配置。</p>
+            <p class="pm-spec-note" data-astro-cid-x26yjsfs>配套設備需另行選配，介面與相容性以所選型號和項目配置為準。</p>
           </aside>
         </div>
       </section>
@@ -406,7 +467,7 @@
         <div class="pm-container" data-astro-cid-x26yjsfs>
           <div class="pm-section-title-row" data-astro-cid-x26yjsfs>
             <h2 data-astro-cid-x26yjsfs>可選配件</h2>
-            <p data-astro-cid-x26yjsfs>可根據應用場景搭配光電輸入、電動車充電和備用發電設備，形成更完整的能源方案。</p>
+            <p data-astro-cid-x26yjsfs>配套設備需另行選配，介面與相容性以所選型號和項目配置為準。</p>
           </div>
           <div class="pm-accessories" data-astro-cid-x26yjsfs>
             <article class="pm-accessory" data-astro-cid-x26yjsfs>
@@ -432,12 +493,12 @@
         <div class="pm-container" data-astro-cid-x26yjsfs>
           <div class="pm-section-title-row" data-astro-cid-x26yjsfs>
             <h2 data-astro-cid-x26yjsfs>產品資料與技術概覽</h2>
-            <p data-astro-cid-x26yjsfs>了解產品核心賣點、系統結構、應用場景和關鍵配置，幫助快速判斷是否適合你的項目需求。</p>
+            <p data-astro-cid-x26yjsfs>了解核心參數、系統結構與應用場景，評估產品是否適合你的項目。</p>
           </div>
           <div class="pm-sales-pages" data-astro-cid-x26yjsfs>
             <article class="pm-sales-page" data-astro-cid-x26yjsfs>
               <a href="/uploads/products/e2/sales-pages/P7-E2.webp" target="_blank" rel="noopener noreferrer" data-astro-cid-x26yjsfs>
-                <img src="/uploads/products/e2/sales-pages/P7-E2.webp" alt="產品概覽" loading="lazy" data-astro-cid-x26yjsfs>
+                <img src="/uploads/previews/690cbc8c6d8353eb-960.webp" srcset="/uploads/previews/690cbc8c6d8353eb-480.webp 480w, /uploads/previews/690cbc8c6d8353eb-960.webp 960w" sizes="(max-width: 768px) 90vw, 480px" width="1600" height="1999" alt="產品概覽" loading="lazy" fetchpriority="auto" decoding="async" data-astro-cid-shljrivk>
               </a>
               <div class="pm-sales-meta" data-astro-cid-x26yjsfs>
                 <h3 data-astro-cid-x26yjsfs>產品概覽</h3>
@@ -446,7 +507,7 @@
             </article>
             <article class="pm-sales-page" data-astro-cid-x26yjsfs>
               <a href="/uploads/products/e2/sales-pages/P8-E2.webp" target="_blank" rel="noopener noreferrer" data-astro-cid-x26yjsfs>
-                <img src="/uploads/products/e2/sales-pages/P8-E2.webp" alt="技術概覽" loading="lazy" data-astro-cid-x26yjsfs>
+                <img src="/uploads/previews/47ab04bd07a87f48-960.webp" srcset="/uploads/previews/47ab04bd07a87f48-480.webp 480w, /uploads/previews/47ab04bd07a87f48-960.webp 960w" sizes="(max-width: 768px) 90vw, 480px" width="1600" height="1999" alt="技術概覽" loading="lazy" fetchpriority="auto" decoding="async" data-astro-cid-shljrivk>
               </a>
               <div class="pm-sales-meta" data-astro-cid-x26yjsfs>
                 <h3 data-astro-cid-x26yjsfs>技術概覽</h3>
@@ -465,8 +526,8 @@
               <p data-astro-cid-x26yjsfs>通過 E2 產品資料快速了解核心規格、應用場景和可選配置，並聯繫 Duopudun 團隊討論適合你的方案。</p>
             </div>
             <div class="pm-cta-actions" data-astro-cid-x26yjsfs>
-              <a class="pm-btn pm-btn-secondary" href="/zh-Hant/contact" data-astro-cid-x26yjsfs>查看產品手冊</a>
-              <a class="pm-btn pm-btn-primary" href="/zh-Hant/contact" data-astro-cid-x26yjsfs>立即詢價</a>
+              <a class="pm-btn pm-btn-secondary" href="#sales-pages" data-astro-cid-x26yjsfs>產品資料與技術概覽</a>
+              <a class="pm-btn pm-btn-primary" href="/zh-Hant/contact?product=e2&amp;source=%2Fzh-Hant%2Fproducts%2Fe2%2F" data-astro-cid-x26yjsfs>立即詢價</a>
             </div>
           </div>
         </div>
@@ -590,11 +651,11 @@
       <div class="footer-contact">
         <span>Hong Kong</span>
         <span class="sep">|</span>
-        <span>Dexon@duopudun.com</span>
+        <a href="mailto:Dexon@duopudun.com">Dexon@duopudun.com</a>
         <span class="sep">|</span>
         <span class="footer-phones">
-          <span>+852 9678 3958</span>
-          <span>+86 130 6689 5078</span>
+          <a href="tel:+85296783958" dir="ltr">+852 9678 3958</a>
+          <a href="tel:+8613066895078" dir="ltr">+86 130 6689 5078</a>
         </span>
         <span class="right">Duopudun is operated by Huizhou Duopudun Energy Storage Technology Co., Ltd.</span>
       </div>

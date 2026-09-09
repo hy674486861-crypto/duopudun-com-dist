@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-CN" data-lang="zh" data-lang-en="/en/" data-lang-zh="/zh/">
+<html lang="zh-CN" dir="ltr" data-lang="zh" data-lang-en="/en/" data-lang-zh="/zh/">
 
 <head>
   <meta charset="UTF-8">
@@ -7,6 +7,28 @@
   <title>多普盾 | 工业级 LiFePO4 储能一体机</title>
 
   <link rel="canonical" href="https://duopudun.com/zh/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Duopudun">
+  <meta property="og:title" content="多普盾 | 工业级 LiFePO4 储能一体机">
+  <meta property="og:description" content="多普盾 | 工业级 LiFePO4 储能一体机">
+  <meta property="og:url" content="https://duopudun.com/zh/">
+  <meta property="og:image" content="https://duopudun.com/uploads/products/a8/main.webp">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="多普盾 | 工业级 LiFePO4 储能一体机">
+  <meta name="twitter:description" content="多普盾 | 工业级 LiFePO4 储能一体机">
+  <meta name="twitter:image" content="https://duopudun.com/uploads/products/a8/main.webp">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [{
+        "@type": "Organization",
+        "@id": "https://duopudun.com/#organization",
+        "name": "Duopudun",
+        "url": "https://duopudun.com/",
+        "logo": "https://duopudun.com/Duopudun_logo.png"
+      }]
+    }
+  </script>
   <link rel="icon" type="image/png" href="/favicon-logo.png" sizes="178x160">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,8 +41,15 @@
   <link rel="alternate" hreflang="ar" href="https://duopudun.com/ar/">
   <link rel="alternate" hreflang="zh-Hant" href="https://duopudun.com/zh-Hant/">
   <link rel="alternate" hreflang="x-default" href="https://duopudun.com/en/">
-  <link rel="stylesheet" href="/_assets/Layout.Bsqp905Y.css">
-  <link rel="stylesheet" href="/_assets/index.B1Vu3TMS.css">
+  <link rel="stylesheet" href="/_assets/Layout.BymaFkJ1.css">
+  <link rel="stylesheet" href="/_assets/index.Dy4rg-NP.css">
+  <style>
+    img[data-astro-cid-shljrivk] {
+      display: block;
+      max-width: 100%;
+      height: auto
+    }
+  </style>
 </head>
 
 <body>
@@ -38,7 +67,7 @@
       </nav>
 
       <div class="lang-dropdown">
-        <button class="lang-toggle" aria-label="Switch language">
+        <button class="lang-toggle" aria-label="Switch language" aria-expanded="false" aria-controls="languageMenu">
           <span class="lang-toggle-flag">
             <img src="/flags/cn.png" alt="ZH" width="22" height="15" style="vertical-align:middle;border-radius:2px">
           </span>
@@ -47,7 +76,7 @@
             <path d="M3 5l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
           </svg>
         </button>
-        <div class="lang-menu">
+        <div class="lang-menu" id="languageMenu">
           <a href="/zh/" class="lang-option" data-lang="zh">
             <span class="lang-option-flag">
               <img src="/flags/cn.png" alt="ZH" width="22" height="15" style="vertical-align:middle;border-radius:2px">
@@ -82,7 +111,7 @@
         </div>
       </div>
 
-      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu">
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu" aria-expanded="false" aria-controls="mobileNav">
         <span></span><span></span><span></span>
       </button>
     </div>
@@ -98,22 +127,29 @@
   </header>
 
   <script type="module">
-    const r = document.getElementById("mobileMenuBtn"),
-      t = document.getElementById("mobileNav");
-    r?.addEventListener("click", () => {
-      t && (t.style.display = t.style.display === "none" ? "flex" : "none")
+    const s = document.getElementById("mobileMenuBtn"),
+      a = document.getElementById("mobileNav");
+    s?.addEventListener("click", () => {
+      a && (a.style.display = a.style.display === "none" ? "flex" : "none", s?.setAttribute("aria-expanded", String(a.style.display === "flex")))
     });
     document.querySelectorAll(".lang-dropdown").forEach(e => {
-      const l = e.querySelector(".lang-toggle"),
+      const t = e.querySelector(".lang-toggle"),
         n = e.querySelector(".lang-menu");
-      !l || !n || l.addEventListener("click", c => {
-        c.stopPropagation(), document.querySelectorAll(".lang-menu.open").forEach(o => {
+      !t || !n || (t.addEventListener("click", l => {
+        l.stopPropagation(), document.querySelectorAll(".lang-menu.open").forEach(o => {
           o !== n && o.classList.remove("open")
-        }), n.classList.toggle("open")
-      })
+        }), n.classList.toggle("open"), t.setAttribute("aria-expanded", String(n.classList.contains("open")))
+      }), e.addEventListener("keydown", l => {
+        l.key === "Escape" && (n.classList.remove("open"), t.setAttribute("aria-expanded", "false"), t.focus())
+      }), e.addEventListener("focusout", l => {
+        e.contains(l.relatedTarget) || (n.classList.remove("open"), t.setAttribute("aria-expanded", "false"))
+      }))
     });
     document.addEventListener("click", () => {
-      document.querySelectorAll(".lang-menu.open").forEach(e => e.classList.remove("open"))
+      document.querySelectorAll(".lang-menu.open").forEach(e => e.classList.remove("open")), document.querySelectorAll(".lang-toggle").forEach(e => e.setAttribute("aria-expanded", "false"))
+    });
+    document.addEventListener("keydown", e => {
+      e.key === "Escape" && a?.style.display === "flex" && (a.style.display = "none", s?.setAttribute("aria-expanded", "false"), s?.focus())
     });
   </script>
 
@@ -140,23 +176,23 @@
           </div>
 
           <div class="proof-row" aria-label="Duopudun capabilities" data-astro-cid-nlow4r3u>
-            <div data-astro-cid-nlow4r3u><b data-astro-cid-nlow4r3u>1.2-61.0kWh</b><span data-astro-cid-nlow4r3u>电池容量</span></div>
-            <div data-astro-cid-nlow4r3u><b data-astro-cid-nlow4r3u>1-50kW</b><span data-astro-cid-nlow4r3u>输出功率</span></div>
+            <div data-astro-cid-nlow4r3u><b data-astro-cid-nlow4r3u>1.28-61 kWh</b><span data-astro-cid-nlow4r3u>电池容量</span></div>
+            <div data-astro-cid-nlow4r3u><b data-astro-cid-nlow4r3u>1.2-50 kW</b><span data-astro-cid-nlow4r3u>输出功率</span></div>
             <div data-astro-cid-nlow4r3u><b data-astro-cid-nlow4r3u>6000+</b><span data-astro-cid-nlow4r3u>循环寿命</span></div>
-            <div data-astro-cid-nlow4r3u><b data-astro-cid-nlow4r3u>24/7</b><span data-astro-cid-nlow4r3u>香港联络处提供全球 24/7 技术支持</span></div>
+            <div data-astro-cid-nlow4r3u><b data-astro-cid-nlow4r3u>24/7</b><span data-astro-cid-nlow4r3u>技术支持</span></div>
           </div>
         </div>
 
         <div class="hero-visual" aria-label="Duopudun product preview" data-astro-cid-nlow4r3u>
           <div class="product-stage" data-astro-cid-nlow4r3u>
             <div class="stage-label" data-astro-cid-nlow4r3u>A8 Hybrid ESS</div>
-            <img src="/uploads/products/a8/main.webp" alt="A8 Home Energy Storage System" loading="eager" data-astro-cid-nlow4r3u>
+            <img src="/uploads/previews/62cbf91077f9f621-960.webp" srcset="/uploads/previews/62cbf91077f9f621-480.webp 480w, /uploads/previews/62cbf91077f9f621-960.webp 960w" sizes="(max-width: 768px) 90vw, 480px" width="1200" height="1499" alt="A8 家用储能" loading="eager" fetchpriority="high" decoding="async" data-astro-cid-shljrivk>
             <div class="spec-card spec-card-a" data-astro-cid-nlow4r3u>
-              <span data-astro-cid-nlow4r3u>Capacity</span>
+              <span data-astro-cid-nlow4r3u>容量</span>
               <b data-astro-cid-nlow4r3u>8.03kWh</b>
             </div>
             <div class="spec-card spec-card-b" data-astro-cid-nlow4r3u>
-              <span data-astro-cid-nlow4r3u>Output</span>
+              <span data-astro-cid-nlow4r3u>输出功率</span>
               <b data-astro-cid-nlow4r3u>3.6kW / 5kVA</b>
             </div>
           </div>
@@ -208,9 +244,9 @@
               <b data-astro-cid-zdxu43nv>便携式系列</b>
               <a href="/zh/products#portable" data-astro-cid-zdxu43nv>了解更多</a>
             </div>
-            <div class="metric" data-astro-cid-zdxu43nv><span data-astro-cid-zdxu43nv>1-5kWh</span></div>
-            <div class="metric" data-astro-cid-zdxu43nv><span data-astro-cid-zdxu43nv>1-3.6kW</span></div>
-            <p data-astro-cid-zdxu43nv>轻巧设计，1-5kWh容量，适合户外作业、应急备电、车载旅行。支持PV，DC，AC三种充电方式。</p>
+            <div class="metric" data-astro-cid-zdxu43nv><span data-astro-cid-zdxu43nv>1.28-2.63 kWh</span></div>
+            <div class="metric" data-astro-cid-zdxu43nv><span data-astro-cid-zdxu43nv>1.2 kW</span></div>
+            <p data-astro-cid-zdxu43nv>1-5kWh / 1-3.6kW 输出，轻巧设计，适合户外作业、应急备电、车载旅行。支持PV，DC，AC三种充电方式。</p>
             <div class="model-list" data-astro-cid-zdxu43nv>
               <a href="/zh/products/m1" data-astro-cid-zdxu43nv>M1</a><a href="/zh/products/m2" data-astro-cid-zdxu43nv>M2</a>
             </div>
@@ -220,9 +256,9 @@
               <b data-astro-cid-zdxu43nv>一体式系列</b>
               <a href="/zh/products#home" data-astro-cid-zdxu43nv>了解更多</a>
             </div>
-            <div class="metric" data-astro-cid-zdxu43nv><span data-astro-cid-zdxu43nv>2.56-15kWh</span></div>
-            <div class="metric" data-astro-cid-zdxu43nv><span data-astro-cid-zdxu43nv>3.6-12kW</span></div>
-            <p data-astro-cid-zdxu43nv>3.6kW-12kW 一体机，MPPT 99.5%，壁挂/落地灵活安装，支持并联扩容，4种充电模式。</p>
+            <div class="metric" data-astro-cid-zdxu43nv><span data-astro-cid-zdxu43nv>2.56-15 kWh</span></div>
+            <div class="metric" data-astro-cid-zdxu43nv><span data-astro-cid-zdxu43nv>1.2-6 kW</span></div>
+            <p data-astro-cid-zdxu43nv>2.56–16kWh 容量，1.2–6kW 输出，MPPT 99.5%，4种充电模式，充电功率可调，模块化设计，简洁外观，节约室内空间，安装部署极简单。</p>
             <div class="model-list" data-astro-cid-zdxu43nv>
               <a href="/zh/products/a8" data-astro-cid-zdxu43nv>A8</a><a href="/zh/products/t10" data-astro-cid-zdxu43nv>T10</a><a href="/zh/products/t15" data-astro-cid-zdxu43nv>T15</a><a href="/zh/products/e2" data-astro-cid-zdxu43nv>E2</a><a href="/zh/products/e5" data-astro-cid-zdxu43nv>E5</a><a href="/zh/products/a5" data-astro-cid-zdxu43nv>A5</a><a href="/zh/products/q5" data-astro-cid-zdxu43nv>Q5</a>
             </div>
@@ -232,8 +268,8 @@
               <b data-astro-cid-zdxu43nv>堆叠式系列</b>
               <a href="/zh/products#stack" data-astro-cid-zdxu43nv>了解更多</a>
             </div>
-            <div class="metric" data-astro-cid-zdxu43nv><span data-astro-cid-zdxu43nv>5-60kWh</span></div>
-            <div class="metric" data-astro-cid-zdxu43nv><span data-astro-cid-zdxu43nv>6-12kW</span></div>
+            <div class="metric" data-astro-cid-zdxu43nv><span data-astro-cid-zdxu43nv>15.07-60.28 kWh</span></div>
+            <div class="metric" data-astro-cid-zdxu43nv><span data-astro-cid-zdxu43nv>6-12 kW</span></div>
             <p data-astro-cid-zdxu43nv>模块化堆叠设计，容量可按项目需求灵活配置，适合中大型家庭和小型商用场景。</p>
             <div class="model-list" data-astro-cid-zdxu43nv>
               <a href="/zh/products/t15pro" data-astro-cid-zdxu43nv>T15Pro</a><a href="/zh/products/t30" data-astro-cid-zdxu43nv>T30</a><a href="/zh/products/t45" data-astro-cid-zdxu43nv>T45</a><a href="/zh/products/t60" data-astro-cid-zdxu43nv>T60</a><a href="/zh/products/k15" data-astro-cid-zdxu43nv>K15</a><a href="/zh/products/k16" data-astro-cid-zdxu43nv>K16</a><a href="/zh/products/k30" data-astro-cid-zdxu43nv>K30</a><a href="/zh/products/k32" data-astro-cid-zdxu43nv>K32</a><a href="/zh/products/k45" data-astro-cid-zdxu43nv>K45</a><a href="/zh/products/k60" data-astro-cid-zdxu43nv>K60</a>
@@ -244,9 +280,9 @@
               <b data-astro-cid-zdxu43nv>壁挂式系列</b>
               <a href="/zh/products#wall" data-astro-cid-zdxu43nv>了解更多</a>
             </div>
-            <div class="metric" data-astro-cid-zdxu43nv><span data-astro-cid-zdxu43nv>5kWh</span></div>
-            <div class="metric" data-astro-cid-zdxu43nv><span data-astro-cid-zdxu43nv>51.2V100Ah</span></div>
-            <p data-astro-cid-zdxu43nv>51.2V100Ah 壁挂式 LiFePO4 电池，5kWh 容量，堆叠模块设计，兼容多品牌逆变器，即插即用。</p>
+            <div class="metric" data-astro-cid-zdxu43nv><span data-astro-cid-zdxu43nv>5 kWh</span></div>
+            <div class="metric" data-astro-cid-zdxu43nv><span data-astro-cid-zdxu43nv>-</span></div>
+            <p data-astro-cid-zdxu43nv>51.2V100Ah 壁挂式 LiFePO4 电池，5kWh 容量，堆叠式模块设计，兼容多品牌逆变器，即插即用。</p>
             <div class="model-list" data-astro-cid-zdxu43nv>
               <a href="/zh/products/d5" data-astro-cid-zdxu43nv>D5</a>
             </div>
@@ -256,8 +292,8 @@
               <b data-astro-cid-zdxu43nv>微电网系列</b>
               <a href="/zh/products#hv" data-astro-cid-zdxu43nv>了解更多</a>
             </div>
-            <div class="metric" data-astro-cid-zdxu43nv><span data-astro-cid-zdxu43nv>61.0kWh</span></div>
-            <div class="metric" data-astro-cid-zdxu43nv><span data-astro-cid-zdxu43nv>30-50kW</span></div>
+            <div class="metric" data-astro-cid-zdxu43nv><span data-astro-cid-zdxu43nv>61 kWh</span></div>
+            <div class="metric" data-astro-cid-zdxu43nv><span data-astro-cid-zdxu43nv>30-50 kW</span></div>
             <p data-astro-cid-zdxu43nv>H6050: 61.0kWh / 50kW；H6030: 61.0kWh / 30kW。三相 AC400V，IP54 户外安装，EMS/消防/空调一体化集成。</p>
             <div class="model-list" data-astro-cid-zdxu43nv>
               <a href="/zh/products/h6050" data-astro-cid-zdxu43nv>H6050</a><a href="/zh/products/h6030" data-astro-cid-zdxu43nv>H6030</a>
@@ -644,11 +680,11 @@
       <div class="footer-contact">
         <span>香港</span>
         <span class="sep">|</span>
-        <span>Dexon@duopudun.com</span>
+        <a href="mailto:Dexon@duopudun.com">Dexon@duopudun.com</a>
         <span class="sep">|</span>
         <span class="footer-phones">
-          <span>+852 9678 3958</span>
-          <span>+86 130 6689 5078</span>
+          <a href="tel:+85296783958" dir="ltr">+852 9678 3958</a>
+          <a href="tel:+8613066895078" dir="ltr">+86 130 6689 5078</a>
         </span>
         <span class="right">Duopudun is operated by Huizhou Duopudun Energy Storage Technology Co., Ltd.</span>
       </div>

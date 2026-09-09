@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="id" data-lang="id" data-lang-en="/en/products/t60/" data-lang-zh="/zh/products/t60/">
+<html lang="id" dir="ltr" data-lang="id" data-lang-en="/en/products/t60/" data-lang-zh="/zh/products/t60/">
 
 <head>
   <meta charset="UTF-8">
@@ -7,6 +7,56 @@
   <title>T60 Penyimpanan Stackable</title>
   <meta name="description" content="Paket baterai modular 15kWh × 4 · Jejak minimal · Tampilan bersih · Cocok untuk rumah &amp; komersial kecil.">
   <link rel="canonical" href="https://duopudun.com/id/products/t60/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Duopudun">
+  <meta property="og:title" content="T60 Penyimpanan Stackable">
+  <meta property="og:description" content="Paket baterai modular 15kWh × 4 · Jejak minimal · Tampilan bersih · Cocok untuk rumah &amp; komersial kecil.">
+  <meta property="og:url" content="https://duopudun.com/id/products/t60/">
+  <meta property="og:image" content="https://duopudun.com/uploads/products/t60/main.webp">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="T60 Penyimpanan Stackable">
+  <meta name="twitter:description" content="Paket baterai modular 15kWh × 4 · Jejak minimal · Tampilan bersih · Cocok untuk rumah &amp; komersial kecil.">
+  <meta name="twitter:image" content="https://duopudun.com/uploads/products/t60/main.webp">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [{
+        "@type": "Organization",
+        "@id": "https://duopudun.com/#organization",
+        "name": "Duopudun",
+        "url": "https://duopudun.com/",
+        "logo": "https://duopudun.com/Duopudun_logo.png"
+      }, {
+        "@type": "Product",
+        "name": "T60 Penyimpanan Stackable",
+        "description": "Paket baterai modular 15kWh × 4 · Jejak minimal · Tampilan bersih · Cocok untuk rumah & komersial kecil.",
+        "model": "T60",
+        "sku": "T60",
+        "brand": {
+          "@type": "Brand",
+          "name": "Duopudun"
+        },
+        "image": "https://duopudun.com/uploads/products/t60/main.webp",
+        "additionalProperty": [{
+          "@type": "PropertyValue",
+          "name": "Kapasitas",
+          "value": "60.28kWh"
+        }, {
+          "@type": "PropertyValue",
+          "name": "Daya Output",
+          "value": "6kW"
+        }, {
+          "@type": "PropertyValue",
+          "name": "Tegangan Standar",
+          "value": "230VAC"
+        }, {
+          "@type": "PropertyValue",
+          "name": "Switching UPS",
+          "value": "10ms"
+        }]
+      }]
+    }
+  </script>
   <link rel="icon" type="image/png" href="/favicon-logo.png" sizes="178x160">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,8 +69,15 @@
   <link rel="alternate" hreflang="ar" href="https://duopudun.com/ar/products/t60/">
   <link rel="alternate" hreflang="zh-Hant" href="https://duopudun.com/zh-Hant/products/t60/">
   <link rel="alternate" hreflang="x-default" href="https://duopudun.com/en/products/t60/">
-  <link rel="stylesheet" href="/_assets/Layout.Bsqp905Y.css">
-  <link rel="stylesheet" href="/_assets/_slug_.BZ79t5Pm.css">
+  <link rel="stylesheet" href="/_assets/Layout.BymaFkJ1.css">
+  <style>
+    img[data-astro-cid-shljrivk] {
+      display: block;
+      max-width: 100%;
+      height: auto
+    }
+  </style>
+  <link rel="stylesheet" href="/_assets/_slug_.oytD1yKG.css">
 </head>
 
 <body>
@@ -38,7 +95,7 @@
       </nav>
 
       <div class="lang-dropdown">
-        <button class="lang-toggle" aria-label="Switch language">
+        <button class="lang-toggle" aria-label="Switch language" aria-expanded="false" aria-controls="languageMenu">
           <span class="lang-toggle-flag">
             <img src="/flags/id.png" alt="ID" width="22" height="15" style="vertical-align:middle;border-radius:2px">
           </span>
@@ -47,7 +104,7 @@
             <path d="M3 5l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
           </svg>
         </button>
-        <div class="lang-menu">
+        <div class="lang-menu" id="languageMenu">
           <a href="/zh/products/t60/" class="lang-option" data-lang="zh">
             <span class="lang-option-flag">
               <img src="/flags/cn.png" alt="ZH" width="22" height="15" style="vertical-align:middle;border-radius:2px">
@@ -82,7 +139,7 @@
         </div>
       </div>
 
-      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu">
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu" aria-expanded="false" aria-controls="mobileNav">
         <span></span><span></span><span></span>
       </button>
     </div>
@@ -98,22 +155,29 @@
   </header>
 
   <script type="module">
-    const r = document.getElementById("mobileMenuBtn"),
-      t = document.getElementById("mobileNav");
-    r?.addEventListener("click", () => {
-      t && (t.style.display = t.style.display === "none" ? "flex" : "none")
+    const s = document.getElementById("mobileMenuBtn"),
+      a = document.getElementById("mobileNav");
+    s?.addEventListener("click", () => {
+      a && (a.style.display = a.style.display === "none" ? "flex" : "none", s?.setAttribute("aria-expanded", String(a.style.display === "flex")))
     });
     document.querySelectorAll(".lang-dropdown").forEach(e => {
-      const l = e.querySelector(".lang-toggle"),
+      const t = e.querySelector(".lang-toggle"),
         n = e.querySelector(".lang-menu");
-      !l || !n || l.addEventListener("click", c => {
-        c.stopPropagation(), document.querySelectorAll(".lang-menu.open").forEach(o => {
+      !t || !n || (t.addEventListener("click", l => {
+        l.stopPropagation(), document.querySelectorAll(".lang-menu.open").forEach(o => {
           o !== n && o.classList.remove("open")
-        }), n.classList.toggle("open")
-      })
+        }), n.classList.toggle("open"), t.setAttribute("aria-expanded", String(n.classList.contains("open")))
+      }), e.addEventListener("keydown", l => {
+        l.key === "Escape" && (n.classList.remove("open"), t.setAttribute("aria-expanded", "false"), t.focus())
+      }), e.addEventListener("focusout", l => {
+        e.contains(l.relatedTarget) || (n.classList.remove("open"), t.setAttribute("aria-expanded", "false"))
+      }))
     });
     document.addEventListener("click", () => {
-      document.querySelectorAll(".lang-menu.open").forEach(e => e.classList.remove("open"))
+      document.querySelectorAll(".lang-menu.open").forEach(e => e.classList.remove("open")), document.querySelectorAll(".lang-toggle").forEach(e => e.setAttribute("aria-expanded", "false"))
+    });
+    document.addEventListener("keydown", e => {
+      e.key === "Escape" && a?.style.display === "flex" && (a.style.display = "none", s?.setAttribute("aria-expanded", "false"), s?.focus())
     });
   </script>
 
@@ -122,48 +186,48 @@
     <div class="pm-page" data-astro-cid-x26yjsfs>
       <section class="pm-hero" id="overview" data-astro-cid-x26yjsfs>
         <div class="pm-container" data-astro-cid-x26yjsfs>
-          <div class="pm-hero-card" style="--pm-hero-image: url('/uploads/products/t60/main.webp')" data-astro-cid-x26yjsfs>
+          <div class="pm-hero-card" style="--pm-hero-image: url('/uploads/previews/68604897f7766c76-960.webp')" data-astro-cid-x26yjsfs>
             <div class="pm-hero-grid" data-astro-cid-x26yjsfs>
               <div class="pm-hero-copy" data-astro-cid-x26yjsfs>
-                <div class="pm-kicker" data-astro-cid-x26yjsfs>T60 Stackable Energy Storage System</div>
-                <h1 data-astro-cid-x26yjsfs>All-in-one Home Solar Energy Storage System <span data-astro-cid-x26yjsfs>T60</span></h1>
-                <p class="pm-hero-sub" data-astro-cid-x26yjsfs>15kWh × 4 modular battery pack · Minimal footprint · Clean look · Ideal for residential &amp; small commercial.</p>
+                <div class="pm-kicker" data-astro-cid-x26yjsfs>T60 Penyimpanan Stackable</div>
+                <h1 data-astro-cid-x26yjsfs>T60 Penyimpanan Stackable</h1>
+                <p class="pm-hero-sub" data-astro-cid-x26yjsfs>Paket baterai modular 15kWh × 4 · Jejak minimal · Tampilan bersih · Cocok untuk rumah &amp; komersial kecil.</p>
                 <ul class="pm-bullets" data-astro-cid-x26yjsfs>
-                  <li data-astro-cid-x26yjsfs>60.28kWh energy capacity</li>
-                  <li data-astro-cid-x26yjsfs>6kW output capability</li>
-                  <li data-astro-cid-x26yjsfs>230VAC output voltage</li>
-                  <li data-astro-cid-x26yjsfs>9kW PV input</li>
+                  <li data-astro-cid-x26yjsfs>Kapasitas energi 60.28kWh</li>
+                  <li data-astro-cid-x26yjsfs>Daya keluaran 6kW</li>
+                  <li data-astro-cid-x26yjsfs>Tegangan keluaran 230VAC</li>
+                  <li data-astro-cid-x26yjsfs>Masukan PV 9kW</li>
                 </ul>
                 <div class="pm-hero-actions" data-astro-cid-x26yjsfs>
-                  <a class="pm-btn pm-btn-primary" href="/id/contact" data-astro-cid-x26yjsfs>Get a Quote</a>
-                  <a class="pm-btn pm-btn-secondary" href="#specs" data-astro-cid-x26yjsfs>View Specifications</a>
+                  <a class="pm-btn pm-btn-primary" href="/id/contact?product=t60&amp;source=%2Fid%2Fproducts%2Ft60%2F" data-astro-cid-x26yjsfs>Minta penawaran</a>
+                  <a class="pm-btn pm-btn-secondary" href="#specs" data-astro-cid-x26yjsfs>Lihat spesifikasi</a>
                 </div>
                 <div class="pm-hero-spec-strip" data-astro-cid-x26yjsfs>
                   <div data-astro-cid-x26yjsfs>
                     <b data-astro-cid-x26yjsfs>60.28kWh</b>
-                    <span data-astro-cid-x26yjsfs>Battery capacity</span>
+                    <span data-astro-cid-x26yjsfs>Kapasitas baterai</span>
                   </div>
                   <div data-astro-cid-x26yjsfs>
                     <b data-astro-cid-x26yjsfs>6kW / 6kVA</b>
-                    <span data-astro-cid-x26yjsfs>Rated output power</span>
+                    <span data-astro-cid-x26yjsfs>Daya keluaran nominal</span>
                   </div>
                   <div data-astro-cid-x26yjsfs>
                     <b data-astro-cid-x26yjsfs>230VAC</b>
-                    <span data-astro-cid-x26yjsfs>Voltage platform</span>
+                    <span data-astro-cid-x26yjsfs>Tegangan sistem</span>
                   </div>
                   <div data-astro-cid-x26yjsfs>
                     <b data-astro-cid-x26yjsfs>IP21</b>
-                    <span data-astro-cid-x26yjsfs>Protection rating</span>
+                    <span data-astro-cid-x26yjsfs>Tingkat perlindungan</span>
                   </div>
                 </div>
               </div>
               <div class="pm-hero-visual" data-astro-cid-x26yjsfs>
-                <img src="/uploads/products/t60/main.webp" alt="T60 product overview" loading="eager" data-astro-cid-x26yjsfs>
+                <img src="/uploads/previews/68604897f7766c76-960.webp" srcset="/uploads/previews/68604897f7766c76-480.webp 480w, /uploads/previews/68604897f7766c76-960.webp 960w" sizes="(max-width: 768px) 90vw, 480px" width="1200" height="1499" alt="T60 Penyimpanan Stackable" loading="eager" fetchpriority="high" decoding="async" data-astro-cid-shljrivk>
               </div>
             </div>
 
             <div class="pm-home-loads-overlay" aria-hidden="true" data-astro-cid-x26yjsfs>
-              <div class="pm-home-loads-title" data-astro-cid-x26yjsfs>Home Loads</div>
+              <div class="pm-home-loads-title" data-astro-cid-x26yjsfs>Beban rumah tangga</div>
               <div class="pm-home-loads-icons" data-astro-cid-x26yjsfs>
                 <div class="pm-home-load-icon pm-lamp" data-astro-cid-x26yjsfs>
                   <svg viewBox="0 0 48 60" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" data-astro-cid-x26yjsfs>
@@ -212,32 +276,32 @@
             <div class="pm-stat" data-astro-cid-x26yjsfs>
               <div class="pm-stat-icon" data-astro-cid-x26yjsfs>🔋</div>
               <b data-astro-cid-x26yjsfs>60.28kWh</b>
-              <span data-astro-cid-x26yjsfs>Battery capacity</span>
+              <span data-astro-cid-x26yjsfs>Kapasitas baterai</span>
             </div>
             <div class="pm-stat" data-astro-cid-x26yjsfs>
               <div class="pm-stat-icon" data-astro-cid-x26yjsfs>〰</div>
               <b data-astro-cid-x26yjsfs>6kW / 6kVA</b>
-              <span data-astro-cid-x26yjsfs>Rated output power</span>
+              <span data-astro-cid-x26yjsfs>Daya keluaran nominal</span>
             </div>
             <div class="pm-stat" data-astro-cid-x26yjsfs>
               <div class="pm-stat-icon" data-astro-cid-x26yjsfs>⚡</div>
               <b data-astro-cid-x26yjsfs>230VAC</b>
-              <span data-astro-cid-x26yjsfs>Voltage platform</span>
+              <span data-astro-cid-x26yjsfs>Tegangan sistem</span>
             </div>
             <div class="pm-stat" data-astro-cid-x26yjsfs>
               <div class="pm-stat-icon" data-astro-cid-x26yjsfs>🛡</div>
               <b data-astro-cid-x26yjsfs>IP21</b>
-              <span data-astro-cid-x26yjsfs>Protection rating</span>
+              <span data-astro-cid-x26yjsfs>Tingkat perlindungan</span>
             </div>
             <div class="pm-stat" data-astro-cid-x26yjsfs>
               <div class="pm-stat-icon" data-astro-cid-x26yjsfs>✓</div>
               <b data-astro-cid-x26yjsfs>UN38.3 MSDS IEC 62619</b>
-              <span data-astro-cid-x26yjsfs>Certification</span>
+              <span data-astro-cid-x26yjsfs>Sertifikasi</span>
             </div>
             <div class="pm-stat" data-astro-cid-x26yjsfs>
               <div class="pm-stat-icon" data-astro-cid-x26yjsfs>▦</div>
-              <b data-astro-cid-x26yjsfs>Expandable</b>
-              <span data-astro-cid-x26yjsfs>Expandable system design</span>
+              <b data-astro-cid-x26yjsfs>Dapat diperluas</b>
+              <span data-astro-cid-x26yjsfs>Desain sistem yang dapat diperluas</span>
             </div>
           </div>
         </div>
@@ -245,29 +309,29 @@
       <section class="pm-section pm-white" id="features" data-astro-cid-x26yjsfs>
         <div class="pm-container" data-astro-cid-x26yjsfs>
           <div class="pm-section-title-row" data-astro-cid-x26yjsfs>
-            <h2 data-astro-cid-x26yjsfs>Core product highlights</h2>
-            <p data-astro-cid-x26yjsfs>T60 is built for backup power, solar energy storage, and daily energy management, combining battery storage, inverter output, and system protection in an easy-to-deploy solution.</p>
+            <h2 data-astro-cid-x26yjsfs>Keunggulan produk</h2>
+            <p data-astro-cid-x26yjsfs>T60 memadukan penyimpanan baterai, keluaran inverter, dan perlindungan sistem untuk daya cadangan, penyimpanan surya, dan manajemen energi harian.</p>
           </div>
           <div class="pm-features" data-astro-cid-x26yjsfs>
             <article class="pm-feature" data-astro-cid-x26yjsfs>
               <div class="pm-feature-ico" data-astro-cid-x26yjsfs>🔋</div>
-              <h3 data-astro-cid-x26yjsfs>Reliable battery system</h3>
-              <p data-astro-cid-x26yjsfs>Capacity and cycle-life oriented design for home and project backup needs.</p>
+              <h3 data-astro-cid-x26yjsfs>Sistem baterai andal</h3>
+              <p data-astro-cid-x26yjsfs>Desain yang mengutamakan kapasitas dan umur siklus untuk kebutuhan cadangan rumah dan proyek.</p>
             </article>
             <article class="pm-feature" data-astro-cid-x26yjsfs>
               <div class="pm-feature-ico" data-astro-cid-x26yjsfs>〰</div>
-              <h3 data-astro-cid-x26yjsfs>Stable output capability</h3>
-              <p data-astro-cid-x26yjsfs>Supports common appliances, lighting, communication devices, and critical loads.</p>
+              <h3 data-astro-cid-x26yjsfs>Daya keluaran Stable</h3>
+              <p data-astro-cid-x26yjsfs>Mendukung peralatan umum, penerangan, perangkat komunikasi, dan beban penting.</p>
             </article>
             <article class="pm-feature" data-astro-cid-x26yjsfs>
               <div class="pm-feature-ico" data-astro-cid-x26yjsfs>☀</div>
-              <h3 data-astro-cid-x26yjsfs>Solar-ready usage</h3>
-              <p data-astro-cid-x26yjsfs>Can work with solar input and local energy-use strategies to improve self-consumption.</p>
+              <h3 data-astro-cid-x26yjsfs>Siap untuk energi surya</h3>
+              <p data-astro-cid-x26yjsfs>Dapat dipadukan dengan masukan surya dan strategi penggunaan energi lokal untuk meningkatkan konsumsi mandiri.</p>
             </article>
             <article class="pm-feature" data-astro-cid-x26yjsfs>
               <div class="pm-feature-ico" data-astro-cid-x26yjsfs>🛡</div>
-              <h3 data-astro-cid-x26yjsfs>Deployment friendly</h3>
-              <p data-astro-cid-x26yjsfs>Clear parameters help distributors, installers, and end customers evaluate configuration quickly.</p>
+              <h3 data-astro-cid-x26yjsfs>Mudah diterapkan</h3>
+              <p data-astro-cid-x26yjsfs>Parameter yang jelas membantu distributor, pemasang, dan pelanggan mengevaluasi konfigurasi dengan cepat.</p>
             </article>
           </div>
         </div>
@@ -276,33 +340,33 @@
       <section class="pm-section" id="applications" data-astro-cid-x26yjsfs>
         <div class="pm-container" data-astro-cid-x26yjsfs>
           <div class="pm-section-title-row" data-astro-cid-x26yjsfs>
-            <h2 data-astro-cid-x26yjsfs>Application scenarios</h2>
-            <p data-astro-cid-x26yjsfs>T60 is designed for practical energy storage applications including backup power, solar energy use, and project-based power support.</p>
+            <h2 data-astro-cid-x26yjsfs>Skenario penggunaan</h2>
+            <p data-astro-cid-x26yjsfs>T60 dirancang untuk penyimpanan energi, daya cadangan, dan pemanfaatan energi surya sesuai kebutuhan proyek.</p>
           </div>
           <div class="pm-scenarios" data-astro-cid-x26yjsfs>
             <article class="pm-scenario" data-astro-cid-x26yjsfs>
-              <img src="/uploads/products/scenarios/home-backup.webp" alt="Home Backup" loading="lazy" data-astro-cid-x26yjsfs>
-              <b data-astro-cid-x26yjsfs>Home Backup</b>
+              <img src="/uploads/products/scenarios/home-backup.webp" alt="Cadangan rumah" loading="lazy" data-astro-cid-x26yjsfs>
+              <b data-astro-cid-x26yjsfs>Cadangan rumah</b>
             </article>
             <article class="pm-scenario" data-astro-cid-x26yjsfs>
-              <img src="/uploads/products/a8/scenarios/island-house.webp" alt="Rooftop Solar Storage" loading="lazy" data-astro-cid-x26yjsfs>
-              <b data-astro-cid-x26yjsfs>Rooftop Solar Storage</b>
+              <img src="/uploads/products/a8/scenarios/island-house.webp" alt="Penyimpanan surya atap" loading="lazy" data-astro-cid-x26yjsfs>
+              <b data-astro-cid-x26yjsfs>Penyimpanan surya atap</b>
             </article>
             <article class="pm-scenario" data-astro-cid-x26yjsfs>
-              <img src="/uploads/products/a8/scenarios/farm-poultry.webp" alt="Stackable Expansion" loading="lazy" data-astro-cid-x26yjsfs>
-              <b data-astro-cid-x26yjsfs>Stackable Expansion</b>
+              <img src="/uploads/products/a8/scenarios/farm-poultry.webp" alt="Ekspansi bertumpuk" loading="lazy" data-astro-cid-x26yjsfs>
+              <b data-astro-cid-x26yjsfs>Ekspansi bertumpuk</b>
             </article>
             <article class="pm-scenario" data-astro-cid-x26yjsfs>
-              <img src="/uploads/products/scenarios/small-shop-backup.webp" alt="Small Shop Backup" loading="lazy" data-astro-cid-x26yjsfs>
-              <b data-astro-cid-x26yjsfs>Small Shop Backup</b>
+              <img src="/uploads/products/scenarios/small-shop-backup.webp" alt="Cadangan toko kecil" loading="lazy" data-astro-cid-x26yjsfs>
+              <b data-astro-cid-x26yjsfs>Cadangan toko kecil</b>
             </article>
             <article class="pm-scenario" data-astro-cid-x26yjsfs>
-              <img src="/uploads/products/a8/scenarios/remote-site.webp" alt="EV Charging Backup" loading="lazy" data-astro-cid-x26yjsfs>
-              <b data-astro-cid-x26yjsfs>EV Charging Backup</b>
+              <img src="/uploads/products/a8/scenarios/remote-site.webp" alt="Cadangan pengisian kendaraan listrik" loading="lazy" data-astro-cid-x26yjsfs>
+              <b data-astro-cid-x26yjsfs>Cadangan pengisian kendaraan listrik</b>
             </article>
             <article class="pm-scenario" data-astro-cid-x26yjsfs>
-              <img src="/uploads/products/a8/scenarios/server-room.webp" alt="Project Power System" loading="lazy" data-astro-cid-x26yjsfs>
-              <b data-astro-cid-x26yjsfs>Project Power System</b>
+              <img src="/uploads/products/a8/scenarios/server-room.webp" alt="Sistem daya proyek" loading="lazy" data-astro-cid-x26yjsfs>
+              <b data-astro-cid-x26yjsfs>Sistem daya proyek</b>
             </article>
           </div>
         </div>
@@ -312,134 +376,135 @@
         <div class="pm-container pm-split" data-astro-cid-x26yjsfs>
           <div data-astro-cid-x26yjsfs>
             <div class="pm-section-title-row pm-stack-title" data-astro-cid-x26yjsfs>
-              <h2 data-astro-cid-x26yjsfs>Common home appliances running time</h2>
-              <p data-astro-cid-x26yjsfs>The estimates below use one formula based on product energy capacity and appliance wattage. Actual runtime varies by load, temperature, and system efficiency.</p>
+              <h2 data-astro-cid-x26yjsfs>Durasi operasi peralatan rumah tangga</h2>
+              <p data-astro-cid-x26yjsfs>Durasi teoretis satu perangkat: kapasitas nominal dibagi daya perangkat, tanpa rugi konversi dan cadangan energi. Durasi nyata bergantung pada kapasitas terpakai, siklus beban, dan kondisi. Pastikan daya inverter dan beban awal sesuai.</p>
+
             </div>
             <div class="pm-runtime-grid" data-astro-cid-x26yjsfs>
               <div class="pm-appliance" data-astro-cid-x26yjsfs>
-                <b data-astro-cid-x26yjsfs>Air Conditioner</b>
+                <b data-astro-cid-x26yjsfs>AC</b>
                 <small data-astro-cid-x26yjsfs>(1080 W)</small>
-                <img src="/uploads/products/a8/appliances/ac.webp" alt="Air Conditioner" loading="lazy" data-astro-cid-x26yjsfs>
-                <div class="pm-time" data-astro-cid-x26yjsfs>Approx. 56 h</div>
+                <img src="/uploads/products/a8/appliances/ac.webp" alt="AC" loading="lazy" data-astro-cid-x26yjsfs>
+                <div class="pm-time" data-astro-cid-x26yjsfs>Sekitar 56 jam</div>
               </div>
               <div class="pm-appliance" data-astro-cid-x26yjsfs>
-                <b data-astro-cid-x26yjsfs>Refrigerator</b>
+                <b data-astro-cid-x26yjsfs>Kulkas</b>
                 <small data-astro-cid-x26yjsfs>(800 W)</small>
-                <img src="/uploads/products/a8/appliances/fridge.webp" alt="Refrigerator" loading="lazy" data-astro-cid-x26yjsfs>
-                <div class="pm-time" data-astro-cid-x26yjsfs>Approx. 75 h</div>
+                <img src="/uploads/products/a8/appliances/fridge.webp" alt="Kulkas" loading="lazy" data-astro-cid-x26yjsfs>
+                <div class="pm-time" data-astro-cid-x26yjsfs>Sekitar 75 jam</div>
               </div>
               <div class="pm-appliance" data-astro-cid-x26yjsfs>
-                <b data-astro-cid-x26yjsfs>Washing Machine</b>
+                <b data-astro-cid-x26yjsfs>Mesin cuci</b>
                 <small data-astro-cid-x26yjsfs>(800 W)</small>
-                <img src="/uploads/products/a8/appliances/washer.webp" alt="Washing Machine" loading="lazy" data-astro-cid-x26yjsfs>
-                <div class="pm-time" data-astro-cid-x26yjsfs>Approx. 75 h</div>
+                <img src="/uploads/products/a8/appliances/washer.webp" alt="Mesin cuci" loading="lazy" data-astro-cid-x26yjsfs>
+                <div class="pm-time" data-astro-cid-x26yjsfs>Sekitar 75 jam</div>
               </div>
               <div class="pm-appliance" data-astro-cid-x26yjsfs>
-                <b data-astro-cid-x26yjsfs>Vacuum Cleaner</b>
+                <b data-astro-cid-x26yjsfs>Penyedot debu</b>
                 <small data-astro-cid-x26yjsfs>(1000 W)</small>
-                <img src="/uploads/products/a8/appliances/vacuum.webp" alt="Vacuum Cleaner" loading="lazy" data-astro-cid-x26yjsfs>
-                <div class="pm-time" data-astro-cid-x26yjsfs>Approx. 60 h</div>
+                <img src="/uploads/products/a8/appliances/vacuum.webp" alt="Penyedot debu" loading="lazy" data-astro-cid-x26yjsfs>
+                <div class="pm-time" data-astro-cid-x26yjsfs>Sekitar 60 jam</div>
               </div>
               <div class="pm-appliance" data-astro-cid-x26yjsfs>
-                <b data-astro-cid-x26yjsfs>Microwave Oven</b>
+                <b data-astro-cid-x26yjsfs>Oven microwave</b>
                 <small data-astro-cid-x26yjsfs>(500 W)</small>
-                <img src="/uploads/products/a8/appliances/microwave.webp" alt="Microwave Oven" loading="lazy" data-astro-cid-x26yjsfs>
-                <div class="pm-time" data-astro-cid-x26yjsfs>Approx. 121 h</div>
+                <img src="/uploads/products/a8/appliances/microwave.webp" alt="Oven microwave" loading="lazy" data-astro-cid-x26yjsfs>
+                <div class="pm-time" data-astro-cid-x26yjsfs>Sekitar 121 jam</div>
               </div>
               <div class="pm-appliance" data-astro-cid-x26yjsfs>
-                <b data-astro-cid-x26yjsfs>Rice Cooker</b>
+                <b data-astro-cid-x26yjsfs>Penanak nasi</b>
                 <small data-astro-cid-x26yjsfs>(850 W)</small>
-                <img src="/uploads/products/a8/appliances/ricecooker.webp" alt="Rice Cooker" loading="lazy" data-astro-cid-x26yjsfs>
-                <div class="pm-time" data-astro-cid-x26yjsfs>Approx. 71 h</div>
+                <img src="/uploads/products/a8/appliances/ricecooker.webp" alt="Penanak nasi" loading="lazy" data-astro-cid-x26yjsfs>
+                <div class="pm-time" data-astro-cid-x26yjsfs>Sekitar 71 jam</div>
               </div>
               <div class="pm-appliance" data-astro-cid-x26yjsfs>
-                <b data-astro-cid-x26yjsfs>Induction Cooker</b>
+                <b data-astro-cid-x26yjsfs>Kompor induksi</b>
                 <small data-astro-cid-x26yjsfs>(1100 W)</small>
-                <img src="/uploads/products/a8/appliances/induction.webp" alt="Induction Cooker" loading="lazy" data-astro-cid-x26yjsfs>
-                <div class="pm-time" data-astro-cid-x26yjsfs>Approx. 55 h</div>
+                <img src="/uploads/products/a8/appliances/induction.webp" alt="Kompor induksi" loading="lazy" data-astro-cid-x26yjsfs>
+                <div class="pm-time" data-astro-cid-x26yjsfs>Sekitar 55 jam</div>
               </div>
               <div class="pm-appliance" data-astro-cid-x26yjsfs>
-                <b data-astro-cid-x26yjsfs>Cooker Hood</b>
+                <b data-astro-cid-x26yjsfs>Penghisap asap dapur</b>
                 <small data-astro-cid-x26yjsfs>(350 W)</small>
-                <img src="/uploads/products/a8/appliances/hood.webp" alt="Cooker Hood" loading="lazy" data-astro-cid-x26yjsfs>
-                <div class="pm-time" data-astro-cid-x26yjsfs>Approx. 172 h</div>
+                <img src="/uploads/products/a8/appliances/hood.webp" alt="Penghisap asap dapur" loading="lazy" data-astro-cid-x26yjsfs>
+                <div class="pm-time" data-astro-cid-x26yjsfs>Sekitar 172 jam</div>
               </div>
             </div>
           </div>
 
           <aside class="pm-specs" data-astro-cid-x26yjsfs>
-            <h3 data-astro-cid-x26yjsfs>Technical Specifications</h3>
+            <h3 data-astro-cid-x26yjsfs>Spesifikasi teknis</h3>
             <table class="pm-spec-table" data-astro-cid-x26yjsfs>
               <tbody data-astro-cid-x26yjsfs>
 
                 <tr data-astro-cid-x26yjsfs>
-                  <th colspan="2" data-astro-cid-x26yjsfs>AC Output</th>
+                  <th colspan="2" data-astro-cid-x26yjsfs>Keluaran AC</th>
                 </tr>
                 <tr data-astro-cid-x26yjsfs>
-                  <td data-astro-cid-x26yjsfs>Rated output power</td>
+                  <td data-astro-cid-x26yjsfs>Daya keluaran nominal</td>
                   <td data-astro-cid-x26yjsfs>6kW / 6kVA</td>
                 </tr>
                 <tr data-astro-cid-x26yjsfs>
-                  <td data-astro-cid-x26yjsfs>Rated output voltage</td>
+                  <td data-astro-cid-x26yjsfs>Tegangan keluaran Rated</td>
                   <td data-astro-cid-x26yjsfs>230VAC</td>
                 </tr>
                 <tr data-astro-cid-x26yjsfs>
-                  <td data-astro-cid-x26yjsfs>Peak power</td>
+                  <td data-astro-cid-x26yjsfs>Daya puncak</td>
                   <td data-astro-cid-x26yjsfs>12kVA</td>
                 </tr>
                 <tr data-astro-cid-x26yjsfs>
-                  <td data-astro-cid-x26yjsfs>UPS switchover time</td>
+                  <td data-astro-cid-x26yjsfs>Waktu peralihan UPS</td>
                   <td data-astro-cid-x26yjsfs>10ms</td>
                 </tr>
                 <tr data-astro-cid-x26yjsfs>
-                  <th colspan="2" data-astro-cid-x26yjsfs>Battery &amp; PV Input</th>
+                  <th colspan="2" data-astro-cid-x26yjsfs>Baterai dan masukan PV</th>
                 </tr>
                 <tr data-astro-cid-x26yjsfs>
-                  <td data-astro-cid-x26yjsfs>Battery cell</td>
-                  <td data-astro-cid-x26yjsfs>A-Grade LiFePO4</td>
+                  <td data-astro-cid-x26yjsfs>Sel baterai</td>
+                  <td data-astro-cid-x26yjsfs>LiFePO4 kelas A</td>
                 </tr>
                 <tr data-astro-cid-x26yjsfs>
-                  <td data-astro-cid-x26yjsfs>Battery capacity</td>
+                  <td data-astro-cid-x26yjsfs>Kapasitas baterai</td>
                   <td data-astro-cid-x26yjsfs>60.28kWh</td>
                 </tr>
                 <tr data-astro-cid-x26yjsfs>
-                  <td data-astro-cid-x26yjsfs>PV max input power</td>
+                  <td data-astro-cid-x26yjsfs>Daya masukan PV maksimum</td>
                   <td data-astro-cid-x26yjsfs>9kW</td>
                 </tr>
                 <tr data-astro-cid-x26yjsfs>
-                  <td data-astro-cid-x26yjsfs>MPPT voltage range</td>
+                  <td data-astro-cid-x26yjsfs>Rentang tegangan MPPT</td>
                   <td data-astro-cid-x26yjsfs>60-450VDC</td>
                 </tr>
                 <tr data-astro-cid-x26yjsfs>
-                  <th colspan="2" data-astro-cid-x26yjsfs>Installation &amp; Compliance</th>
+                  <th colspan="2" data-astro-cid-x26yjsfs>Pemasangan dan kepatuhan</th>
                 </tr>
                 <tr data-astro-cid-x26yjsfs>
-                  <td data-astro-cid-x26yjsfs>Cycle life</td>
-                  <td data-astro-cid-x26yjsfs>6000 cycles (80% retention)</td>
+                  <td data-astro-cid-x26yjsfs>Umur siklus</td>
+                  <td data-astro-cid-x26yjsfs>6.000 siklus (retensi kapasitas 80%)</td>
                 </tr>
                 <tr data-astro-cid-x26yjsfs>
-                  <td data-astro-cid-x26yjsfs>Dimensions</td>
+                  <td data-astro-cid-x26yjsfs>Dimensi</td>
                   <td data-astro-cid-x26yjsfs>666 x 430 x 1462mm</td>
                 </tr>
                 <tr data-astro-cid-x26yjsfs>
-                  <td data-astro-cid-x26yjsfs>Net weight</td>
+                  <td data-astro-cid-x26yjsfs>Berat bersih</td>
                   <td data-astro-cid-x26yjsfs>499kg</td>
                 </tr>
                 <tr data-astro-cid-x26yjsfs>
-                  <td data-astro-cid-x26yjsfs>Installation</td>
-                  <td data-astro-cid-x26yjsfs>Floor / wheel / wall-mounted</td>
+                  <td data-astro-cid-x26yjsfs>Pemasangan</td>
+                  <td data-astro-cid-x26yjsfs>Lantai / beroda / dinding</td>
                 </tr>
                 <tr data-astro-cid-x26yjsfs>
-                  <td data-astro-cid-x26yjsfs>IP grade</td>
+                  <td data-astro-cid-x26yjsfs>Tingkat IP</td>
                   <td data-astro-cid-x26yjsfs>IP21</td>
                 </tr>
                 <tr data-astro-cid-x26yjsfs>
-                  <td data-astro-cid-x26yjsfs>Certification</td>
+                  <td data-astro-cid-x26yjsfs>Sertifikasi</td>
                   <td data-astro-cid-x26yjsfs>UN38.3 MSDS IEC 62619</td>
                 </tr>
               </tbody>
             </table>
-            <p class="pm-spec-note" data-astro-cid-x26yjsfs>For project selection, confirm load type, installation method, solar input conditions, and target backup time before configuration.</p>
+            <p class="pm-spec-note" data-astro-cid-x26yjsfs>Peralatan pendukung dipilih secara terpisah. Antarmuka dan kompatibilitas bergantung pada model dan konfigurasi proyek.</p>
           </aside>
         </div>
       </section>
@@ -447,24 +512,24 @@
       <section class="pm-section" id="accessories" data-astro-cid-x26yjsfs>
         <div class="pm-container" data-astro-cid-x26yjsfs>
           <div class="pm-section-title-row" data-astro-cid-x26yjsfs>
-            <h2 data-astro-cid-x26yjsfs>Optional accessories</h2>
-            <p data-astro-cid-x26yjsfs>Extend the system with solar input, EV charging, and backup generation options for a more complete energy solution.</p>
+            <h2 data-astro-cid-x26yjsfs>Aksesori opsional</h2>
+            <p data-astro-cid-x26yjsfs>Peralatan pendukung dipilih secara terpisah. Antarmuka dan kompatibilitas bergantung pada model dan konfigurasi proyek.</p>
           </div>
           <div class="pm-accessories" data-astro-cid-x26yjsfs>
             <article class="pm-accessory" data-astro-cid-x26yjsfs>
-              <img src="/uploads/products/a8/accessories/pv-modules.webp" alt="PV Modules" loading="lazy" data-astro-cid-x26yjsfs>
-              <h3 data-astro-cid-x26yjsfs>PV Modules</h3>
-              <p data-astro-cid-x26yjsfs>Pair with solar input to support daily self-consumption and off-grid supply.</p>
+              <img src="/uploads/products/a8/accessories/pv-modules.webp" alt="Modul PV" loading="lazy" data-astro-cid-x26yjsfs>
+              <h3 data-astro-cid-x26yjsfs>Modul PV</h3>
+              <p data-astro-cid-x26yjsfs>Padukan dengan masukan surya untuk konsumsi mandiri harian dan pasokan di luar jaringan.</p>
             </article>
             <article class="pm-accessory" data-astro-cid-x26yjsfs>
-              <img src="/uploads/products/a8/accessories/ev-charger.webp" alt="EV Charging Option" loading="lazy" data-astro-cid-x26yjsfs>
-              <h3 data-astro-cid-x26yjsfs>EV Charging Option</h3>
-              <p data-astro-cid-x26yjsfs>For projects that need home energy storage and EV charging coordination.</p>
+              <img src="/uploads/products/a8/accessories/ev-charger.webp" alt="Opsi pengisian kendaraan listrik" loading="lazy" data-astro-cid-x26yjsfs>
+              <h3 data-astro-cid-x26yjsfs>Opsi pengisian kendaraan listrik</h3>
+              <p data-astro-cid-x26yjsfs>Untuk proyek yang memerlukan koordinasi penyimpanan energi rumah dan pengisian kendaraan listrik.</p>
             </article>
             <article class="pm-accessory" data-astro-cid-x26yjsfs>
-              <img src="/uploads/products/a8/accessories/generator.webp" alt="Backup Generator" loading="lazy" data-astro-cid-x26yjsfs>
-              <h3 data-astro-cid-x26yjsfs>Backup Generator</h3>
-              <p data-astro-cid-x26yjsfs>Adds another backup source for long outages or remote sites.</p>
+              <img src="/uploads/products/a8/accessories/generator.webp" alt="Generator cadangan" loading="lazy" data-astro-cid-x26yjsfs>
+              <h3 data-astro-cid-x26yjsfs>Generator cadangan</h3>
+              <p data-astro-cid-x26yjsfs>Menambahkan sumber cadangan untuk pemadaman lama atau lokasi terpencil.</p>
             </article>
           </div>
         </div>
@@ -473,26 +538,26 @@
       <section class="pm-section pm-white" id="sales-pages" data-astro-cid-x26yjsfs>
         <div class="pm-container" data-astro-cid-x26yjsfs>
           <div class="pm-section-title-row" data-astro-cid-x26yjsfs>
-            <h2 data-astro-cid-x26yjsfs>Product materials and technical overview</h2>
-            <p data-astro-cid-x26yjsfs>Review key selling points, system structure, application scenarios, and core configuration details for project evaluation.</p>
+            <h2 data-astro-cid-x26yjsfs>Materi produk dan ringkasan teknis</h2>
+            <p data-astro-cid-x26yjsfs>Tinjau spesifikasi, struktur sistem, dan aplikasi untuk proyek Anda.</p>
           </div>
           <div class="pm-sales-pages" data-astro-cid-x26yjsfs>
             <article class="pm-sales-page" data-astro-cid-x26yjsfs>
               <a href="/uploads/products/t60/sales-pages/P27-T60.webp" target="_blank" rel="noopener noreferrer" data-astro-cid-x26yjsfs>
-                <img src="/uploads/products/t60/sales-pages/P27-T60.webp" alt="Product overview" loading="lazy" data-astro-cid-x26yjsfs>
+                <img src="/uploads/previews/a2285e2e6605a9c4-960.webp" srcset="/uploads/previews/a2285e2e6605a9c4-480.webp 480w, /uploads/previews/a2285e2e6605a9c4-960.webp 960w" sizes="(max-width: 768px) 90vw, 480px" width="1600" height="1999" alt="Ringkasan produk" loading="lazy" fetchpriority="auto" decoding="async" data-astro-cid-shljrivk>
               </a>
               <div class="pm-sales-meta" data-astro-cid-x26yjsfs>
-                <h3 data-astro-cid-x26yjsfs>Product overview</h3>
-                <span data-astro-cid-x26yjsfs>Benefits and applications</span>
+                <h3 data-astro-cid-x26yjsfs>Ringkasan produk</h3>
+                <span data-astro-cid-x26yjsfs>Keunggulan dan aplikasi</span>
               </div>
             </article>
             <article class="pm-sales-page" data-astro-cid-x26yjsfs>
               <a href="/uploads/products/t60/sales-pages/P28-T60.webp" target="_blank" rel="noopener noreferrer" data-astro-cid-x26yjsfs>
-                <img src="/uploads/products/t60/sales-pages/P28-T60.webp" alt="Technical overview" loading="lazy" data-astro-cid-x26yjsfs>
+                <img src="/uploads/previews/af2e064c5299a7d4-960.webp" srcset="/uploads/previews/af2e064c5299a7d4-480.webp 480w, /uploads/previews/af2e064c5299a7d4-960.webp 960w" sizes="(max-width: 768px) 90vw, 480px" width="1600" height="1999" alt="Ringkasan teknis" loading="lazy" fetchpriority="auto" decoding="async" data-astro-cid-shljrivk>
               </a>
               <div class="pm-sales-meta" data-astro-cid-x26yjsfs>
-                <h3 data-astro-cid-x26yjsfs>Technical overview</h3>
-                <span data-astro-cid-x26yjsfs>Configuration and structure</span>
+                <h3 data-astro-cid-x26yjsfs>Ringkasan teknis</h3>
+                <span data-astro-cid-x26yjsfs>Konfigurasi dan struktur</span>
               </div>
             </article>
           </div>
@@ -503,12 +568,12 @@
         <div class="pm-container" data-astro-cid-x26yjsfs>
           <div class="pm-cta" data-astro-cid-x26yjsfs>
             <div data-astro-cid-x26yjsfs>
-              <h2 data-astro-cid-x26yjsfs>Explore the T60 product brochure</h2>
-              <p data-astro-cid-x26yjsfs>Use the T60 product materials to review core specifications, application scenarios, and optional configurations, then contact Duopudun for a suitable solution.</p>
+              <h2 data-astro-cid-x26yjsfs>Lihat brosur produk T60</h2>
+              <p data-astro-cid-x26yjsfs>Tinjau spesifikasi, aplikasi, dan opsi T60, lalu hubungi Duopudun untuk solusi yang sesuai.</p>
             </div>
             <div class="pm-cta-actions" data-astro-cid-x26yjsfs>
-              <a class="pm-btn pm-btn-secondary" href="/id/contact" data-astro-cid-x26yjsfs>View Product Brochure</a>
-              <a class="pm-btn pm-btn-primary" href="/id/contact" data-astro-cid-x26yjsfs>Get a Quote</a>
+              <a class="pm-btn pm-btn-secondary" href="#sales-pages" data-astro-cid-x26yjsfs>Materi produk dan ringkasan teknis</a>
+              <a class="pm-btn pm-btn-primary" href="/id/contact?product=t60&amp;source=%2Fid%2Fproducts%2Ft60%2F" data-astro-cid-x26yjsfs>Minta penawaran</a>
             </div>
           </div>
         </div>
@@ -632,13 +697,13 @@
       <div class="footer-contact">
         <span>Hong Kong</span>
         <span class="sep">|</span>
-        <span>Dexon@duopudun.com</span>
+        <a href="mailto:Dexon@duopudun.com">Dexon@duopudun.com</a>
         <span class="sep">|</span>
         <span class="footer-phones">
-          <span>+852 9678 3958</span>
-          <span>+86 130 6689 5078</span>
+          <a href="tel:+85296783958" dir="ltr">+852 9678 3958</a>
+          <a href="tel:+8613066895078" dir="ltr">+86 130 6689 5078</a>
         </span>
-        <span class="right">Duopudun is operated by Huizhou Duopudun Energy Storage Technology Co., Ltd.</span>
+        <span class="right">Duopudun dioperasikan oleh Huizhou Duopudun Energy Storage Technology Co., Ltd.</span>
       </div>
     </div>
   </footer>
